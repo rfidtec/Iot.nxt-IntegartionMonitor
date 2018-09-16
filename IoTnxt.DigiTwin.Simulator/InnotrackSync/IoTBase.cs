@@ -18,13 +18,15 @@ using System.Collections;
 
 namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
 {
-  public  class IoTBase
+    public class IoTBase
     {
 
         #region Properties
         public readonly ILogger<Gateway1Simulator> _logger;
         public readonly IRedGreenQueueAdapter _redq;
-        public List<(string,string,object)> lst = new List<(string, string, object)>();
+        public List<(string, string, object)> lst = new List<(string, string, object)>();
+
+        public IotObject _iotObject { get; set; }
         #endregion
 
         #region Constructors
@@ -32,6 +34,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
         public IoTBase(IRedGreenQueueAdapter redq)
         {
             this._redq = redq;
+            _iotObject = new IotObject();
         }
         #endregion
 

@@ -10,9 +10,6 @@ namespace IoTnxt.DigiTwin.Simulator.Collection_Property
         public string Rfid { get; set; }
         [JsonProperty("dateseen")]
         public string DateSeen { get; set; }
-        [JsonProperty("device")]
-        public string device { get; set; }
-
 
         public override bool Equals(object obj)
         {

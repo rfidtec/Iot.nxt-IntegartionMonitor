@@ -61,13 +61,13 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="DALC4NET">
-      <HintPath>..\..\..\..\Development\DALC4NET\DALC4NET\bin\Debug\DALC4NET.dll</HintPath>
+      <HintPath>..\..\..\Development\DALC4NET\DALC4NET\bin\Debug\DALC4NET.dll</HintPath>
     </Reference>
     <Reference Include="DALX">
-      <HintPath>..\..\..\..\Development\DALMapper\DALX\bin\Debug\DALX.dll</HintPath>
+      <HintPath>..\..\..\Development\DALMapper\DALX\bin\Debug\DALX.dll</HintPath>
     </Reference>
     <Reference Include="Innotrack.DeviceManager">
-      <HintPath>..\..\..\..\Source Code\Innotrack Library\Innotrack.DeviceManager\bin\Debug\Innotrack.DeviceManager.dll</HintPath>
+      <HintPath>..\..\Innotrack Library\Innotrack.DeviceManager\bin\Debug\Innotrack.DeviceManager.dll</HintPath>
     </Reference>
     <Reference Include="System.Configuration" />
   </ItemGroup>

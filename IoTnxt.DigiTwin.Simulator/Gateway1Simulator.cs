@@ -28,7 +28,11 @@ namespace IoTnxt.DigiTwin.Simulator
         private readonly IOptions<Gateway1SimulatorOptions> _options;
         private readonly IEntityApi _entityApi;
 
-        TagReadsSync tagReadsSync { get; set; }
+        TagReadsSync _tagReadsSync { get; set; }
+        DeviceStatusSync _devicestatusSync { get; set; }
+        RNCHeartbeatSync _RNCHeartbeatSync { get; set; }
+        UnreadRFIDSync _unreadRFIDSync { get; set; }
+        KeyFrameSync _keyFrameSync { get; set; }
 
         public Gateway1Simulator(
     IRedGreenQueueAdapter redq,
@@ -45,7 +49,13 @@ namespace IoTnxt.DigiTwin.Simulator
             if (options.Value.Active)
                 logger.LogInformation("GATEWAY.1 simulator active");
 
-            tagReadsSync = new TagReadsSync(redq);
+
+            //Init all Innotrack Sync Classes
+            _tagReadsSync = new TagReadsSync(redq);
+            _devicestatusSync = new DeviceStatusSync(redq);
+            _RNCHeartbeatSync = new RNCHeartbeatSync(redq);
+            _unreadRFIDSync = new UnreadRFIDSync(redq);
+            _keyFrameSync = new KeyFrameSync(redq);
 
 
             Task.Run(InitAsync);
@@ -63,37 +73,39 @@ namespace IoTnxt.DigiTwin.Simulator
             {
                 _logger.LogInformation("Waiting for connecting...");
 
-                    if (!string.IsNullOrWhiteSpace(IotGateway.Secret))
-                    {
-                        _logger.LogInformation($"Registering gateway {IotGateway.GatewayId}");
+                if (!string.IsNullOrWhiteSpace(IotGateway.Secret))
+                {
+                    _logger.LogInformation($"Registering gateway {IotGateway.GatewayId}");
 
-                        var gw = new Gateway.API.Abstractions.Gateway
-                        {
-                            GatewayId = IotGateway.GatewayId,
-                            Secret = IotGateway.Secret,
-                            Make = "Innotrack",
-                            Model = "Vodaworld-RNC",
-                            FirmwareVersion = typeof(Gateway1Simulation).Assembly.GetName().Version.ToString(),
-                            Devices = new Dictionary<string, Device>()
-                        };
+                    var gw = new Gateway.API.Abstractions.Gateway
+                    {
+                        GatewayId = IotGateway.GatewayId,
+                        Secret = IotGateway.Secret,
+                        Make = "Innotrack",
+                        Model = "Vodaworld-RNC",
+                        FirmwareVersion = typeof(Gateway1Simulation).Assembly.GetName().Version.ToString(),
+                        Devices = new Dictionary<string, Device>()
+                    };
                     gw.Devices = IotGateway.GetIotDevices();
-                   // gw.Devices.Add("RFID|1:ZONE|ZONE1", new Device() { DeviceName = "RFID|1:ZONE|ZONE1", DeviceType = "ZONE", Properties = new Dictionary<string, DeviceProperty>() { { "TAGS", new DeviceProperty() { PropertyName = "TAGS", DataType = "RFIDDictionary" } } } });
+                    // gw.Devices.Add("RFID|1:ZONE|ZONE1", new Device() { DeviceName = "RFID|1:ZONE|ZONE1", DeviceType = "ZONE", Properties = new Dictionary<string, DeviceProperty>() { { "TAGS", new DeviceProperty() { PropertyName = "TAGS", DataType = "RFIDDictionary" } } } });
 
-                        await DapiContext.ExecuteAsync(username: IotGateway.UserName, action: () => _gatewayApi.RegisterGatewayFromGatewayAsync(gw));
+                    await DapiContext.ExecuteAsync(username: IotGateway.UserName, action: () => _gatewayApi.RegisterGatewayFromGatewayAsync(gw));
 
-                        if (!string.IsNullOrWhiteSpace(IotGateway.ClientId))
-                        {
-                            _logger.LogInformation($"Associating gateway {IotGateway.GatewayId} with client {IotGateway.ClientId}");
-                            await DapiContext.ExecuteAsync(username: "root", action: () => _entityApi.AssociateGatewayAndClientAsync(IotGateway.GatewayId, IotGateway.ClientId));
-                        }
-                    }
-
-                    _logger.LogInformation($"Simulating gateway {IotGateway.GatewayId} started...");
-
-                    var unused = Task.Run(async () =>
+                    if (!string.IsNullOrWhiteSpace(IotGateway.ClientId))
                     {
-                      await tagReadsSync.SyncTagReads();
-                    });
+                        _logger.LogInformation($"Associating gateway {IotGateway.GatewayId} with client {IotGateway.ClientId}");
+                        await DapiContext.ExecuteAsync(username: "root", action: () => _entityApi.AssociateGatewayAndClientAsync(IotGateway.GatewayId, IotGateway.ClientId));
+                    }
+                }
+
+                _logger.LogInformation($"Simulating gateway {IotGateway.GatewayId} started...");
+
+                //var unused = Task.Run(async () =>
+                //{
+                //    await _tagReadsSync.SyncTagReads();
+                //    await _devicestatusSync.SyncDeviceStatus();
+                //});
+                StartIntegration();
             }
             catch (Exception ex)
             {
@@ -108,12 +120,19 @@ namespace IoTnxt.DigiTwin.Simulator
         /// <param name="uniqueDicCode"></param>
         /// <returns></returns>
         /// 
-     
+        private void StartIntegration()
+        {
+            Task.Run(() => _tagReadsSync.StartTagReads());
+            Task.Run(() => _RNCHeartbeatSync.StartAsync());
+            Task.Run(() => _devicestatusSync.StartDeviceStatus());
+            Task.Run(() => _unreadRFIDSync.StartUnSeenMonitor());
+            Task.Run(() => _keyFrameSync.StartKeyFrameMonitor());
+        }
 
-       
 
 
 
-     
+
+
     }
 }

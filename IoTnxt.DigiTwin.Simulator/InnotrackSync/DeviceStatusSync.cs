@@ -5,38 +5,71 @@ using System.Text;
 using System.Threading.Tasks;
 using IoTnxt.DAPI.RedGreenQueue.Abstractions;
 using Innotrack.DeviceManager.Entities;
+using DALX.Core.Sql.Filters;
+using Microsoft.Extensions.Logging;
+using Innotrack.DeviceManager.Data;
+using IoTnxt.DigiTwin.Simulator.Collection_Property;
 
 namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
 {
-   public class DeviceStatusSync :IoTBase
+    public class DeviceStatusSync : IoTBase
     {
         #region Properties
 
-        List<Device> LastDeviceStatusList { get; set; }
+        List<Device> Devices { get; set; }
+
         #endregion
 
-        public DeviceStatusSync(IRedGreenQueueAdapter redq):base(redq)
+        public DeviceStatusSync(IRedGreenQueueAdapter redq) : base(redq)
         {
-            LastDeviceStatusList = new List<Device>();
+            Devices = new List<Device>();
+           
         }
 
-        public async Task SyncDeviceStatus()
+        public async Task StartDeviceStatus()
         {
-            while(true)
+            while (true)
             {
-
-                //Send list to Iot Cloud Platform
-                await SendNotification();
-            }
                 
+                try
+                {
+                    RefreshDeviceStatusList();
+                    foreach (var device in Devices)
+                    {
+                        //Add Heartbeat of device and send
+                        _iotObject.DeviceName = device.DeviceName;
+                        _iotObject.DeviceType = "ZONE";
+                        _iotObject.ObjectType = "TAGS";
+                        _iotObject.Object = new DeviceObject()
+                        {
+                            Device = device.DeviceName,
+                            Heartbeat = device.Status == "Active" ? true : false
+                        };
+                        lst.Add(_iotObject.ToString());
+                        //Send list to Iot Cloud Platform
+                        await SendNotification();
+                        //Clear 
+                        lst.Clear();
+                        device.HostSeen = true;
+                        device.Update();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+
+                    _logger.LogError(ex, $"Sending notification for gateway {IotGateway.GatewayId}");
+                }
+            }
+
         }
 
-        private void CheckDeviceStatuses()
+
+        private void RefreshDeviceStatusList()
         {
-            foreach(var device in new Device().Read())
-            {
-               
-            }
+            //Get a list of all devices that status has changed
+            QueryFilter filter = new QueryFilter("HostSeen", false, DALX.Core.FilterOperator.Equals);
+            Devices = new Device().Read(filter);
         }
 
 

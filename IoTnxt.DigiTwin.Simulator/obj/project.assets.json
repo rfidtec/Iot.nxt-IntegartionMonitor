@@ -3906,11 +3906,11 @@
   "project": {
     "version": "3.0.9",
     "restore": {
-      "projectUniqueName": "D:\\Work\\Customers\\IOT\\IoTnxt.DigiTwin.Simulator\\IoTnxt.DigiTwin.Simulator\\IoTnxt.DigiTwin.Simulator.csproj",
+      "projectUniqueName": "D:\\Work\\Source Code\\IoTnxt.DigiTwin.Simulator\\IoTnxt.DigiTwin.Simulator\\IoTnxt.DigiTwin.Simulator.csproj",
       "projectName": "IoTnxt.DigiTwin.Simulator",
-      "projectPath": "D:\\Work\\Customers\\IOT\\IoTnxt.DigiTwin.Simulator\\IoTnxt.DigiTwin.Simulator\\IoTnxt.DigiTwin.Simulator.csproj",
+      "projectPath": "D:\\Work\\Source Code\\IoTnxt.DigiTwin.Simulator\\IoTnxt.DigiTwin.Simulator\\IoTnxt.DigiTwin.Simulator.csproj",
       "packagesPath": "C:\\Users\\JayJay\\.nuget\\packages\\",
-      "outputPath": "D:\\Work\\Customers\\IOT\\IoTnxt.DigiTwin.Simulator\\IoTnxt.DigiTwin.Simulator\\obj\\",
+      "outputPath": "D:\\Work\\Source Code\\IoTnxt.DigiTwin.Simulator\\IoTnxt.DigiTwin.Simulator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

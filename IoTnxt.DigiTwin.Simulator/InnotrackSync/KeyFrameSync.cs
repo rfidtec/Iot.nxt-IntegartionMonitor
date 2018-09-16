@@ -12,11 +12,11 @@ using DALX.Core;
 
 namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
 {
-    public class KeyFrame : IoTBase
+    public class KeyFrameSync : IoTBase
     {
         List<Device> DeviceList { get; set; }
 
-        public KeyFrame(IRedGreenQueueAdapter redq) : base(redq)
+        public KeyFrameSync(IRedGreenQueueAdapter redq) : base(redq)
         {
             DeviceList = new List<Device>();
         }
@@ -25,24 +25,38 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
         /// Loop through all devices and send current tag list to IoT Cloud Platform
         /// </summary>
         /// <returns></returns>
-        public async Task SendKeyFrames()
+        public async Task StartKeyFrameMonitor()
         {
             DeviceList = new Device().Read();
-            while(true)
-            foreach (var device in DeviceList)
-            {
-                //Add all added tag of device
-                var Alltags = GetCurrentDeviceTagList(device);
-                var value = new JObject
+            while (true)
+                try
                 {
-                    ["CurrentTags"] = JToken.FromObject(Alltags)
-                };
-                lst.Add((device.DeviceName, device.DeviceName, value));
+                    foreach (var device in DeviceList)
+                    {
+                        //Add all added tag of device
+                        var Alltags = GetCurrentDeviceTagList(device);
+                        var value = new JObject
+                        {
+                            ["reset"] = JToken.FromObject(Alltags)
+                        };
+                        lst.Add((device.DeviceName, device.DeviceName, value));
 
-                await SendNotification();
+                        await SendNotification();
 
-                lst.Clear();
-            }
+                        lst.Clear();
+                        device.HostSeen = true;
+                        device.Update();
+                    }
+
+                        //Delay For Total Key Frame Interval Seconds
+                        if (IotGateway.KeyframeInterval > 0)
+                            await Task.Delay((int)(IotGateway.KeyframeInterval * 1000));
+                }
+                catch (Exception ex)
+                {
+
+                    throw;
+                }
         }
         /// <summary>
         /// Get all current taglist of device
