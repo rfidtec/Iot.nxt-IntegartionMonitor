@@ -1,0 +1,74 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net47</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Version>3.0.9</Version>
+    <PackageId>IoTnxt.DigiTwin.Simulator</PackageId>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Config\DapiRedGreenQueueProxyOptions.json" />
+    <None Remove="Config\DbHelperProviderOptions.json" />
+    <None Remove="Config\Gateway1SimulatorOptions.json" />
+    <None Remove="Config\logging.AppInsights.json" />
+    <None Remove="Config\logging.json" />
+    <None Remove="Config\logging.Log4Net.json" />
+    <None Remove="Config\LoggingGeneral.json" />
+    <None Remove="Config\RedGreenQueueAdapterOptions.json" />
+    <None Remove="Config\SimulatorOptions.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\DapiRedGreenQueueProxyOptions.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\Gateway1SimulatorOptions.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\RedGreenQueueAdapterOptions.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\SimulatorOptions.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\DbHelperProviderOptions.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\logging.AppInsights.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\logging.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\logging.Log4Net.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\LoggingGeneral.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="IoTnxt.Common.Bootstrap.DefaultWindowsBootstrap" Version="3.0.7" />
+    <PackageReference Include="IoTnxt.DAPI.RedGreenQueue" Version="6.1.0" />
+    <PackageReference Include="IoTnxt.Entity.API.Abstractions" Version="3.17.0" />
+    <PackageReference Include="IoTnxt.Gateway.API.Abstractions" Version="3.4.0" />
+    <PackageReference Include="IoTnxt.Security.API.Abstractions" Version="3.11.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DALC4NET">
+      <HintPath>..\..\..\..\Development\DALC4NET\DALC4NET\bin\Debug\DALC4NET.dll</HintPath>
+    </Reference>
+    <Reference Include="DALX">
+      <HintPath>..\..\..\..\Development\DALMapper\DALX\bin\Debug\DALX.dll</HintPath>
+    </Reference>
+    <Reference Include="Innotrack.DeviceManager">
+      <HintPath>..\..\..\..\Source Code\Innotrack Library\Innotrack.DeviceManager\bin\Debug\Innotrack.DeviceManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+  </ItemGroup>
+</Project>

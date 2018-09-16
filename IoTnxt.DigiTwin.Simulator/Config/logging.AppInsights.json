@@ -1,0 +1,12 @@
+{
+	"LoggingLogAppInsightsSettings":
+	{
+		"InstrumentationKey":"5f110eec-2b6d-4562-b87e-e7cfa9da0e6e",
+		"Enabled_Trace": true,
+        "Enabled_Debug": true,
+        "Enabled_Information": true,
+        "Enabled_Warning": true,
+        "Enabled_Error": true,
+        "Enabled_Critical": true
+	}
+}

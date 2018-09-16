@@ -1,0 +1,23 @@
+﻿{
+  "RedGreenQueueAdapterOptions": {
+    "Id": 1,
+    "ServiceTypeIdentifier": "Entity:API",
+    "ServiceIdentifier": "Default",
+    "InstanceName": "1",
+    "HeartbeatInterval": 15,
+    "GreenQueueOptions": {
+      "publicKeyAsXml": "<RSAKeyValue><Exponent>AQAB</Exponent><Modulus>w6GwwIJImw87wUxg7JUtOiolWVyDTzPsT6ANvvFW00JkKTOHVTI2gMguogO/aH9SAjHVm35N1M9RO5W9CAnqbCVoL0i3gM3K7Z5DZeI0jFx/8ho1iMtcrCfEdCBv32eN+/Yuao15NtTbQubqmMa4D4URXbuzeZvDPG4DwsVur263kk3uoSASyoqIKbVFbIulmViZFtXOTWrjgSAvCjULOPYXllZUDZTCq3Q9BuoHFCQXA+5ZAsm0PHKBKEZ/G852Fcy602PUcUpdvEJdiiQ80M3f+BhgZiJG2mDg0fySnVznQIb1tJ8ISOTqcPuzep4TYrm04p2wH8uR82bhVzNFFQ==</Modulus></RSAKeyValue>",
+      "Hosts": [ "greenqueue.qa.iotnxt.io" ],
+      "ConnectionNamePrefix": "Inno.IoTnxt.Simulator.Service.RedGreenQueueAdapterDefault",
+      "ServiceUniqueId": "Inno65IoTnxtSimulatorServiceRedGreenQueueAdapterDefault",
+      "SecretKey": "Inno65",
+      "TraceLogMessages": false
+    },
+    "LogSends": true,
+    "LogReceives": false,
+    "LogDispatches": false,
+    "ExclusivePrivateQueue": false,
+    "QueueDeclareDelay": 0,
+    "MaxDegreeOfParallelism": 4
+  }
+}

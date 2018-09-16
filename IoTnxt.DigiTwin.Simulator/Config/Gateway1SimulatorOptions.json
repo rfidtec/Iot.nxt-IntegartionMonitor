@@ -1,0 +1,182 @@
+﻿{
+  "Gateway1SimulatorOptions": {
+    "Active": true,
+    "Simulations": [
+      {
+        "Active": false,
+        "Heartbeat": true,
+        "IntervalSeconds": 5,
+        "ClientId": "t000000003",
+        "GatewayId": "VodaworldSim3",
+        "Secret": "123",
+        "Associate": true,
+        "Properties": [
+          {
+            "DeviceId": "DPS|1:DPS|1",
+            "Property": "Open",
+            "BoolSequence": [
+              true,
+              false,
+              true,
+              false
+            ]
+          }
+        ]
+      },
+      {
+        "Active": false,
+        "Heartbeat": true,
+        "IntervalSeconds": 15,
+        "ResetIntervalSeconds": 38,
+        "ClientId": "t000000003",
+        "GatewayId": "VodaworldSim",
+        "Secret": "123",
+        "Associate": true,
+        "Properties": [
+          {
+            "DeviceId": "InnotechReader1",
+            "Property": "ExitAntennaOne",
+            "RFIDSequence": [
+              {
+                "UnsoldItem{1-10}": {
+                  "rssi": -10
+                },
+                "SoldItem1": {
+                  "rssi": 10
+                },
+                "SoldItem2": {
+                  "rssi": 10
+                },
+                "UnregisteredItem1": {
+                  "rssi": 10
+                }
+              },
+              {
+                "empty": true
+              }
+            ]
+          },
+          {
+            "DeviceId": "InnotechReader1",
+            "Property": "ExitAntennaTwo",
+            "RFIDSequence": [
+              {
+                "UnsoldItem1": {
+                  "rssi": -10
+                },
+                "SoldItem1": {
+                  "rssi": -10
+                },
+                "SoldItem2": {
+                  "rssi": -10
+                },
+                "UnregisteredItem3": {
+                  "rssi": -10
+                }
+              },
+              {
+                "empty": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Active": true,
+        "Heartbeat": false,
+        "IntervalSeconds": 10,
+        "ResetIntervalSeconds": 30,
+        "ClientId": "t000000003",
+        "GatewayId": "Vodaworld1",
+        "Secret": "VW1",
+        "Associate": true,
+        "RfidRoamingTags": {
+          "A9004134150600812250A{1-5}": {
+            "Locations": [
+              "VodashopZone",
+              "KidZone",
+              "MainExitZone"
+            ],
+            "Random": false
+          }
+        },
+        "Properties": [
+          {
+            "DeviceId": "VodashopZone",
+            "Property": "VodashopZone",
+            "RfidSequence": [
+              {
+                "B9004134150600812250B{1-2}": {
+                  "rssi": 0
+                }
+              },
+              {
+                "B9004134150600812250B{1-3}": {
+                  "rssi": 1
+                }
+              },
+              {
+                "B9004134150600812250B{1-2}": {
+                  "rssi": 2
+                }
+              },
+              {
+                "B9004134150600812250B{1-2}": {
+                  "rssi": 3
+                }
+              }
+            ]
+          },
+          {
+            "DeviceId": "KidZone",
+            "Property": "KidZone",
+            "RfidSequence": [
+              {
+                "D9004134150600812250D001": {
+                  "rssi": -10,
+                  "Visible": false
+                },
+                "D9004134150600812250D002": {
+                  "rssi": -10,
+                  "Visible": false
+                }
+              },
+              {
+                "D9004134150600812250D001": {
+                  "rssi": -10,
+                  "Visible": false
+                }
+              }
+            ]
+          },
+          {
+            "DeviceId": "MainExitZone",
+            "Property": "MainExitZone",
+            "RfidSequence": [
+              {
+                "C9004134150600812250C{1-2}": {
+                  "rssi": 0
+                }
+              },
+              {
+                "C9004134150600812250C{1-2}": {
+                  "rssi": 1
+                }
+              },
+              {
+                "C9004134150600812250C{1-2}": {
+                  "rssi": 2
+                }
+              },
+              {
+                "C9004134150600812250C{1-2}": {
+                  "rssi": 3
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

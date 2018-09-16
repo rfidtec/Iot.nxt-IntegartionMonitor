@@ -1,0 +1,105 @@
+﻿{
+  "Gateway1SimulatorOptions": {
+    "Active": true,
+    "Simulations": [
+      {
+        "Active": true,
+        "Heartbeat": true,
+        "IntervalSeconds": 5,
+        "ClientId": "t000000070",
+        "GatewayId": "VodaworldSim3",
+        "Secret": "123",
+        "Associate": true,
+        "Properties": [
+          {
+            "DeviceId": "DPS|1:DPS|1",
+            "Property": "Open",
+            "BoolSequence": [ true, false, true, false ]
+          }
+        ]
+      },
+      {
+        "Active": true,
+        "Heartbeat": true,
+        "IntervalSeconds": 15,
+        "ResetIntervalSeconds": 38,
+        "ClientId": "t000000070",
+        "GatewayId": "VodaworldSim",
+        "Secret": "123",
+        "Associate": true,
+        "Properties": [
+          {
+            "DeviceId": "InnotechReader1",
+            "Property": "ExitAntennaOne",
+            "RFIDSequence": [
+              {
+                "UnsoldItem1": { "rssi": -10 },
+                "UnsoldItem2": { "rssi": -10 },
+                "SoldItem1": { "rssi": 10 },
+                "SoldItem2": { "rssi": 10 },
+                "UnregisteredItem1": { "rssi": 10 }
+              },
+              {
+                "empty": true
+              }
+            ]
+          },
+          {
+            "DeviceId": "InnotechReader1",
+            "Property": "ExitAntennaTwo",
+            "RFIDSequence": [
+              {
+                "UnsoldItem1": { "rssi":  -10 },
+                "SoldItem1": { "rssi": -10 },
+                "SoldItem2": { "rssi": -10 },
+                "UnregisteredItem3": { "rssi": -10 }
+              },
+              {
+                "empty": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Active": true,
+        "Heartbeat": false,
+        "IntervalSeconds": 5,
+        "ResetIntervalSeconds": 18,
+        "ClientId": "t000000070",
+        "GatewayId": "VodaworldSim2",
+        "Secret": "123",
+        "Associate": true,
+        "Properties": [
+          {
+            "DeviceId": "InnotechReader2",
+            "Property": "IsleAntenna1",
+            "RfidSequence": [
+              {
+                "InStockItem1": { "rssi": -30 },
+                "InStockItem2": { "rssi": -100 }
+              },
+              {
+                "InStockItem1": { "rssi": -90 }
+              }
+            ]
+          },
+          {
+            "DeviceId": "InnotechReader2",
+            "Property": "IsleAntenna2",
+            "RfidSequence": [
+              {
+                "InStockItem3": { "rssi": -10 },
+                "InStockItem4": { "rssi": -10 }
+              },
+              {
+                "InStockItem3": { "rssi": -10 }
+              }
+            ]
+          }
+        ]
+      }
+
+    ]
+  }
+}

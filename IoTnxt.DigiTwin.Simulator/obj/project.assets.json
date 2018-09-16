@@ -1,0 +1,3977 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.7": {
+      "DnsClient/1.0.7": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.3.0"
+        },
+        "compile": {
+          "lib/net45/DnsClient.dll": {}
+        },
+        "runtime": {
+          "lib/net45/DnsClient.dll": {}
+        }
+      },
+      "GeoAPI/1.7.5-pre009": {
+        "type": "package",
+        "compile": {
+          "lib/net45/GeoAPI.dll": {}
+        },
+        "runtime": {
+          "lib/net45/GeoAPI.dll": {}
+        }
+      },
+      "IoTnxt.Alarm.API.Abstractions/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Abstractions": "3.3.0",
+          "IoTnxt.DAPI.Abstractions": "5.0.0",
+          "IoTnxt.DAPI.Base": "5.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.AlarmApi.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.AlarmApi.Abstractions.dll": {}
+        }
+      },
+      "IoTnxt.Common.Abstractions/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Common.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Common.Abstractions.dll": {}
+        }
+      },
+      "IoTnxt.Common.Bootstrap/3.0.6": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Bootstrap.Abstractions": "3.0.6",
+          "IoTnxt.Common.Bootstrap.Console": "3.0.6",
+          "IoTnxt.Common.Helpers": "3.0.5",
+          "IoTnxt.Logging": "3.0.7",
+          "Microsoft.Extensions.Configuration": "2.0.2",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.2",
+          "Microsoft.Extensions.Configuration.Binder": "2.0.2",
+          "Microsoft.Extensions.Configuration.CommandLine": "2.0.2",
+          "Microsoft.Extensions.Configuration.EnvironmentVariables": "2.0.2",
+          "Microsoft.Extensions.Configuration.FileExtensions": "2.0.2",
+          "Microsoft.Extensions.Configuration.Ini": "2.0.2",
+          "Microsoft.Extensions.Configuration.Json": "2.0.2",
+          "Microsoft.Extensions.DependencyInjection": "2.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Logging": "2.0.2",
+          "Microsoft.Extensions.Logging.Configuration": "2.0.2",
+          "Microsoft.Extensions.Options": "2.0.2",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Common.Bootstrap.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Common.Bootstrap.dll": {}
+        }
+      },
+      "IoTnxt.Common.Bootstrap.Abstractions/3.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.0.2",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Logging": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Common.Bootstrap.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Common.Bootstrap.Abstractions.dll": {}
+        }
+      },
+      "IoTnxt.Common.Bootstrap.Console/3.0.6": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Bootstrap.Abstractions": "3.0.6",
+          "Microsoft.Extensions.Logging": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Common.Bootstrap.Console.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Common.Bootstrap.Console.dll": {}
+        }
+      },
+      "IoTnxt.Common.Bootstrap.DefaultWindowsBootstrap/3.0.7": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Abstractions": "4.0.0",
+          "IoTnxt.Common.Bootstrap": "3.0.6",
+          "IoTnxt.Common.Bootstrap.Abstractions": "3.0.6",
+          "IoTnxt.Common.Bootstrap.Console": "3.0.6",
+          "IoTnxt.Common.Bootstrap.WindowsService": "3.0.6",
+          "IoTnxt.Common.Extensions": "3.1.1",
+          "IoTnxt.Common.Helpers": "4.1.0",
+          "IoTnxt.Common.UniqueId.Windows": "3.0.5",
+          "IoTnxt.Logging": "3.0.7",
+          "IoTnxt.Logging.Abstractions": "3.0.7",
+          "IoTnxt.Logging.AppInsights": "3.0.7",
+          "IoTnxt.Logging.File": "3.0.7",
+          "IoTnxt.Logging.Log4Net": "3.0.7",
+          "Microsoft.Extensions.Configuration": "2.0.2",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.2",
+          "Microsoft.Extensions.Configuration.Binder": "2.0.2",
+          "Microsoft.Extensions.Logging": "2.0.2",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.2",
+          "Microsoft.Extensions.Logging.Console": "2.0.2",
+          "Microsoft.Extensions.Logging.Debug": "2.0.2",
+          "Microsoft.Extensions.Options": "2.0.2",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "2.0.2"
+        },
+        "compile": {
+          "lib/net47/IoTnxt.Common.Bootstrap.DefaultWindowsBootstrap.dll": {}
+        },
+        "runtime": {
+          "lib/net47/IoTnxt.Common.Bootstrap.DefaultWindowsBootstrap.dll": {}
+        }
+      },
+      "IoTnxt.Common.Bootstrap.WindowsService/3.0.6": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Bootstrap.Abstractions": "3.0.6",
+          "IoTnxt.Logging.Abstractions": "3.0.7",
+          "Microsoft.Extensions.Configuration": "2.0.2",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.2",
+          "Microsoft.Extensions.Configuration.Binder": "2.0.2",
+          "Microsoft.Extensions.Logging": "2.0.2"
+        },
+        "frameworkAssemblies": [
+          "System.Configuration.Install",
+          "System.ServiceProcess"
+        ],
+        "compile": {
+          "lib/net47/IoTnxt.Common.Bootstrap.WindowsService.dll": {}
+        },
+        "runtime": {
+          "lib/net47/IoTnxt.Common.Bootstrap.WindowsService.dll": {}
+        }
+      },
+      "IoTnxt.Common.Extensions/3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Common.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Common.Extensions.dll": {}
+        }
+      },
+      "IoTnxt.Common.Extensions.Pack1/3.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.2",
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Common.Extensions.Pack1.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Common.Extensions.Pack1.dll": {}
+        }
+      },
+      "IoTnxt.Common.Helpers/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Abstractions": "4.0.0",
+          "Newtonsoft.Json": "11.0.2",
+          "System.Runtime.Caching": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Common.Helpers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Common.Helpers.dll": {}
+        }
+      },
+      "IoTnxt.Common.Linq.Dynamic/3.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.3",
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Common.Linq.Dynamic.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Common.Linq.Dynamic.dll": {}
+        }
+      },
+      "IoTnxt.Common.UniqueId.Windows/3.0.5": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Abstractions": "3.0.5",
+          "IoTnxt.Logging.Abstractions": "3.0.7",
+          "Microsoft.Extensions.Logging": "2.0.2"
+        },
+        "frameworkAssemblies": [
+          "System.Management"
+        ],
+        "compile": {
+          "lib/net47/IoTnxt.Common.UniqueId.Windows.dll": {}
+        },
+        "runtime": {
+          "lib/net47/IoTnxt.Common.UniqueId.Windows.dll": {}
+        }
+      },
+      "IoTnxt.DAPI.Abstractions/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Abstractions": "4.0.0",
+          "IoTnxt.RedGreenQueue.Abstractions": "4.1.1",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.DAPI.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.DAPI.Abstractions.dll": {}
+        }
+      },
+      "IoTnxt.DAPI.Base/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Abstractions": "4.0.0",
+          "IoTnxt.Common.Bootstrap.Abstractions": "3.0.6",
+          "IoTnxt.Common.Helpers": "4.1.0",
+          "IoTnxt.DAPI.Abstractions": "6.1.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.1.1",
+          "Newtonsoft.Json": "11.0.2",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.DAPI.Base.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.DAPI.Base.dll": {}
+        }
+      },
+      "IoTnxt.DAPI.RedGreenQueue/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Bootstrap.Abstractions": "3.0.6",
+          "IoTnxt.Common.Extensions.Pack1": "3.0.1",
+          "IoTnxt.Common.Linq.Dynamic": "3.0.1",
+          "IoTnxt.DAPI.Abstractions": "6.1.0",
+          "IoTnxt.DAPI.Base": "6.1.0",
+          "IoTnxt.DAPI.RedGreenQueue.Abstractions": "6.1.0",
+          "IoTnxt.RedGreenQueue": "4.1.1",
+          "IoTnxt.RedGreenQueue.Factory": "4.1.1",
+          "System.Reactive.Linq": "4.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.DAPI.RedGreenQueue.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.DAPI.RedGreenQueue.dll": {}
+        }
+      },
+      "IoTnxt.DAPI.RedGreenQueue.Abstractions/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.DAPI.Abstractions": "6.1.0",
+          "IoTnxt.RedGreenQueue.Abstractions": "4.1.1",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.DAPI.RedGreenQueue.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.DAPI.RedGreenQueue.Abstractions.dll": {}
+        }
+      },
+      "IoTnxt.Data.DbHelper/3.1.6": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Extensions.Pack1": "3.0.1",
+          "IoTnxt.DAPI.Abstractions": "5.0.0",
+          "IoTnxt.DAPI.Base": "5.0.0",
+          "IoTnxt.Data.DbHelper.Abstractions": "3.0.1",
+          "System.Data.SqlClient": "4.4.3",
+          "System.Threading.Tasks.Dataflow": "4.8.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Data.DbHelper.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Data.DbHelper.dll": {}
+        }
+      },
+      "IoTnxt.Data.DbHelper.Abstractions/3.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "2.0.2",
+          "Microsoft.Extensions.Options": "2.0.2",
+          "System.Data.SqlClient": "4.4.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Data.DbHelper.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Data.DbHelper.Abstractions.dll": {}
+        }
+      },
+      "IoTnxt.Data.KeyValue/7.0.1": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Extensions.Pack1": "3.0.1",
+          "IoTnxt.Data.DbHelper": "3.1.6",
+          "IoTnxt.Data.KeyValue.Abstractions": "4.0.0",
+          "MongoDB.Bson": "2.6.1",
+          "MongoDB.Driver": "2.6.1",
+          "MongoDB.Driver.Core": "2.6.1",
+          "Newtonsoft.Json": "10.0.3",
+          "StackExchange.Redis": "1.2.6"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Data.KeyValue.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Data.KeyValue.dll": {}
+        }
+      },
+      "IoTnxt.Data.KeyValue.Abstractions/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Data.KeyValue.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Data.KeyValue.Abstractions.dll": {}
+        }
+      },
+      "IoTnxt.EndpointFunctions.Geospatial.Abstractions/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "1.15.0-pre063",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.EndpointFunctions.Geospatial.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.EndpointFunctions.Geospatial.Abstractions.dll": {}
+        }
+      },
+      "IoTnxt.Entity.API.Abstractions/3.17.0": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Alarm.API.Abstractions": "4.5.0",
+          "IoTnxt.Common.Extensions": "3.1.1",
+          "IoTnxt.DAPI.Abstractions": "6.1.0",
+          "IoTnxt.Data.KeyValue": "7.0.1",
+          "IoTnxt.EndpointFunctions.Geospatial.Abstractions": "3.0.0",
+          "IoTnxt.Security.API.Abstractions": "3.11.0",
+          "Newtonsoft.Json": "11.0.2",
+          "StackExchange.Redis": "1.2.6"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Entity.API.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Entity.API.Abstractions.dll": {}
+        }
+      },
+      "IoTnxt.Gateway.API.Abstractions/3.4.0": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.DAPI.Abstractions": "6.1.0",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Gateway.API.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Gateway.API.Abstractions.dll": {}
+        }
+      },
+      "IoTnxt.Logging/3.0.7": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Helpers": "3.0.5",
+          "IoTnxt.Logging.Abstractions": "3.0.7",
+          "Microsoft.Extensions.Logging": "2.0.2",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Logging.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Logging.dll": {}
+        }
+      },
+      "IoTnxt.Logging.Abstractions/3.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.0.2",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.2",
+          "Microsoft.Extensions.Configuration.Binder": "2.0.2",
+          "Microsoft.Extensions.Logging": "2.0.2",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.2",
+          "Microsoft.Extensions.Logging.Configuration": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Logging.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Logging.Abstractions.dll": {}
+        }
+      },
+      "IoTnxt.Logging.AppInsights/3.0.7": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Logging.Abstractions": "3.0.7",
+          "Microsoft.ApplicationInsights": "2.5.1",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.2",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.2",
+          "Microsoft.Extensions.Logging.Configuration": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Logging.AppInsights.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Logging.AppInsights.dll": {}
+        }
+      },
+      "IoTnxt.Logging.File/3.0.7": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Logging.Abstractions": "3.0.7",
+          "Microsoft.Extensions.Options": "2.0.2",
+          "System.Threading.Tasks.Dataflow": "4.8.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Logging.File.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Logging.File.dll": {}
+        }
+      },
+      "IoTnxt.Logging.Log4Net/3.0.7": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Logging.Abstractions": "3.0.7",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.2",
+          "Microsoft.Extensions.Logging.Configuration": "2.0.2",
+          "System.Threading.Tasks.Dataflow": "4.8.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Logging.Log4Net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Logging.Log4Net.dll": {}
+        }
+      },
+      "IoTnxt.RedGreenQueue/4.1.1": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Extensions": "3.1.1",
+          "IoTnxt.Logging": "3.0.7",
+          "IoTnxt.RedGreenQueue.Abstractions": "4.1.1",
+          "Microsoft.Extensions.Options": "2.0.2",
+          "Newtonsoft.Json": "10.0.3",
+          "RabbitMQ.Client": "5.1.0",
+          "System.Threading.Tasks.Dataflow": "4.9.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.RedGreenQueue.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.RedGreenQueue.dll": {}
+        }
+      },
+      "IoTnxt.RedGreenQueue.Abstractions/4.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Options": "2.0.2",
+          "RabbitMQ.Client": "5.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.RedGreenQueue.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.RedGreenQueue.Abstractions.dll": {}
+        }
+      },
+      "IoTnxt.RedGreenQueue.Factory/4.1.1": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.RedGreenQueue": "4.1.1",
+          "IoTnxt.RedGreenQueue.Abstractions": "4.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.RedGreenQueue.Factory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.RedGreenQueue.Factory.dll": {}
+        }
+      },
+      "IoTnxt.Security.API.Abstractions/3.11.0": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.DAPI.Abstractions": "6.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Security.API.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Security.API.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights/2.5.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "4.4.0"
+        },
+        "compile": {
+          "lib/net46/Microsoft.ApplicationInsights.dll": {}
+        },
+        "runtime": {
+          "lib/net46/Microsoft.ApplicationInsights.dll": {}
+        }
+      },
+      "Microsoft.Diagnostics.Tracing.EventSource.Redist/1.1.28": {
+        "type": "package",
+        "compile": {
+          "lib/net46/Microsoft.Diagnostics.Tracing.EventSource.dll": {}
+        },
+        "runtime": {
+          "lib/net46/Microsoft.Diagnostics.Tracing.EventSource.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Binder/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.CommandLine/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.CommandLine.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.CommandLine.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.EnvironmentVariables/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.EnvironmentVariables.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.EnvironmentVariables.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.FileExtensions/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.0.2",
+          "Microsoft.Extensions.FileProviders.Physical": "2.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Ini/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.0.2",
+          "Microsoft.Extensions.Configuration.FileExtensions": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Ini.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Ini.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Json/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.0.2",
+          "Microsoft.Extensions.Configuration.FileExtensions": "2.0.2",
+          "Newtonsoft.Json": "10.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Abstractions/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Physical/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.FileProviders.Abstractions": "2.0.1",
+          "Microsoft.Extensions.FileSystemGlobbing": "2.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll": {}
+        }
+      },
+      "Microsoft.Extensions.FileSystemGlobbing/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Logging/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.2",
+          "Microsoft.Extensions.Options": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/2.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Configuration/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "2.0.2",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Console/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.2",
+          "Microsoft.Extensions.Logging": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Console.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Console.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Debug/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Debug.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Debug.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Options/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Primitives": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.2",
+          "Microsoft.Extensions.Configuration.Binder": "2.0.2",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Options": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.4.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {}
+        }
+      },
+      "MongoDB.Bson/2.6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/MongoDB.Bson.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MongoDB.Bson.dll": {}
+        }
+      },
+      "MongoDB.Driver/2.6.1": {
+        "type": "package",
+        "dependencies": {
+          "MongoDB.Bson": "2.6.1",
+          "MongoDB.Driver.Core": "2.6.1"
+        },
+        "compile": {
+          "lib/net45/MongoDB.Driver.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MongoDB.Driver.dll": {}
+        }
+      },
+      "MongoDB.Driver.Core/2.6.1": {
+        "type": "package",
+        "dependencies": {
+          "DnsClient": "1.0.7",
+          "MongoDB.Bson": "2.6.1",
+          "System.Runtime.InteropServices.RuntimeInformation": "4.0.0"
+        },
+        "compile": {
+          "lib/net45/MongoDB.Driver.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MongoDB.Driver.Core.dll": {}
+        }
+      },
+      "NetTopologySuite/1.15.0-pre063": {
+        "type": "package",
+        "dependencies": {
+          "GeoAPI": "1.7.5-pre009"
+        },
+        "compile": {
+          "lib/net45/NetTopologySuite.dll": {}
+        },
+        "runtime": {
+          "lib/net45/NetTopologySuite.dll": {}
+        }
+      },
+      "Newtonsoft.Json/11.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "RabbitMQ.Client/5.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Diagnostics.Tracing.EventSource.Redist": "1.1.28"
+        },
+        "compile": {
+          "lib/net451/RabbitMQ.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net451/RabbitMQ.Client.dll": {}
+        }
+      },
+      "StackExchange.Redis/1.2.6": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.IO.Compression"
+        ],
+        "compile": {
+          "lib/net46/StackExchange.Redis.dll": {}
+        },
+        "runtime": {
+          "lib/net46/StackExchange.Redis.dll": {}
+        }
+      },
+      "System.Buffers/4.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.1/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/System.Buffers.dll": {}
+        }
+      },
+      "System.Data.SqlClient/4.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Data",
+          "System.Xml",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Data.SqlClient.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Data.SqlClient.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/net461/System.Data.SqlClient.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Diagnostics.DiagnosticSource/4.4.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net46/System.Diagnostics.DiagnosticSource.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Diagnostics.DiagnosticSource.dll": {}
+        }
+      },
+      "System.Reactive/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Threading.Tasks.Extensions": "4.5.1",
+          "System.ValueTuple": "4.4.0"
+        },
+        "frameworkAssemblies": [
+          "System.Windows",
+          "System.Windows.Forms",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net46/System.Reactive.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Reactive.dll": {}
+        }
+      },
+      "System.Reactive.Linq/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive": "4.1.0",
+          "System.Threading.Tasks.Extensions": "4.5.1"
+        },
+        "compile": {
+          "lib/net46/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Reactive.Linq.dll": {}
+        }
+      },
+      "System.Reflection/4.3.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net462/System.Reflection.dll": {}
+        },
+        "runtime": {
+          "lib/net462/System.Reflection.dll": {}
+        }
+      },
+      "System.Reflection.Emit/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "System.Runtime.Caching/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Runtime.Caching"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net45/_._": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
+      "System.Runtime.InteropServices.RuntimeInformation/4.0.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Threading.Tasks.Dataflow/4.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Threading.Tasks.Dataflow.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Threading.Tasks.Dataflow.dll": {}
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
+        }
+      },
+      "System.ValueTuple/4.4.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net47/System.ValueTuple.dll": {}
+        },
+        "runtime": {
+          "lib/net47/System.ValueTuple.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7/win7-x86": {
+      "DnsClient/1.0.7": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.3.0"
+        },
+        "compile": {
+          "lib/net45/DnsClient.dll": {}
+        },
+        "runtime": {
+          "lib/net45/DnsClient.dll": {}
+        }
+      },
+      "GeoAPI/1.7.5-pre009": {
+        "type": "package",
+        "compile": {
+          "lib/net45/GeoAPI.dll": {}
+        },
+        "runtime": {
+          "lib/net45/GeoAPI.dll": {}
+        }
+      },
+      "IoTnxt.Alarm.API.Abstractions/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Abstractions": "3.3.0",
+          "IoTnxt.DAPI.Abstractions": "5.0.0",
+          "IoTnxt.DAPI.Base": "5.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.AlarmApi.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.AlarmApi.Abstractions.dll": {}
+        }
+      },
+      "IoTnxt.Common.Abstractions/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Common.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Common.Abstractions.dll": {}
+        }
+      },
+      "IoTnxt.Common.Bootstrap/3.0.6": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Bootstrap.Abstractions": "3.0.6",
+          "IoTnxt.Common.Bootstrap.Console": "3.0.6",
+          "IoTnxt.Common.Helpers": "3.0.5",
+          "IoTnxt.Logging": "3.0.7",
+          "Microsoft.Extensions.Configuration": "2.0.2",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.2",
+          "Microsoft.Extensions.Configuration.Binder": "2.0.2",
+          "Microsoft.Extensions.Configuration.CommandLine": "2.0.2",
+          "Microsoft.Extensions.Configuration.EnvironmentVariables": "2.0.2",
+          "Microsoft.Extensions.Configuration.FileExtensions": "2.0.2",
+          "Microsoft.Extensions.Configuration.Ini": "2.0.2",
+          "Microsoft.Extensions.Configuration.Json": "2.0.2",
+          "Microsoft.Extensions.DependencyInjection": "2.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Logging": "2.0.2",
+          "Microsoft.Extensions.Logging.Configuration": "2.0.2",
+          "Microsoft.Extensions.Options": "2.0.2",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Common.Bootstrap.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Common.Bootstrap.dll": {}
+        }
+      },
+      "IoTnxt.Common.Bootstrap.Abstractions/3.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.0.2",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Logging": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Common.Bootstrap.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Common.Bootstrap.Abstractions.dll": {}
+        }
+      },
+      "IoTnxt.Common.Bootstrap.Console/3.0.6": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Bootstrap.Abstractions": "3.0.6",
+          "Microsoft.Extensions.Logging": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Common.Bootstrap.Console.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Common.Bootstrap.Console.dll": {}
+        }
+      },
+      "IoTnxt.Common.Bootstrap.DefaultWindowsBootstrap/3.0.7": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Abstractions": "4.0.0",
+          "IoTnxt.Common.Bootstrap": "3.0.6",
+          "IoTnxt.Common.Bootstrap.Abstractions": "3.0.6",
+          "IoTnxt.Common.Bootstrap.Console": "3.0.6",
+          "IoTnxt.Common.Bootstrap.WindowsService": "3.0.6",
+          "IoTnxt.Common.Extensions": "3.1.1",
+          "IoTnxt.Common.Helpers": "4.1.0",
+          "IoTnxt.Common.UniqueId.Windows": "3.0.5",
+          "IoTnxt.Logging": "3.0.7",
+          "IoTnxt.Logging.Abstractions": "3.0.7",
+          "IoTnxt.Logging.AppInsights": "3.0.7",
+          "IoTnxt.Logging.File": "3.0.7",
+          "IoTnxt.Logging.Log4Net": "3.0.7",
+          "Microsoft.Extensions.Configuration": "2.0.2",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.2",
+          "Microsoft.Extensions.Configuration.Binder": "2.0.2",
+          "Microsoft.Extensions.Logging": "2.0.2",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.2",
+          "Microsoft.Extensions.Logging.Console": "2.0.2",
+          "Microsoft.Extensions.Logging.Debug": "2.0.2",
+          "Microsoft.Extensions.Options": "2.0.2",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "2.0.2"
+        },
+        "compile": {
+          "lib/net47/IoTnxt.Common.Bootstrap.DefaultWindowsBootstrap.dll": {}
+        },
+        "runtime": {
+          "lib/net47/IoTnxt.Common.Bootstrap.DefaultWindowsBootstrap.dll": {}
+        }
+      },
+      "IoTnxt.Common.Bootstrap.WindowsService/3.0.6": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Bootstrap.Abstractions": "3.0.6",
+          "IoTnxt.Logging.Abstractions": "3.0.7",
+          "Microsoft.Extensions.Configuration": "2.0.2",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.2",
+          "Microsoft.Extensions.Configuration.Binder": "2.0.2",
+          "Microsoft.Extensions.Logging": "2.0.2"
+        },
+        "frameworkAssemblies": [
+          "System.Configuration.Install",
+          "System.ServiceProcess"
+        ],
+        "compile": {
+          "lib/net47/IoTnxt.Common.Bootstrap.WindowsService.dll": {}
+        },
+        "runtime": {
+          "lib/net47/IoTnxt.Common.Bootstrap.WindowsService.dll": {}
+        }
+      },
+      "IoTnxt.Common.Extensions/3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Common.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Common.Extensions.dll": {}
+        }
+      },
+      "IoTnxt.Common.Extensions.Pack1/3.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.2",
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Common.Extensions.Pack1.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Common.Extensions.Pack1.dll": {}
+        }
+      },
+      "IoTnxt.Common.Helpers/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Abstractions": "4.0.0",
+          "Newtonsoft.Json": "11.0.2",
+          "System.Runtime.Caching": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Common.Helpers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Common.Helpers.dll": {}
+        }
+      },
+      "IoTnxt.Common.Linq.Dynamic/3.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.3",
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Common.Linq.Dynamic.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Common.Linq.Dynamic.dll": {}
+        }
+      },
+      "IoTnxt.Common.UniqueId.Windows/3.0.5": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Abstractions": "3.0.5",
+          "IoTnxt.Logging.Abstractions": "3.0.7",
+          "Microsoft.Extensions.Logging": "2.0.2"
+        },
+        "frameworkAssemblies": [
+          "System.Management"
+        ],
+        "compile": {
+          "lib/net47/IoTnxt.Common.UniqueId.Windows.dll": {}
+        },
+        "runtime": {
+          "lib/net47/IoTnxt.Common.UniqueId.Windows.dll": {}
+        }
+      },
+      "IoTnxt.DAPI.Abstractions/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Abstractions": "4.0.0",
+          "IoTnxt.RedGreenQueue.Abstractions": "4.1.1",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.DAPI.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.DAPI.Abstractions.dll": {}
+        }
+      },
+      "IoTnxt.DAPI.Base/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Abstractions": "4.0.0",
+          "IoTnxt.Common.Bootstrap.Abstractions": "3.0.6",
+          "IoTnxt.Common.Helpers": "4.1.0",
+          "IoTnxt.DAPI.Abstractions": "6.1.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.1.1",
+          "Newtonsoft.Json": "11.0.2",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.DAPI.Base.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.DAPI.Base.dll": {}
+        }
+      },
+      "IoTnxt.DAPI.RedGreenQueue/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Bootstrap.Abstractions": "3.0.6",
+          "IoTnxt.Common.Extensions.Pack1": "3.0.1",
+          "IoTnxt.Common.Linq.Dynamic": "3.0.1",
+          "IoTnxt.DAPI.Abstractions": "6.1.0",
+          "IoTnxt.DAPI.Base": "6.1.0",
+          "IoTnxt.DAPI.RedGreenQueue.Abstractions": "6.1.0",
+          "IoTnxt.RedGreenQueue": "4.1.1",
+          "IoTnxt.RedGreenQueue.Factory": "4.1.1",
+          "System.Reactive.Linq": "4.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.DAPI.RedGreenQueue.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.DAPI.RedGreenQueue.dll": {}
+        }
+      },
+      "IoTnxt.DAPI.RedGreenQueue.Abstractions/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.DAPI.Abstractions": "6.1.0",
+          "IoTnxt.RedGreenQueue.Abstractions": "4.1.1",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.DAPI.RedGreenQueue.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.DAPI.RedGreenQueue.Abstractions.dll": {}
+        }
+      },
+      "IoTnxt.Data.DbHelper/3.1.6": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Extensions.Pack1": "3.0.1",
+          "IoTnxt.DAPI.Abstractions": "5.0.0",
+          "IoTnxt.DAPI.Base": "5.0.0",
+          "IoTnxt.Data.DbHelper.Abstractions": "3.0.1",
+          "System.Data.SqlClient": "4.4.3",
+          "System.Threading.Tasks.Dataflow": "4.8.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Data.DbHelper.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Data.DbHelper.dll": {}
+        }
+      },
+      "IoTnxt.Data.DbHelper.Abstractions/3.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "2.0.2",
+          "Microsoft.Extensions.Options": "2.0.2",
+          "System.Data.SqlClient": "4.4.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Data.DbHelper.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Data.DbHelper.Abstractions.dll": {}
+        }
+      },
+      "IoTnxt.Data.KeyValue/7.0.1": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Extensions.Pack1": "3.0.1",
+          "IoTnxt.Data.DbHelper": "3.1.6",
+          "IoTnxt.Data.KeyValue.Abstractions": "4.0.0",
+          "MongoDB.Bson": "2.6.1",
+          "MongoDB.Driver": "2.6.1",
+          "MongoDB.Driver.Core": "2.6.1",
+          "Newtonsoft.Json": "10.0.3",
+          "StackExchange.Redis": "1.2.6"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Data.KeyValue.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Data.KeyValue.dll": {}
+        }
+      },
+      "IoTnxt.Data.KeyValue.Abstractions/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Data.KeyValue.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Data.KeyValue.Abstractions.dll": {}
+        }
+      },
+      "IoTnxt.EndpointFunctions.Geospatial.Abstractions/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "1.15.0-pre063",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.EndpointFunctions.Geospatial.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.EndpointFunctions.Geospatial.Abstractions.dll": {}
+        }
+      },
+      "IoTnxt.Entity.API.Abstractions/3.17.0": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Alarm.API.Abstractions": "4.5.0",
+          "IoTnxt.Common.Extensions": "3.1.1",
+          "IoTnxt.DAPI.Abstractions": "6.1.0",
+          "IoTnxt.Data.KeyValue": "7.0.1",
+          "IoTnxt.EndpointFunctions.Geospatial.Abstractions": "3.0.0",
+          "IoTnxt.Security.API.Abstractions": "3.11.0",
+          "Newtonsoft.Json": "11.0.2",
+          "StackExchange.Redis": "1.2.6"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Entity.API.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Entity.API.Abstractions.dll": {}
+        }
+      },
+      "IoTnxt.Gateway.API.Abstractions/3.4.0": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.DAPI.Abstractions": "6.1.0",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Gateway.API.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Gateway.API.Abstractions.dll": {}
+        }
+      },
+      "IoTnxt.Logging/3.0.7": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Helpers": "3.0.5",
+          "IoTnxt.Logging.Abstractions": "3.0.7",
+          "Microsoft.Extensions.Logging": "2.0.2",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Logging.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Logging.dll": {}
+        }
+      },
+      "IoTnxt.Logging.Abstractions/3.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.0.2",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.2",
+          "Microsoft.Extensions.Configuration.Binder": "2.0.2",
+          "Microsoft.Extensions.Logging": "2.0.2",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.2",
+          "Microsoft.Extensions.Logging.Configuration": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Logging.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Logging.Abstractions.dll": {}
+        }
+      },
+      "IoTnxt.Logging.AppInsights/3.0.7": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Logging.Abstractions": "3.0.7",
+          "Microsoft.ApplicationInsights": "2.5.1",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.2",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.2",
+          "Microsoft.Extensions.Logging.Configuration": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Logging.AppInsights.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Logging.AppInsights.dll": {}
+        }
+      },
+      "IoTnxt.Logging.File/3.0.7": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Logging.Abstractions": "3.0.7",
+          "Microsoft.Extensions.Options": "2.0.2",
+          "System.Threading.Tasks.Dataflow": "4.8.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Logging.File.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Logging.File.dll": {}
+        }
+      },
+      "IoTnxt.Logging.Log4Net/3.0.7": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Logging.Abstractions": "3.0.7",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.2",
+          "Microsoft.Extensions.Logging.Configuration": "2.0.2",
+          "System.Threading.Tasks.Dataflow": "4.8.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Logging.Log4Net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Logging.Log4Net.dll": {}
+        }
+      },
+      "IoTnxt.RedGreenQueue/4.1.1": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.Common.Extensions": "3.1.1",
+          "IoTnxt.Logging": "3.0.7",
+          "IoTnxt.RedGreenQueue.Abstractions": "4.1.1",
+          "Microsoft.Extensions.Options": "2.0.2",
+          "Newtonsoft.Json": "10.0.3",
+          "RabbitMQ.Client": "5.1.0",
+          "System.Threading.Tasks.Dataflow": "4.9.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.RedGreenQueue.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.RedGreenQueue.dll": {}
+        }
+      },
+      "IoTnxt.RedGreenQueue.Abstractions/4.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Options": "2.0.2",
+          "RabbitMQ.Client": "5.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.RedGreenQueue.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.RedGreenQueue.Abstractions.dll": {}
+        }
+      },
+      "IoTnxt.RedGreenQueue.Factory/4.1.1": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.RedGreenQueue": "4.1.1",
+          "IoTnxt.RedGreenQueue.Abstractions": "4.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.RedGreenQueue.Factory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.RedGreenQueue.Factory.dll": {}
+        }
+      },
+      "IoTnxt.Security.API.Abstractions/3.11.0": {
+        "type": "package",
+        "dependencies": {
+          "IoTnxt.DAPI.Abstractions": "6.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IoTnxt.Security.API.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IoTnxt.Security.API.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights/2.5.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "4.4.0"
+        },
+        "compile": {
+          "lib/net46/Microsoft.ApplicationInsights.dll": {}
+        },
+        "runtime": {
+          "lib/net46/Microsoft.ApplicationInsights.dll": {}
+        }
+      },
+      "Microsoft.Diagnostics.Tracing.EventSource.Redist/1.1.28": {
+        "type": "package",
+        "compile": {
+          "lib/net46/Microsoft.Diagnostics.Tracing.EventSource.dll": {}
+        },
+        "runtime": {
+          "lib/net46/Microsoft.Diagnostics.Tracing.EventSource.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Binder/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.CommandLine/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.CommandLine.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.CommandLine.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.EnvironmentVariables/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.EnvironmentVariables.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.EnvironmentVariables.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.FileExtensions/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.0.2",
+          "Microsoft.Extensions.FileProviders.Physical": "2.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Ini/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.0.2",
+          "Microsoft.Extensions.Configuration.FileExtensions": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Ini.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Ini.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Json/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.0.2",
+          "Microsoft.Extensions.Configuration.FileExtensions": "2.0.2",
+          "Newtonsoft.Json": "10.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Abstractions/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Physical/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.FileProviders.Abstractions": "2.0.1",
+          "Microsoft.Extensions.FileSystemGlobbing": "2.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll": {}
+        }
+      },
+      "Microsoft.Extensions.FileSystemGlobbing/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Logging/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.2",
+          "Microsoft.Extensions.Options": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/2.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Configuration/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "2.0.2",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Console/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.2",
+          "Microsoft.Extensions.Logging": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Console.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Console.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Debug/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Debug.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Debug.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Options/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Primitives": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.2",
+          "Microsoft.Extensions.Configuration.Binder": "2.0.2",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Options": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.4.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {}
+        }
+      },
+      "MongoDB.Bson/2.6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/MongoDB.Bson.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MongoDB.Bson.dll": {}
+        }
+      },
+      "MongoDB.Driver/2.6.1": {
+        "type": "package",
+        "dependencies": {
+          "MongoDB.Bson": "2.6.1",
+          "MongoDB.Driver.Core": "2.6.1"
+        },
+        "compile": {
+          "lib/net45/MongoDB.Driver.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MongoDB.Driver.dll": {}
+        }
+      },
+      "MongoDB.Driver.Core/2.6.1": {
+        "type": "package",
+        "dependencies": {
+          "DnsClient": "1.0.7",
+          "MongoDB.Bson": "2.6.1",
+          "System.Runtime.InteropServices.RuntimeInformation": "4.0.0"
+        },
+        "compile": {
+          "lib/net45/MongoDB.Driver.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MongoDB.Driver.Core.dll": {}
+        }
+      },
+      "NetTopologySuite/1.15.0-pre063": {
+        "type": "package",
+        "dependencies": {
+          "GeoAPI": "1.7.5-pre009"
+        },
+        "compile": {
+          "lib/net45/NetTopologySuite.dll": {}
+        },
+        "runtime": {
+          "lib/net45/NetTopologySuite.dll": {}
+        }
+      },
+      "Newtonsoft.Json/11.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "RabbitMQ.Client/5.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Diagnostics.Tracing.EventSource.Redist": "1.1.28"
+        },
+        "compile": {
+          "lib/net451/RabbitMQ.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net451/RabbitMQ.Client.dll": {}
+        }
+      },
+      "StackExchange.Redis/1.2.6": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.IO.Compression"
+        ],
+        "compile": {
+          "lib/net46/StackExchange.Redis.dll": {}
+        },
+        "runtime": {
+          "lib/net46/StackExchange.Redis.dll": {}
+        }
+      },
+      "System.Buffers/4.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.1/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/System.Buffers.dll": {}
+        }
+      },
+      "System.Data.SqlClient/4.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Data",
+          "System.Xml",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Data.SqlClient.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Data.SqlClient.dll": {}
+        }
+      },
+      "System.Diagnostics.DiagnosticSource/4.4.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net46/System.Diagnostics.DiagnosticSource.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Diagnostics.DiagnosticSource.dll": {}
+        }
+      },
+      "System.Reactive/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Threading.Tasks.Extensions": "4.5.1",
+          "System.ValueTuple": "4.4.0"
+        },
+        "frameworkAssemblies": [
+          "System.Windows",
+          "System.Windows.Forms",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net46/System.Reactive.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Reactive.dll": {}
+        }
+      },
+      "System.Reactive.Linq/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive": "4.1.0",
+          "System.Threading.Tasks.Extensions": "4.5.1"
+        },
+        "compile": {
+          "lib/net46/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Reactive.Linq.dll": {}
+        }
+      },
+      "System.Reflection/4.3.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net462/System.Reflection.dll": {}
+        },
+        "runtime": {
+          "lib/net462/System.Reflection.dll": {}
+        }
+      },
+      "System.Reflection.Emit/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "System.Runtime.Caching/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Runtime.Caching"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
+      "System.Runtime.InteropServices.RuntimeInformation/4.0.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll": {}
+        }
+      },
+      "System.Threading.Tasks.Dataflow/4.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Threading.Tasks.Dataflow.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Threading.Tasks.Dataflow.dll": {}
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
+        }
+      },
+      "System.ValueTuple/4.4.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net47/System.ValueTuple.dll": {}
+        },
+        "runtime": {
+          "lib/net47/System.ValueTuple.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DnsClient/1.0.7": {
+      "sha512": "f3k5ufhUSL658fy/ac1mReqRIr0jGMyOJFvBqJ+7cASq01NIysYbrrRDjboYKAGrd0Y2mc1A749uQvT8vAA91A==",
+      "type": "package",
+      "path": "dnsclient/1.0.7",
+      "files": [
+        "dnsclient.1.0.7.nupkg.sha512",
+        "dnsclient.nuspec",
+        "lib/net45/DnsClient.dll",
+        "lib/net45/DnsClient.xml",
+        "lib/netstandard1.3/DnsClient.dll",
+        "lib/netstandard1.3/DnsClient.xml"
+      ]
+    },
+    "GeoAPI/1.7.5-pre009": {
+      "sha512": "UBiwkUqdgCXcTcoCQF7H6+nLV9mah2/wSZjdjhsLD3AJ2vE2hcc6C6Hj708+FLEmUZl7/SutANGAsWlAnBPoeA==",
+      "type": "package",
+      "path": "geoapi/1.7.5-pre009",
+      "files": [
+        "geoapi.1.7.5-pre009.nupkg.sha512",
+        "geoapi.nuspec",
+        "lib/net20/GeoAPI.dll",
+        "lib/net20/GeoAPI.pdb",
+        "lib/net20/GeoAPI.xml",
+        "lib/net35-cf/GeoAPI.dll",
+        "lib/net35-cf/GeoAPI.pdb",
+        "lib/net35-cf/GeoAPI.xml",
+        "lib/net35-client/GeoAPI.dll",
+        "lib/net35-client/GeoAPI.pdb",
+        "lib/net35-client/GeoAPI.xml",
+        "lib/net40-client/GeoAPI.dll",
+        "lib/net40-client/GeoAPI.pdb",
+        "lib/net40-client/GeoAPI.xml",
+        "lib/net403-client/GeoAPI.dll",
+        "lib/net403-client/GeoAPI.pdb",
+        "lib/net403-client/GeoAPI.xml",
+        "lib/net45/GeoAPI.dll",
+        "lib/net45/GeoAPI.pdb",
+        "lib/net45/GeoAPI.xml",
+        "lib/netstandard1.0/GeoAPI.deps.json",
+        "lib/netstandard1.0/GeoAPI.dll",
+        "lib/netstandard1.0/GeoAPI.pdb",
+        "lib/netstandard1.0/GeoAPI.xml",
+        "lib/netstandard2.0/GeoAPI.deps.json",
+        "lib/netstandard2.0/GeoAPI.dll",
+        "lib/netstandard2.0/GeoAPI.pdb",
+        "lib/netstandard2.0/GeoAPI.xml",
+        "lib/portable40-net40+sl5+win8+wp8+wpa81/GeoAPI.dll",
+        "lib/portable40-net40+sl5+win8+wp8+wpa81/GeoAPI.pdb",
+        "lib/portable40-net40+sl5+win8+wp8+wpa81/GeoAPI.xml",
+        "lib/portable40-net403+sl5+win8+wp8+wpa81/GeoAPI.dll",
+        "lib/portable40-net403+sl5+win8+wp8+wpa81/GeoAPI.pdb",
+        "lib/portable40-net403+sl5+win8+wp8+wpa81/GeoAPI.xml",
+        "src/Consts.cs",
+        "src/CoordinateSystems/AxisInfo.cs",
+        "src/CoordinateSystems/AxisOrientationEnum.cs",
+        "src/CoordinateSystems/DatumType.cs",
+        "src/CoordinateSystems/IAngularUnit.cs",
+        "src/CoordinateSystems/ICompoundCoordinateSystem.cs",
+        "src/CoordinateSystems/ICoordinateSystem.cs",
+        "src/CoordinateSystems/ICoordinateSystemAuthorityFactory.cs",
+        "src/CoordinateSystems/ICoordinateSystemFactory.cs",
+        "src/CoordinateSystems/IDatum.cs",
+        "src/CoordinateSystems/IEllipsoid.cs",
+        "src/CoordinateSystems/IFittedCoordinateSystem.cs",
+        "src/CoordinateSystems/IGeocentricCoordinateSystem.cs",
+        "src/CoordinateSystems/IGeodeticSpatialReference.cs",
+        "src/CoordinateSystems/IGeographicCoordinateSystem.cs",
+        "src/CoordinateSystems/IGeographicTransform.cs",
+        "src/CoordinateSystems/IHorizontalCoordinateSystem.cs",
+        "src/CoordinateSystems/IHorizontalDatum.cs",
+        "src/CoordinateSystems/IInfo.cs",
+        "src/CoordinateSystems/ILinearUnit.cs",
+        "src/CoordinateSystems/ILocalCoordinateSystem.cs",
+        "src/CoordinateSystems/ILocalDatum.cs",
+        "src/CoordinateSystems/IParameterInfo.cs",
+        "src/CoordinateSystems/IPrimeMeridian.cs",
+        "src/CoordinateSystems/IProjectedCoordinateSystem.cs",
+        "src/CoordinateSystems/IProjection.cs",
+        "src/CoordinateSystems/IUnit.cs",
+        "src/CoordinateSystems/IVerticalCoordinateSystem.cs",
+        "src/CoordinateSystems/IVerticalDatum.cs",
+        "src/CoordinateSystems/Parameter.cs",
+        "src/CoordinateSystems/ProjectionParameter.cs",
+        "src/CoordinateSystems/Transformations/DomainFlags.cs",
+        "src/CoordinateSystems/Transformations/ICoordinateTransformation.cs",
+        "src/CoordinateSystems/Transformations/ICoordinateTransformationFactory.cs",
+        "src/CoordinateSystems/Transformations/IMathTransform.cs",
+        "src/CoordinateSystems/Transformations/IMathTransformFactory.cs",
+        "src/CoordinateSystems/Transformations/TransformType.cs",
+        "src/CoordinateSystems/WGS84ConversionInfo.cs",
+        "src/DataStructures/Interval.cs",
+        "src/Geometries/Coordinate.cs",
+        "src/Geometries/Dimension.cs",
+        "src/Geometries/Envelope.cs",
+        "src/Geometries/IBoundable.cs",
+        "src/Geometries/ICoordinate.cs",
+        "src/Geometries/ICoordinateBuffer.cs",
+        "src/Geometries/ICoordinateFilter.cs",
+        "src/Geometries/ICoordinateSequence.cs",
+        "src/Geometries/ICoordinateSequenceFactory.cs",
+        "src/Geometries/ICoordinateSequenceFilter.cs",
+        "src/Geometries/ICurve.cs",
+        "src/Geometries/IEnvelope.cs",
+        "src/Geometries/IExpandable.cs",
+        "src/Geometries/IGeometry.cs",
+        "src/Geometries/IGeometryCollection.cs",
+        "src/Geometries/IGeometryComponentFilter.cs",
+        "src/Geometries/IGeometryFactory.cs",
+        "src/Geometries/IGeometryFilter.cs",
+        "src/Geometries/IIntersectable.cs",
+        "src/Geometries/ILineString.cs",
+        "src/Geometries/ILineal.cs",
+        "src/Geometries/ILinearRing.cs",
+        "src/Geometries/IMultiCurve.cs",
+        "src/Geometries/IMultiLineString.cs",
+        "src/Geometries/IMultiPoint.cs",
+        "src/Geometries/IMultiPolygon.cs",
+        "src/Geometries/IMultiSurface.cs",
+        "src/Geometries/IPoint.cs",
+        "src/Geometries/IPolygon.cs",
+        "src/Geometries/IPolygonal.cs",
+        "src/Geometries/IPrecisionModel.cs",
+        "src/Geometries/IPuntal.cs",
+        "src/Geometries/ISurface.cs",
+        "src/Geometries/IntersectionMatrix.cs",
+        "src/Geometries/Location.cs",
+        "src/Geometries/OgcGeometryType.cs",
+        "src/Geometries/Ordinate.cs",
+        "src/Geometries/Ordinates.cs",
+        "src/Geometries/OridinatesUtility.cs",
+        "src/Geometries/Prepared/IPreparedGeometry.cs",
+        "src/GeometryServiceProvider.cs",
+        "src/ICloneable.cs",
+        "src/ICoordinateSystemServices.cs",
+        "src/IGeometryServices.cs",
+        "src/IO/ByteOrder.cs",
+        "src/IO/GeometryType.cs",
+        "src/IO/IGeometryReader.cs",
+        "src/IO/IGeometryWriter.cs",
+        "src/IO/ParseException.cs",
+        "src/Operation/Buffer/BufferStyle.cs",
+        "src/Operation/Buffer/EndCapStyle.cs",
+        "src/Operation/Buffer/IBufferParameters.cs",
+        "src/Operation/Buffer/JoinStyle.cs",
+        "src/Properties/AssemblyInfo.cs",
+        "src/ValueParser.cs"
+      ]
+    },
+    "IoTnxt.Alarm.API.Abstractions/4.5.0": {
+      "sha512": "ICI2Nwr+2z9r+yjp8a6D0K9DyUCLdlWsexPayT8h8Fn1eSqYvfMQc5WjaQIqUvtp9uoHeTjMzf7k/s6ynXb20Q==",
+      "type": "package",
+      "path": "iotnxt.alarm.api.abstractions/4.5.0",
+      "files": [
+        "iotnxt.alarm.api.abstractions.4.5.0.nupkg.sha512",
+        "iotnxt.alarm.api.abstractions.nuspec",
+        "lib/netstandard2.0/IoTnxt.AlarmApi.Abstractions.dll"
+      ]
+    },
+    "IoTnxt.Common.Abstractions/4.0.0": {
+      "sha512": "JfF9mF9FdEg2QQNOH5dgmZ2LgNK//LRvjaTlSfOYG0IMIMU3mRGJUi8rjytUyLU5MODwIZ0og+xyzcfCpnfcMg==",
+      "type": "package",
+      "path": "iotnxt.common.abstractions/4.0.0",
+      "files": [
+        "iotnxt.common.abstractions.4.0.0.nupkg.sha512",
+        "iotnxt.common.abstractions.nuspec",
+        "lib/netstandard2.0/IoTnxt.Common.Abstractions.dll"
+      ]
+    },
+    "IoTnxt.Common.Bootstrap/3.0.6": {
+      "sha512": "hZWf9o4URjYppu5NKyo+Sse6aoervwDEdQb50NeiAt7tGblMhzn0Yrw18sAT408bxlOEvFRCuWwgrdFS5BjmsA==",
+      "type": "package",
+      "path": "iotnxt.common.bootstrap/3.0.6",
+      "files": [
+        "iotnxt.common.bootstrap.3.0.6.nupkg.sha512",
+        "iotnxt.common.bootstrap.nuspec",
+        "lib/netstandard2.0/IoTnxt.Common.Bootstrap.dll"
+      ]
+    },
+    "IoTnxt.Common.Bootstrap.Abstractions/3.0.6": {
+      "sha512": "/DBSAzj93W4dG4EtV2O6iE2St5faov3EIK+StwWU2TNj4qzxmI8D3j9t1dzbZU41QM6Gtft3sW1d/qXUPP2WKA==",
+      "type": "package",
+      "path": "iotnxt.common.bootstrap.abstractions/3.0.6",
+      "files": [
+        "iotnxt.common.bootstrap.abstractions.3.0.6.nupkg.sha512",
+        "iotnxt.common.bootstrap.abstractions.nuspec",
+        "lib/netstandard2.0/IoTnxt.Common.Bootstrap.Abstractions.dll"
+      ]
+    },
+    "IoTnxt.Common.Bootstrap.Console/3.0.6": {
+      "sha512": "wJfDANgOxNdWQ6IPkCU/DJ38gLxhFIMgADYR/Hvcny8jc3vgR9iC/vwAvJLQBEZ/H27u115+rlvwNrn70wtWXw==",
+      "type": "package",
+      "path": "iotnxt.common.bootstrap.console/3.0.6",
+      "files": [
+        "iotnxt.common.bootstrap.console.3.0.6.nupkg.sha512",
+        "iotnxt.common.bootstrap.console.nuspec",
+        "lib/netstandard2.0/IoTnxt.Common.Bootstrap.Console.dll"
+      ]
+    },
+    "IoTnxt.Common.Bootstrap.DefaultWindowsBootstrap/3.0.7": {
+      "sha512": "g8vXuNx42AyN4UhTqufhZl0XEJuC0xE7geHSn8pQzCydqHtLMroUdn8/bVGh5TmN13foqHix+RWqHC8hQqbKwA==",
+      "type": "package",
+      "path": "iotnxt.common.bootstrap.defaultwindowsbootstrap/3.0.7",
+      "files": [
+        "iotnxt.common.bootstrap.defaultwindowsbootstrap.3.0.7.nupkg.sha512",
+        "iotnxt.common.bootstrap.defaultwindowsbootstrap.nuspec",
+        "lib/net47/IoTnxt.Common.Bootstrap.DefaultWindowsBootstrap.dll"
+      ]
+    },
+    "IoTnxt.Common.Bootstrap.WindowsService/3.0.6": {
+      "sha512": "f8u8jSnZZRKJgfRs55pKrWGDavZdpYVJlVeGNyF/hUvr3qmFLcseb7XhwEFPN19qd5TDfEYMQfccdLBU9I2CZg==",
+      "type": "package",
+      "path": "iotnxt.common.bootstrap.windowsservice/3.0.6",
+      "files": [
+        "iotnxt.common.bootstrap.windowsservice.3.0.6.nupkg.sha512",
+        "iotnxt.common.bootstrap.windowsservice.nuspec",
+        "lib/net47/IoTnxt.Common.Bootstrap.WindowsService.dll"
+      ]
+    },
+    "IoTnxt.Common.Extensions/3.1.1": {
+      "sha512": "XWrT8RlOTre3DTA4UKs1zgSvXe6mXLGrZiPHM7IuwrgxiWIpD/FAKKvKAzor2+v+RcSVxWIXWhgsQ2J/P+uz2g==",
+      "type": "package",
+      "path": "iotnxt.common.extensions/3.1.1",
+      "files": [
+        "iotnxt.common.extensions.3.1.1.nupkg.sha512",
+        "iotnxt.common.extensions.nuspec",
+        "lib/netstandard2.0/IoTnxt.Common.Extensions.dll"
+      ]
+    },
+    "IoTnxt.Common.Extensions.Pack1/3.0.1": {
+      "sha512": "IpJBI5gM5hY1MGWwFBje6jUhDFMr+Cge57far9tL9X2XL6MANNKfbiPQzz1fkQNafIm+b8aBfAZ+PPjKsVP0Ng==",
+      "type": "package",
+      "path": "iotnxt.common.extensions.pack1/3.0.1",
+      "files": [
+        "iotnxt.common.extensions.pack1.3.0.1.nupkg.sha512",
+        "iotnxt.common.extensions.pack1.nuspec",
+        "lib/netstandard2.0/IoTnxt.Common.Extensions.Pack1.dll",
+        "lib/netstandard2.0/IoTnxt.Common.Extensions.Pack1.xml"
+      ]
+    },
+    "IoTnxt.Common.Helpers/4.1.0": {
+      "sha512": "SLF+6/JY1crEDRBOy5zQ3GdHQtslHopmMS3i8Me7fZIKRoTYNtzAHBW4eQ1PEHW6n+uk/xgOUx1FUyNTT+H2UQ==",
+      "type": "package",
+      "path": "iotnxt.common.helpers/4.1.0",
+      "files": [
+        "iotnxt.common.helpers.4.1.0.nupkg.sha512",
+        "iotnxt.common.helpers.nuspec",
+        "lib/netstandard2.0/IoTnxt.Common.Helpers.dll"
+      ]
+    },
+    "IoTnxt.Common.Linq.Dynamic/3.0.1": {
+      "sha512": "8GH0Ro2ZAwMM23fR4WxIn08b+b6tBcTY8bSRnKDo3vJve2pn4T58kCh7VvzT7wmk6H27ZacfvlMrCaHdWz9Vxw==",
+      "type": "package",
+      "path": "iotnxt.common.linq.dynamic/3.0.1",
+      "files": [
+        "iotnxt.common.linq.dynamic.3.0.1.nupkg.sha512",
+        "iotnxt.common.linq.dynamic.nuspec",
+        "lib/netstandard2.0/IoTnxt.Common.Linq.Dynamic.dll"
+      ]
+    },
+    "IoTnxt.Common.UniqueId.Windows/3.0.5": {
+      "sha512": "Adq8YatJZWwHdaA2eJfqQgaayG2MNs1qAIbPfqLtwNVEJPuUwctYjcFSqQWGBnbt53ggcOZQLkmZMPY46NatVA==",
+      "type": "package",
+      "path": "iotnxt.common.uniqueid.windows/3.0.5",
+      "files": [
+        "iotnxt.common.uniqueid.windows.3.0.5.nupkg.sha512",
+        "iotnxt.common.uniqueid.windows.nuspec",
+        "lib/net47/IoTnxt.Common.UniqueId.Windows.dll"
+      ]
+    },
+    "IoTnxt.DAPI.Abstractions/6.1.0": {
+      "sha512": "tCv+E7cdUAjqk0guK5ASM8bKPbP3lSwN2ctnQzg/ee0tSCFuQpzRNkkDyy2DzzDPv/fGhHcsUlsbvRpMaTyUlg==",
+      "type": "package",
+      "path": "iotnxt.dapi.abstractions/6.1.0",
+      "files": [
+        "iotnxt.dapi.abstractions.6.1.0.nupkg.sha512",
+        "iotnxt.dapi.abstractions.nuspec",
+        "lib/netstandard2.0/IoTnxt.DAPI.Abstractions.dll"
+      ]
+    },
+    "IoTnxt.DAPI.Base/6.1.0": {
+      "sha512": "FWrcVrqCXkFxPE8ipMsB4za6KCizRjtyg/Hoh72NZb57v6+8A7udTxkq357jNEUDjxrjwm4t/c3+fscpM/5SXA==",
+      "type": "package",
+      "path": "iotnxt.dapi.base/6.1.0",
+      "files": [
+        "iotnxt.dapi.base.6.1.0.nupkg.sha512",
+        "iotnxt.dapi.base.nuspec",
+        "lib/netstandard2.0/IoTnxt.DAPI.Base.dll"
+      ]
+    },
+    "IoTnxt.DAPI.RedGreenQueue/6.1.0": {
+      "sha512": "V3GAl+ufT7dHV/7a+1g0ktsqzYjGHQBPIw2WzlzuWB2jXIm2xK36deR83jT3JlLwiOh3gWyp0kHdmI2zx23ekg==",
+      "type": "package",
+      "path": "iotnxt.dapi.redgreenqueue/6.1.0",
+      "files": [
+        "iotnxt.dapi.redgreenqueue.6.1.0.nupkg.sha512",
+        "iotnxt.dapi.redgreenqueue.nuspec",
+        "lib/netstandard2.0/IoTnxt.DAPI.RedGreenQueue.dll"
+      ]
+    },
+    "IoTnxt.DAPI.RedGreenQueue.Abstractions/6.1.0": {
+      "sha512": "cgjMBfysfsM+hPOXTBcv6kHkvuJfnXZXnaRlV50kKgHVA7Yh3tkHHI6ikGr4xfHxUW4YL39J5bAt0U4emITpXw==",
+      "type": "package",
+      "path": "iotnxt.dapi.redgreenqueue.abstractions/6.1.0",
+      "files": [
+        "iotnxt.dapi.redgreenqueue.abstractions.6.1.0.nupkg.sha512",
+        "iotnxt.dapi.redgreenqueue.abstractions.nuspec",
+        "lib/netstandard2.0/IoTnxt.DAPI.RedGreenQueue.Abstractions.dll"
+      ]
+    },
+    "IoTnxt.Data.DbHelper/3.1.6": {
+      "sha512": "pBdvS+IyPGSasNDK6JF0NkVc+t2+PPbzgUwwIa68xJMneZUBsnC2ZxUJtGNQ1hRyz6QP8frNab2JqZe3mw9k5A==",
+      "type": "package",
+      "path": "iotnxt.data.dbhelper/3.1.6",
+      "files": [
+        "iotnxt.data.dbhelper.3.1.6.nupkg.sha512",
+        "iotnxt.data.dbhelper.nuspec",
+        "lib/netstandard2.0/IoTnxt.Data.DbHelper.dll"
+      ]
+    },
+    "IoTnxt.Data.DbHelper.Abstractions/3.0.1": {
+      "sha512": "wiZ0tJmMCMwuKE8LiuNV6fhA4m0uBYKf791E/OAAh/zExds0yAaDFL2JqKuIWnehWHdlc7xYTYF8ipIwUB+B/Q==",
+      "type": "package",
+      "path": "iotnxt.data.dbhelper.abstractions/3.0.1",
+      "files": [
+        "iotnxt.data.dbhelper.abstractions.3.0.1.nupkg.sha512",
+        "iotnxt.data.dbhelper.abstractions.nuspec",
+        "lib/netstandard2.0/IoTnxt.Data.DbHelper.Abstractions.dll"
+      ]
+    },
+    "IoTnxt.Data.KeyValue/7.0.1": {
+      "sha512": "BKlkeUDZbj4Ru/aEztHxl6tEJTzHrWHXZIHIdfZY3NCLSGan9c3bUj3gu2flISDec+ulojadyxGqcDUiMZLq1Q==",
+      "type": "package",
+      "path": "iotnxt.data.keyvalue/7.0.1",
+      "files": [
+        "iotnxt.data.keyvalue.7.0.1.nupkg.sha512",
+        "iotnxt.data.keyvalue.nuspec",
+        "lib/netstandard2.0/IoTnxt.Data.KeyValue.dll",
+        "lib/netstandard2.0/IoTnxt.Data.KeyValue.xml"
+      ]
+    },
+    "IoTnxt.Data.KeyValue.Abstractions/4.0.0": {
+      "sha512": "pCfH90Gf/LFOGVig2WK4w5Nkx2uhzjSh0zTRiyVsdiGXPuodvm0Ya3IwL9+4AGZP8DsubwfrGJb9O0Z/wQVZOQ==",
+      "type": "package",
+      "path": "iotnxt.data.keyvalue.abstractions/4.0.0",
+      "files": [
+        "iotnxt.data.keyvalue.abstractions.4.0.0.nupkg.sha512",
+        "iotnxt.data.keyvalue.abstractions.nuspec",
+        "lib/netstandard2.0/IoTnxt.Data.KeyValue.Abstractions.dll",
+        "lib/netstandard2.0/IoTnxt.Data.KeyValue.Abstractions.xml"
+      ]
+    },
+    "IoTnxt.EndpointFunctions.Geospatial.Abstractions/3.0.0": {
+      "sha512": "+i8UYOomqx5JINQH6/QvCXaasFrHhBujbEnxZLR6Lx6BM2OeozzLKBiD6srmFOhavGkvtVRLY0SBffZ4MBCTaw==",
+      "type": "package",
+      "path": "iotnxt.endpointfunctions.geospatial.abstractions/3.0.0",
+      "files": [
+        "iotnxt.endpointfunctions.geospatial.abstractions.3.0.0.nupkg.sha512",
+        "iotnxt.endpointfunctions.geospatial.abstractions.nuspec",
+        "lib/netstandard2.0/IoTnxt.EndpointFunctions.Geospatial.Abstractions.dll"
+      ]
+    },
+    "IoTnxt.Entity.API.Abstractions/3.17.0": {
+      "sha512": "1nEbp6ZpSCzA8NzQUTKdg1qLneuMb6OFGXWlkXMk3lC9EwkG6GGovEVEG1QJb4WBaPTRQAQXb8UKqo/dNuaLag==",
+      "type": "package",
+      "path": "iotnxt.entity.api.abstractions/3.17.0",
+      "files": [
+        "iotnxt.entity.api.abstractions.3.17.0.nupkg.sha512",
+        "iotnxt.entity.api.abstractions.nuspec",
+        "lib/netstandard2.0/IoTnxt.Entity.API.Abstractions.dll"
+      ]
+    },
+    "IoTnxt.Gateway.API.Abstractions/3.4.0": {
+      "sha512": "6RI76X3a94OcXrfEPBMKhpblKEmsAi+4Mgn7cvHbD/8pPtQt8Ft+zkQU0LUqml/gLCtZuxQoL1fBc8XAa+HDmg==",
+      "type": "package",
+      "path": "iotnxt.gateway.api.abstractions/3.4.0",
+      "files": [
+        "iotnxt.gateway.api.abstractions.3.4.0.nupkg.sha512",
+        "iotnxt.gateway.api.abstractions.nuspec",
+        "lib/netstandard2.0/IoTnxt.Gateway.API.Abstractions.dll"
+      ]
+    },
+    "IoTnxt.Logging/3.0.7": {
+      "sha512": "G+TInjHQtpYxyM997i9iTYNCScn7vXtXn1Eb09xm8XaCuIZQ3FF2ULF9Z6iwpmhTCNFW8xybqiW5rhqhabdh5w==",
+      "type": "package",
+      "path": "iotnxt.logging/3.0.7",
+      "files": [
+        "iotnxt.logging.3.0.7.nupkg.sha512",
+        "iotnxt.logging.nuspec",
+        "lib/netstandard2.0/IoTnxt.Logging.dll"
+      ]
+    },
+    "IoTnxt.Logging.Abstractions/3.0.7": {
+      "sha512": "rvzzf/rxeoPGte4pzsqMdmIaOmXnc/yOqol+mALFDhrztf2ZNUaNFHMpPajN9mqD1ATpr6li1fN6ddQA0LcNDQ==",
+      "type": "package",
+      "path": "iotnxt.logging.abstractions/3.0.7",
+      "files": [
+        "iotnxt.logging.abstractions.3.0.7.nupkg.sha512",
+        "iotnxt.logging.abstractions.nuspec",
+        "lib/netstandard2.0/IoTnxt.Logging.Abstractions.dll"
+      ]
+    },
+    "IoTnxt.Logging.AppInsights/3.0.7": {
+      "sha512": "XCrmo0cX8zRNv9RjB0rMwR7He4KdN5kxhJ5h8FYEl86p1bv5Lm2Bidw8L1L4Jydj7Fe0pSItCvD+HbMs8iAHbA==",
+      "type": "package",
+      "path": "iotnxt.logging.appinsights/3.0.7",
+      "files": [
+        "iotnxt.logging.appinsights.3.0.7.nupkg.sha512",
+        "iotnxt.logging.appinsights.nuspec",
+        "lib/netstandard2.0/IoTnxt.Logging.AppInsights.dll"
+      ]
+    },
+    "IoTnxt.Logging.File/3.0.7": {
+      "sha512": "E555qYGguQlopKSWU1fAwPz3XkTQzSSAwAqOm3AQUMQ34kD9r1bRy627o/x7aRzwhHNY+MkDUJo+fXETvDYeMA==",
+      "type": "package",
+      "path": "iotnxt.logging.file/3.0.7",
+      "files": [
+        "iotnxt.logging.file.3.0.7.nupkg.sha512",
+        "iotnxt.logging.file.nuspec",
+        "lib/netstandard2.0/IoTnxt.Logging.File.dll"
+      ]
+    },
+    "IoTnxt.Logging.Log4Net/3.0.7": {
+      "sha512": "enzFdmiP8hChGjsShg1zlz/wdoPHIBnRTfegoQua9bXXMfG+zAGXQUI1/iQDBPvUp/bQDRAbNpCz0DwQdG+M4Q==",
+      "type": "package",
+      "path": "iotnxt.logging.log4net/3.0.7",
+      "files": [
+        "iotnxt.logging.log4net.3.0.7.nupkg.sha512",
+        "iotnxt.logging.log4net.nuspec",
+        "lib/netstandard2.0/IoTnxt.Logging.Log4Net.dll"
+      ]
+    },
+    "IoTnxt.RedGreenQueue/4.1.1": {
+      "sha512": "lCaPzgmNQfquA6i7mw6q8naSmCDHfsI1PwRELa8As+v8/Mt5rCqT+emAomQmfrH0dYGGIt199wm5RhNbiqdt9Q==",
+      "type": "package",
+      "path": "iotnxt.redgreenqueue/4.1.1",
+      "files": [
+        "iotnxt.redgreenqueue.4.1.1.nupkg.sha512",
+        "iotnxt.redgreenqueue.nuspec",
+        "lib/netstandard2.0/IoTnxt.RedGreenQueue.dll"
+      ]
+    },
+    "IoTnxt.RedGreenQueue.Abstractions/4.1.1": {
+      "sha512": "nIQN2UMnBj2pSQHotUX17i/lAO1HjqAOeFH9cr26rfAEqe1lGgwrUOvMygY81S0Aso1csEpp5v5CSVlVn2cx8w==",
+      "type": "package",
+      "path": "iotnxt.redgreenqueue.abstractions/4.1.1",
+      "files": [
+        "iotnxt.redgreenqueue.abstractions.4.1.1.nupkg.sha512",
+        "iotnxt.redgreenqueue.abstractions.nuspec",
+        "lib/netstandard2.0/IoTnxt.RedGreenQueue.Abstractions.dll"
+      ]
+    },
+    "IoTnxt.RedGreenQueue.Factory/4.1.1": {
+      "sha512": "23qWiHj5E3SVsBK3tPq6TVVdksRJJijiTH15F6yxDj6iStoKdqrj2SCafJXH3S+kXsRza5CtisqA9qdWAENStQ==",
+      "type": "package",
+      "path": "iotnxt.redgreenqueue.factory/4.1.1",
+      "files": [
+        "iotnxt.redgreenqueue.factory.4.1.1.nupkg.sha512",
+        "iotnxt.redgreenqueue.factory.nuspec",
+        "lib/netstandard2.0/IoTnxt.RedGreenQueue.Factory.dll"
+      ]
+    },
+    "IoTnxt.Security.API.Abstractions/3.11.0": {
+      "sha512": "exSw3OJ5K3lv7GNhBm3MT700kIPQILerAGMGSCFbiDl2V5Lsw61rpEfdFZExUJ2NAY6c8ZprD2UXoEvQXWyEGw==",
+      "type": "package",
+      "path": "iotnxt.security.api.abstractions/3.11.0",
+      "files": [
+        "iotnxt.security.api.abstractions.3.11.0.nupkg.sha512",
+        "iotnxt.security.api.abstractions.nuspec",
+        "lib/netstandard2.0/IoTnxt.Security.API.Abstractions.dll"
+      ]
+    },
+    "Microsoft.ApplicationInsights/2.5.1": {
+      "sha512": "k9PtCkxAf5LIJo7i3VCt0R+EtvrZ+b/JPlN0GVtyOuNXZmqdCpmKxoQnOOSwReWDQNkvfF6HWvk75VCKXzf31g==",
+      "type": "package",
+      "path": "microsoft.applicationinsights/2.5.1",
+      "files": [
+        "lib/net45/Microsoft.ApplicationInsights.dll",
+        "lib/net46/Microsoft.ApplicationInsights.dll",
+        "lib/netstandard1.3/Microsoft.ApplicationInsights.dll",
+        "microsoft.applicationinsights.2.5.1.nupkg.sha512",
+        "microsoft.applicationinsights.nuspec"
+      ]
+    },
+    "Microsoft.Diagnostics.Tracing.EventSource.Redist/1.1.28": {
+      "sha512": "pn07chRDMdeug9sHbuNlAEZG8ZN3zKgE07IMJG7qPeoQlX6ve01rKTwknKCY/2CVacRP78ONzykV8am84gxc2g==",
+      "type": "package",
+      "path": "microsoft.diagnostics.tracing.eventsource.redist/1.1.28",
+      "files": [
+        "License-Stable.rtf",
+        "lib/net35/Microsoft.Diagnostics.Tracing.EventSource.XML",
+        "lib/net35/Microsoft.Diagnostics.Tracing.EventSource.dll",
+        "lib/net40/Microsoft.Diagnostics.Tracing.EventSource.XML",
+        "lib/net40/Microsoft.Diagnostics.Tracing.EventSource.dll",
+        "lib/net46/Microsoft.Diagnostics.Tracing.EventSource.XML",
+        "lib/net46/Microsoft.Diagnostics.Tracing.EventSource.dll",
+        "lib/portable-win8+wpa81/Microsoft.Diagnostics.Tracing.EventSource.XML",
+        "lib/portable-win8+wpa81/Microsoft.Diagnostics.Tracing.EventSource.dll",
+        "microsoft.diagnostics.tracing.eventsource.redist.1.1.28.nupkg.sha512",
+        "microsoft.diagnostics.tracing.eventsource.redist.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Configuration/2.0.2": {
+      "sha512": "n5HeFXiEFONntcwVFvEGY5dnB8VRqGD20RrdB9omX6dAAUSIV/sGwGhaLV5neOt/uvhc64VDmKjIjdffC6TX5A==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration/2.0.2",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.xml",
+        "microsoft.extensions.configuration.2.0.2.nupkg.sha512",
+        "microsoft.extensions.configuration.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Configuration.Abstractions/2.0.2": {
+      "sha512": "IoTZQU9aQOHr9zQbwozyzWq25eFbu/EcUZnPAMum6hh0Nl2RuM7ieziNLk3xk+c2g8YnnmxiA3VEvVaCFYCoTQ==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration.abstractions/2.0.2",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.xml",
+        "microsoft.extensions.configuration.abstractions.2.0.2.nupkg.sha512",
+        "microsoft.extensions.configuration.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Configuration.Binder/2.0.2": {
+      "sha512": "QO7j0yme7e5D3PJDwtJWLmsmGfDnc9OVMnt2UmXKTekcYKsEpKMUINULfXtMHHLoPymH8BZaqly/vWw97rQoWg==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration.binder/2.0.2",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.xml",
+        "microsoft.extensions.configuration.binder.2.0.2.nupkg.sha512",
+        "microsoft.extensions.configuration.binder.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Configuration.CommandLine/2.0.2": {
+      "sha512": "DTyBGC28gL/kaMk5F4XsbAHu6kaWFtfJrs77m2MYrQddMFSQUAPysV42i9QyJoVLWZGTps4vA0OB/SwarMpl7A==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration.commandline/2.0.2",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.CommandLine.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.CommandLine.xml",
+        "microsoft.extensions.configuration.commandline.2.0.2.nupkg.sha512",
+        "microsoft.extensions.configuration.commandline.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Configuration.EnvironmentVariables/2.0.2": {
+      "sha512": "NxoOopUxTVrogDtVQC9GF6Gk6f8JwwieArodu4ESVV07bB+jfMLnDwbKE/nWkAAu8ESnmX9s6wcD88kpfaD+zQ==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration.environmentvariables/2.0.2",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.EnvironmentVariables.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.EnvironmentVariables.xml",
+        "microsoft.extensions.configuration.environmentvariables.2.0.2.nupkg.sha512",
+        "microsoft.extensions.configuration.environmentvariables.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Configuration.FileExtensions/2.0.2": {
+      "sha512": "Axc13qp2kYf6VUmUBCMmRCGIc1CmWC5xQ33MD9D8nB9hYZrbjh6IqNj10fHDG1UE+4L24H8fSeYJCMyGfa+VZg==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration.fileextensions/2.0.2",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.xml",
+        "microsoft.extensions.configuration.fileextensions.2.0.2.nupkg.sha512",
+        "microsoft.extensions.configuration.fileextensions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Configuration.Ini/2.0.2": {
+      "sha512": "jA3v2sEDueM/JiuSzy5qlALbOXFWPCtwxqyHMBw1u3cV12zBbtMr1TJYJITUpAt2R37GOl9DUWU/jU/vYY6szg==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration.ini/2.0.2",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Ini.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Ini.xml",
+        "microsoft.extensions.configuration.ini.2.0.2.nupkg.sha512",
+        "microsoft.extensions.configuration.ini.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Configuration.Json/2.0.2": {
+      "sha512": "dbx6tQ0uWc/8GoH2HJUaRtPG0X8puyeZIbXatu4I0b+xV23oFv7FdegPRlYrwnuyinqhAD3G2uR1YtJG0BgiNg==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration.json/2.0.2",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.xml",
+        "microsoft.extensions.configuration.json.2.0.2.nupkg.sha512",
+        "microsoft.extensions.configuration.json.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection/2.0.0": {
+      "sha512": "wakg18gHYiUL1pcjjyZuYk6OvDpbSw1E7IWxm78TMepsr+gQ8W0tWzuRm0q/9RFblngwPwo15rrgZSUV51W5Iw==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection/2.0.0",
+      "files": [
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.xml",
+        "microsoft.extensions.dependencyinjection.2.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/2.0.0": {
+      "sha512": "eUdJ0Q/GfVyUJc0Jal5L1QZLceL78pvEM9wEKcHeI24KorqMDoVX+gWsMGLulQMfOwsUaPtkpQM2pFERTzSfSg==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/2.0.0",
+      "files": [
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.FileProviders.Abstractions/2.0.1": {
+      "sha512": "Gzc5yXvwIrKpdti0Ev4jC0inVrGZpI86eLZorMVRqAPXowR8JDRbcHjhmID2EqA4rdhL/IsfD42+4upKpHULDw==",
+      "type": "package",
+      "path": "microsoft.extensions.fileproviders.abstractions/2.0.1",
+      "files": [
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.xml",
+        "microsoft.extensions.fileproviders.abstractions.2.0.1.nupkg.sha512",
+        "microsoft.extensions.fileproviders.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.FileProviders.Physical/2.0.1": {
+      "sha512": "h+6bcXYlGldl7BUhnQKFxL2sMfeg9Gr/AuVexYOCYWmzDsc4iyUoy3NL7i2vkG209wd0ZXf+pZzRDwGPFhmlSw==",
+      "type": "package",
+      "path": "microsoft.extensions.fileproviders.physical/2.0.1",
+      "files": [
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.xml",
+        "microsoft.extensions.fileproviders.physical.2.0.1.nupkg.sha512",
+        "microsoft.extensions.fileproviders.physical.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.FileSystemGlobbing/2.0.1": {
+      "sha512": "q7KsG2kjwo2Ps0WdV7MFh64cQS0UHikV8qv4HQrUfWQyxim5vNmLzAbuduarS9QWbhRHTtUanx+ohyAQdumdnw==",
+      "type": "package",
+      "path": "microsoft.extensions.filesystemglobbing/2.0.1",
+      "files": [
+        "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
+        "microsoft.extensions.filesystemglobbing.2.0.1.nupkg.sha512",
+        "microsoft.extensions.filesystemglobbing.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Logging/2.0.2": {
+      "sha512": "OAfe/ju23vgXyqG/E9eDQ8lE5ydMV/IruvHqZ8MRi3T8DTpdL+kDGhDR/zqChnnTcalsZV31bB1OPn75RLHdqQ==",
+      "type": "package",
+      "path": "microsoft.extensions.logging/2.0.2",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.xml",
+        "microsoft.extensions.logging.2.0.2.nupkg.sha512",
+        "microsoft.extensions.logging.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Logging.Abstractions/2.1.1": {
+      "sha512": "QWFWKrdeoDSEr8nVJaBAVDMj24wnh9clGzDNmMdgHHRsOIwTUMeh4XljeZXJhIKPT00jWuzwEzn3uNxOtO4cYg==",
+      "type": "package",
+      "path": "microsoft.extensions.logging.abstractions/2.1.1",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.xml",
+        "microsoft.extensions.logging.abstractions.2.1.1.nupkg.sha512",
+        "microsoft.extensions.logging.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Logging.Configuration/2.0.2": {
+      "sha512": "twYiZLG4Yxmo9rMJbCq2tlmq4vHTnDMrneS5WSsx+TvDXP6K53Yg3ObVp4rRns6Lei/KGhn++rRO2KCgT7aJNA==",
+      "type": "package",
+      "path": "microsoft.extensions.logging.configuration/2.0.2",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.xml",
+        "microsoft.extensions.logging.configuration.2.0.2.nupkg.sha512",
+        "microsoft.extensions.logging.configuration.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Logging.Console/2.0.2": {
+      "sha512": "6Bfhw152LogpEk7Au9wyomeat68k9ZedcR7CX/IdYuTu34sG5jYgiK4m1Yt089ewOaslYAOgbDIzZI0MPvm8UQ==",
+      "type": "package",
+      "path": "microsoft.extensions.logging.console/2.0.2",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Console.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Console.xml",
+        "microsoft.extensions.logging.console.2.0.2.nupkg.sha512",
+        "microsoft.extensions.logging.console.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Logging.Debug/2.0.2": {
+      "sha512": "vKSQBCU/MASzFZRAIFjEcSBZzoVHsLv8uGLoC2X8DxZsFnhodm2YlrXvH+SltIcbPX/2kp7bGYYVfiIXP+lbPQ==",
+      "type": "package",
+      "path": "microsoft.extensions.logging.debug/2.0.2",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Debug.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Debug.xml",
+        "microsoft.extensions.logging.debug.2.0.2.nupkg.sha512",
+        "microsoft.extensions.logging.debug.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Options/2.0.2": {
+      "sha512": "OrIk/xmo5rsN4ufV32cjAQgM9uCoe6FaNijFX7Huwdg8T3z5L5r1kMBMwjROvDJZNiNkcfJ6iJi2JhCRi6GTfA==",
+      "type": "package",
+      "path": "microsoft.extensions.options/2.0.2",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Options.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Options.xml",
+        "microsoft.extensions.options.2.0.2.nupkg.sha512",
+        "microsoft.extensions.options.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Options.ConfigurationExtensions/2.0.2": {
+      "sha512": "xJ/KhbYXzTeVr58trRLcKExLsyrU2Y6peBIDWcbu5N/NlFdJvx1ZFZYB8fr2dhFG3Sn0AuvozvRzDEixgZZjKA==",
+      "type": "package",
+      "path": "microsoft.extensions.options.configurationextensions/2.0.2",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.xml",
+        "microsoft.extensions.options.configurationextensions.2.0.2.nupkg.sha512",
+        "microsoft.extensions.options.configurationextensions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Primitives/2.0.0": {
+      "sha512": "ukg53qNlqTrK38WA30b5qhw0GD7y3jdI9PHHASjdKyTcBHTevFM2o23tyk3pWCgAV27Bbkm+CPQ2zUe1ZOuYSA==",
+      "type": "package",
+      "path": "microsoft.extensions.primitives/2.0.0",
+      "files": [
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
+        "microsoft.extensions.primitives.2.0.0.nupkg.sha512",
+        "microsoft.extensions.primitives.nuspec"
+      ]
+    },
+    "MongoDB.Bson/2.6.1": {
+      "sha512": "pKSE9nG9OZX2uPjSI/AGWLGtOVINNiUbLpJYtFN/0oxWams0KbXOW6tFXAoL1iXuWUR3RxSz8u4DIhueCSm/Jg==",
+      "type": "package",
+      "path": "mongodb.bson/2.6.1",
+      "files": [
+        "License.rtf",
+        "lib/net45/MongoDB.Bson.dll",
+        "lib/net45/MongoDB.Bson.xml",
+        "lib/netstandard1.5/MongoDB.Bson.dll",
+        "lib/netstandard1.5/MongoDB.Bson.xml",
+        "mongodb.bson.2.6.1.nupkg.sha512",
+        "mongodb.bson.nuspec"
+      ]
+    },
+    "MongoDB.Driver/2.6.1": {
+      "sha512": "GwEKCHKjmgcsinLiLs7q54YoS4n03e+Ax/21j4PvppTYQAIpPusX/qdaU/gvZbpH97k/LmSGBN/5cdxN6mvFGw==",
+      "type": "package",
+      "path": "mongodb.driver/2.6.1",
+      "files": [
+        "License.rtf",
+        "lib/net45/MongoDB.Driver.dll",
+        "lib/net45/MongoDB.Driver.xml",
+        "lib/netstandard1.5/MongoDB.Driver.dll",
+        "lib/netstandard1.5/MongoDB.Driver.xml",
+        "mongodb.driver.2.6.1.nupkg.sha512",
+        "mongodb.driver.nuspec"
+      ]
+    },
+    "MongoDB.Driver.Core/2.6.1": {
+      "sha512": "lBjITp66o0OX5PHp5INxYTOz7RZa2GCPpKXUYZMo+1Cxy8TtIDiba6PmP6XB5KO+Zw/8AeofSh4ofj1uHxXuqQ==",
+      "type": "package",
+      "path": "mongodb.driver.core/2.6.1",
+      "files": [
+        "License.rtf",
+        "lib/net45/MongoDB.Driver.Core.dll",
+        "lib/net45/MongoDB.Driver.Core.xml",
+        "lib/netstandard1.5/MongoDB.Driver.Core.dll",
+        "lib/netstandard1.5/MongoDB.Driver.Core.xml",
+        "mongodb.driver.core.2.6.1.nupkg.sha512",
+        "mongodb.driver.core.nuspec"
+      ]
+    },
+    "NetTopologySuite/1.15.0-pre063": {
+      "sha512": "4D8dDFSumcOvSYZpq6RHxv5o7URrIMgEGhvmnnSeqEuSFLbHEf1veFwq5UwH7ZeSJpin+lSyDPIwjLuPaKFEJQ==",
+      "type": "package",
+      "path": "nettopologysuite/1.15.0-pre063",
+      "files": [
+        "lib/net35-client/NetTopologySuite.dll",
+        "lib/net35-client/NetTopologySuite.pdb",
+        "lib/net35-client/NetTopologySuite.xml",
+        "lib/net40-client/NetTopologySuite.dll",
+        "lib/net40-client/NetTopologySuite.pdb",
+        "lib/net40-client/NetTopologySuite.xml",
+        "lib/net403-client/NetTopologySuite.dll",
+        "lib/net403-client/NetTopologySuite.pdb",
+        "lib/net403-client/NetTopologySuite.xml",
+        "lib/net45/NetTopologySuite.dll",
+        "lib/net45/NetTopologySuite.pdb",
+        "lib/net45/NetTopologySuite.xml",
+        "lib/netstandard1.0/NetTopologySuite.deps.json",
+        "lib/netstandard1.0/NetTopologySuite.dll",
+        "lib/netstandard1.0/NetTopologySuite.pdb",
+        "lib/netstandard1.0/NetTopologySuite.xml",
+        "lib/netstandard1.3/NetTopologySuite.deps.json",
+        "lib/netstandard1.3/NetTopologySuite.dll",
+        "lib/netstandard1.3/NetTopologySuite.pdb",
+        "lib/netstandard1.3/NetTopologySuite.xml",
+        "lib/netstandard2.0/NetTopologySuite.deps.json",
+        "lib/netstandard2.0/NetTopologySuite.dll",
+        "lib/netstandard2.0/NetTopologySuite.pdb",
+        "lib/netstandard2.0/NetTopologySuite.xml",
+        "nettopologysuite.1.15.0-pre063.nupkg.sha512",
+        "nettopologysuite.nuspec",
+        "src/NetTopologySuite.Common.props",
+        "src/NetTopologySuite/Algorithm/Algorithm.xml",
+        "src/NetTopologySuite/Algorithm/Angle.cs",
+        "src/NetTopologySuite/Algorithm/Area.cs",
+        "src/NetTopologySuite/Algorithm/BoundaryNodeRule.cs",
+        "src/NetTopologySuite/Algorithm/CGAlgorithms.cs",
+        "src/NetTopologySuite/Algorithm/CGAlgorithms3D.cs",
+        "src/NetTopologySuite/Algorithm/CGAlgorithmsDD.cs",
+        "src/NetTopologySuite/Algorithm/Centroid.cs",
+        "src/NetTopologySuite/Algorithm/CentroidArea.cs",
+        "src/NetTopologySuite/Algorithm/CentroidLine.cs",
+        "src/NetTopologySuite/Algorithm/CentroidPoint.cs",
+        "src/NetTopologySuite/Algorithm/ConvexHull.cs",
+        "src/NetTopologySuite/Algorithm/Distance.cs",
+        "src/NetTopologySuite/Algorithm/Distance/DiscreteHausdorffDistance.cs",
+        "src/NetTopologySuite/Algorithm/Distance/Distance.xml",
+        "src/NetTopologySuite/Algorithm/Distance/DistanceToPoint.cs",
+        "src/NetTopologySuite/Algorithm/Distance/PointPairDistance.cs",
+        "src/NetTopologySuite/Algorithm/HCoordinate.cs",
+        "src/NetTopologySuite/Algorithm/IPointInAreaLocator.cs",
+        "src/NetTopologySuite/Algorithm/InteriorPointArea.cs",
+        "src/NetTopologySuite/Algorithm/InteriorPointLine.cs",
+        "src/NetTopologySuite/Algorithm/InteriorPointPoint.cs",
+        "src/NetTopologySuite/Algorithm/Length.cs",
+        "src/NetTopologySuite/Algorithm/LineIntersector.cs",
+        "src/NetTopologySuite/Algorithm/Locate/IPointOnGeometryLocator.cs",
+        "src/NetTopologySuite/Algorithm/Locate/IndexedPointInAreaLocator.cs",
+        "src/NetTopologySuite/Algorithm/Locate/Locate.xml",
+        "src/NetTopologySuite/Algorithm/Locate/SimplePointInAreaLocator.cs",
+        "src/NetTopologySuite/Algorithm/Match/AreaSimilarityMeasure.cs",
+        "src/NetTopologySuite/Algorithm/Match/HausdorffSimilarityMeasure.cs",
+        "src/NetTopologySuite/Algorithm/Match/ISimilarityMeasure.cs",
+        "src/NetTopologySuite/Algorithm/Match/Match.xml",
+        "src/NetTopologySuite/Algorithm/Match/SimilarityMeasureCombiner.cs",
+        "src/NetTopologySuite/Algorithm/MinimumBoundingCircle.cs",
+        "src/NetTopologySuite/Algorithm/MinimumDiameter.cs",
+        "src/NetTopologySuite/Algorithm/NotRepresentableException.cs",
+        "src/NetTopologySuite/Algorithm/Orientation.cs",
+        "src/NetTopologySuite/Algorithm/OrientationIndex.cs",
+        "src/NetTopologySuite/Algorithm/PointLocation.cs",
+        "src/NetTopologySuite/Algorithm/PointLocator.cs",
+        "src/NetTopologySuite/Algorithm/RayCrossingCounter.cs",
+        "src/NetTopologySuite/Algorithm/RectangleLineIntersector.cs",
+        "src/NetTopologySuite/Algorithm/RobustDeterminant.cs",
+        "src/NetTopologySuite/Algorithm/RobustLineIntersector.cs",
+        "src/NetTopologySuite/Consts.cs",
+        "src/NetTopologySuite/CoordinateSystems/CRSBase.cs",
+        "src/NetTopologySuite/CoordinateSystems/CRSType.cs",
+        "src/NetTopologySuite/CoordinateSystems/ICRSObject.cs",
+        "src/NetTopologySuite/CoordinateSystems/LinkedCRS.cs",
+        "src/NetTopologySuite/CoordinateSystems/NamedCRS.cs",
+        "src/NetTopologySuite/CoordinateSystems/Transformations/GeometryTransform.cs",
+        "src/NetTopologySuite/Densify/Densifier.cs",
+        "src/NetTopologySuite/Densify/DensifySummary.xml",
+        "src/NetTopologySuite/Dissolve/DissolveEdgeGraph.cs",
+        "src/NetTopologySuite/Dissolve/DissolveHalfEdge.cs",
+        "src/NetTopologySuite/Dissolve/LineDissolver.cs",
+        "src/NetTopologySuite/EdgeGraph/EdgeGraph.cs",
+        "src/NetTopologySuite/EdgeGraph/EdgeGraphBuilder.cs",
+        "src/NetTopologySuite/EdgeGraph/HalfEdge.cs",
+        "src/NetTopologySuite/EdgeGraph/MarkHalfEdge.cs",
+        "src/NetTopologySuite/Features/AttributesTable.cs",
+        "src/NetTopologySuite/Features/Feature.cs",
+        "src/NetTopologySuite/Features/FeatureCollection.cs",
+        "src/NetTopologySuite/Features/FeatureExtensions.cs",
+        "src/NetTopologySuite/Features/IAttributesTable.cs",
+        "src/NetTopologySuite/Features/IFeature.cs",
+        "src/NetTopologySuite/Geometries/CoordinateArrays.cs",
+        "src/NetTopologySuite/Geometries/CoordinateList.cs",
+        "src/NetTopologySuite/Geometries/CoordinateSequenceComparator.cs",
+        "src/NetTopologySuite/Geometries/CoordinateSequences.cs",
+        "src/NetTopologySuite/Geometries/DefaultCoordinateSequence.cs",
+        "src/NetTopologySuite/Geometries/DefaultCoordinateSequenceFactory.cs",
+        "src/NetTopologySuite/Geometries/Geometries.xml",
+        "src/NetTopologySuite/Geometries/Geometry.cs",
+        "src/NetTopologySuite/Geometries/GeometryCollection.cs",
+        "src/NetTopologySuite/Geometries/GeometryCollectionEnumerator.cs",
+        "src/NetTopologySuite/Geometries/GeometryComponentFilter.cs",
+        "src/NetTopologySuite/Geometries/GeometryFactory.cs",
+        "src/NetTopologySuite/Geometries/Implementation/CoordinateArraySequence.cs",
+        "src/NetTopologySuite/Geometries/Implementation/CoordinateArraySequenceFactory.cs",
+        "src/NetTopologySuite/Geometries/Implementation/DotSpatialAffineCoordinateSequence.cs",
+        "src/NetTopologySuite/Geometries/Implementation/DotSpatialAffineCoordinateSequenceFactory.cs",
+        "src/NetTopologySuite/Geometries/Implementation/PackedCoordinateSequence.cs",
+        "src/NetTopologySuite/Geometries/Implementation/PackedCoordinateSequenceFactory.cs",
+        "src/NetTopologySuite/Geometries/LineSegment.cs",
+        "src/NetTopologySuite/Geometries/LineString.cs",
+        "src/NetTopologySuite/Geometries/LinearRing.cs",
+        "src/NetTopologySuite/Geometries/MultiLineString.cs",
+        "src/NetTopologySuite/Geometries/MultiPoint.cs",
+        "src/NetTopologySuite/Geometries/MultiPolygon.cs",
+        "src/NetTopologySuite/Geometries/OctogonalEnvelope.cs",
+        "src/NetTopologySuite/Geometries/OgcCompliantGeometryFactory.cs",
+        "src/NetTopologySuite/Geometries/Point.cs",
+        "src/NetTopologySuite/Geometries/Polygon.cs",
+        "src/NetTopologySuite/Geometries/PrecisionModel.cs",
+        "src/NetTopologySuite/Geometries/Prepared/AbstractPreparedPolygonContains.cs",
+        "src/NetTopologySuite/Geometries/Prepared/BasicPreparedGeometry.cs",
+        "src/NetTopologySuite/Geometries/Prepared/PreparedGeometryFactory.cs",
+        "src/NetTopologySuite/Geometries/Prepared/PreparedLineString.cs",
+        "src/NetTopologySuite/Geometries/Prepared/PreparedLineStringIntersects.cs",
+        "src/NetTopologySuite/Geometries/Prepared/PreparedPoint.cs",
+        "src/NetTopologySuite/Geometries/Prepared/PreparedPolygon.cs",
+        "src/NetTopologySuite/Geometries/Prepared/PreparedPolygonContains.cs",
+        "src/NetTopologySuite/Geometries/Prepared/PreparedPolygonContainsProperly.cs",
+        "src/NetTopologySuite/Geometries/Prepared/PreparedPolygonCovers.cs",
+        "src/NetTopologySuite/Geometries/Prepared/PreparedPolygonIntersects.cs",
+        "src/NetTopologySuite/Geometries/Prepared/PreparedPolygonPredicate.cs",
+        "src/NetTopologySuite/Geometries/TopologyException.cs",
+        "src/NetTopologySuite/Geometries/Triangle.cs",
+        "src/NetTopologySuite/Geometries/Utilities/AffineTransformation.cs",
+        "src/NetTopologySuite/Geometries/Utilities/AffineTransformationBuilder.cs",
+        "src/NetTopologySuite/Geometries/Utilities/AffineTransformationFactory.cs",
+        "src/NetTopologySuite/Geometries/Utilities/ComponentGeometryExtractor.cs",
+        "src/NetTopologySuite/Geometries/Utilities/GeometryCollectionMapper.cs",
+        "src/NetTopologySuite/Geometries/Utilities/GeometryCombiner.cs",
+        "src/NetTopologySuite/Geometries/Utilities/GeometryEditor.cs",
+        "src/NetTopologySuite/Geometries/Utilities/GeometryExtracter.cs",
+        "src/NetTopologySuite/Geometries/Utilities/GeometryMapper.cs",
+        "src/NetTopologySuite/Geometries/Utilities/GeometryTransformer.cs",
+        "src/NetTopologySuite/Geometries/Utilities/LineStringExtracter.cs",
+        "src/NetTopologySuite/Geometries/Utilities/LinearComponentExtracter.cs",
+        "src/NetTopologySuite/Geometries/Utilities/Matrix.cs",
+        "src/NetTopologySuite/Geometries/Utilities/NoninvertibleTransformationException.cs",
+        "src/NetTopologySuite/Geometries/Utilities/PointExtracter.cs",
+        "src/NetTopologySuite/Geometries/Utilities/PolygonExtracter.cs",
+        "src/NetTopologySuite/Geometries/Utilities/ShortCircuitedGeometryVisitor.cs",
+        "src/NetTopologySuite/Geometries/Utilities/SineStarFactory.cs",
+        "src/NetTopologySuite/GeometriesGraph/Depth.cs",
+        "src/NetTopologySuite/GeometriesGraph/DirectedEdge.cs",
+        "src/NetTopologySuite/GeometriesGraph/DirectedEdgeStar.cs",
+        "src/NetTopologySuite/GeometriesGraph/Edge.cs",
+        "src/NetTopologySuite/GeometriesGraph/EdgeEnd.cs",
+        "src/NetTopologySuite/GeometriesGraph/EdgeEndStar.cs",
+        "src/NetTopologySuite/GeometriesGraph/EdgeIntersection.cs",
+        "src/NetTopologySuite/GeometriesGraph/EdgeIntersectionList.cs",
+        "src/NetTopologySuite/GeometriesGraph/EdgeList.cs",
+        "src/NetTopologySuite/GeometriesGraph/EdgeNodingValidator.cs",
+        "src/NetTopologySuite/GeometriesGraph/EdgeRing.cs",
+        "src/NetTopologySuite/GeometriesGraph/GeometryGraph.cs",
+        "src/NetTopologySuite/GeometriesGraph/GraphComponent.cs",
+        "src/NetTopologySuite/GeometriesGraph/Index/EdgeSetIntersector.cs",
+        "src/NetTopologySuite/GeometriesGraph/Index/MonotoneChain.cs",
+        "src/NetTopologySuite/GeometriesGraph/Index/MonotoneChainEdge.cs",
+        "src/NetTopologySuite/GeometriesGraph/Index/MonotoneChainIndexer.cs",
+        "src/NetTopologySuite/GeometriesGraph/Index/SegmentIntersector.cs",
+        "src/NetTopologySuite/GeometriesGraph/Index/SimpleEdgeSetIntersector.cs",
+        "src/NetTopologySuite/GeometriesGraph/Index/SimpleMCSweepLineIntersector.cs",
+        "src/NetTopologySuite/GeometriesGraph/Index/SimpleSweepLineIntersector.cs",
+        "src/NetTopologySuite/GeometriesGraph/Index/SweepLineEvent.cs",
+        "src/NetTopologySuite/GeometriesGraph/Index/SweepLineSegment.cs",
+        "src/NetTopologySuite/GeometriesGraph/Label.cs",
+        "src/NetTopologySuite/GeometriesGraph/Node.cs",
+        "src/NetTopologySuite/GeometriesGraph/NodeFactory.cs",
+        "src/NetTopologySuite/GeometriesGraph/NodeMap.cs",
+        "src/NetTopologySuite/GeometriesGraph/PlanarGraph.cs",
+        "src/NetTopologySuite/GeometriesGraph/Position.cs",
+        "src/NetTopologySuite/GeometriesGraph/QuadrantOp.cs",
+        "src/NetTopologySuite/GeometriesGraph/TopologyLocation.cs",
+        "src/NetTopologySuite/IO/BEBinaryReader.cs",
+        "src/NetTopologySuite/IO/BEBinaryWriter.cs",
+        "src/NetTopologySuite/IO/GML2/GMLElements.cs",
+        "src/NetTopologySuite/IO/GML2/GMLReader.cs",
+        "src/NetTopologySuite/IO/GML2/GMLWriter.cs",
+        "src/NetTopologySuite/IO/KML/KMLWriter.cs",
+        "src/NetTopologySuite/IO/ParseException.cs",
+        "src/NetTopologySuite/IO/WKBGeometryTypes.cs",
+        "src/NetTopologySuite/IO/WKBHexFileReader.cs",
+        "src/NetTopologySuite/IO/WKBReader.cs",
+        "src/NetTopologySuite/IO/WKBWriter.cs",
+        "src/NetTopologySuite/IO/WKTFileReader.cs",
+        "src/NetTopologySuite/IO/WKTReader.cs",
+        "src/NetTopologySuite/IO/WKTWriter.cs",
+        "src/NetTopologySuite/Index/ArrayListVisitor.cs",
+        "src/NetTopologySuite/Index/Bintree/Bintree.cs",
+        "src/NetTopologySuite/Index/Bintree/Interval.cs",
+        "src/NetTopologySuite/Index/Bintree/Key.cs",
+        "src/NetTopologySuite/Index/Bintree/Node.cs",
+        "src/NetTopologySuite/Index/Bintree/NodeBase.cs",
+        "src/NetTopologySuite/Index/Bintree/Root.cs",
+        "src/NetTopologySuite/Index/Chain/MonotoneChain.cs",
+        "src/NetTopologySuite/Index/Chain/MonotoneChainBuilder.cs",
+        "src/NetTopologySuite/Index/Chain/MonotoneChainOverlapAction.cs",
+        "src/NetTopologySuite/Index/Chain/MonotoneChainSelectAction.cs",
+        "src/NetTopologySuite/Index/IIndexVisitor.cs",
+        "src/NetTopologySuite/Index/IItemVisitor.cs",
+        "src/NetTopologySuite/Index/ISpatialIndex.cs",
+        "src/NetTopologySuite/Index/IntervalRTree/IntervalRTreeBranchNode.cs",
+        "src/NetTopologySuite/Index/IntervalRTree/IntervalRTreeLeafNode.cs",
+        "src/NetTopologySuite/Index/IntervalRTree/IntervalRTreeNode.cs",
+        "src/NetTopologySuite/Index/IntervalRTree/SortedPackedIntervalRTree.cs",
+        "src/NetTopologySuite/Index/KdTree/IKdNodeVisitor.cs",
+        "src/NetTopologySuite/Index/KdTree/KdNode.cs",
+        "src/NetTopologySuite/Index/KdTree/KdTree.cs",
+        "src/NetTopologySuite/Index/KdTree/KdTreeExtensions.cs",
+        "src/NetTopologySuite/Index/Quadtree/DoubleBits.cs",
+        "src/NetTopologySuite/Index/Quadtree/IntervalSize.cs",
+        "src/NetTopologySuite/Index/Quadtree/Key.cs",
+        "src/NetTopologySuite/Index/Quadtree/Node.cs",
+        "src/NetTopologySuite/Index/Quadtree/NodeBase.cs",
+        "src/NetTopologySuite/Index/Quadtree/Quadtree.cs",
+        "src/NetTopologySuite/Index/Quadtree/Root.cs",
+        "src/NetTopologySuite/Index/Strtree/AbstractNode.cs",
+        "src/NetTopologySuite/Index/Strtree/AbstractSTRtree.cs",
+        "src/NetTopologySuite/Index/Strtree/BoundablePair.cs",
+        "src/NetTopologySuite/Index/Strtree/BoundablePairDistanceComparer.cs",
+        "src/NetTopologySuite/Index/Strtree/GeometryItemDistance.cs",
+        "src/NetTopologySuite/Index/Strtree/IBoundable.cs",
+        "src/NetTopologySuite/Index/Strtree/IItemDistance.cs",
+        "src/NetTopologySuite/Index/Strtree/Interval.cs",
+        "src/NetTopologySuite/Index/Strtree/ItemBoundable.cs",
+        "src/NetTopologySuite/Index/Strtree/SIRtree.cs",
+        "src/NetTopologySuite/Index/Strtree/STRtree.cs",
+        "src/NetTopologySuite/Index/Sweepline/ISweepLineOverlapAction.cs",
+        "src/NetTopologySuite/Index/Sweepline/SweepLineEvent.cs",
+        "src/NetTopologySuite/Index/Sweepline/SweepLineIndex.cs",
+        "src/NetTopologySuite/Index/Sweepline/SweepLineInterval.cs",
+        "src/NetTopologySuite/License.txt",
+        "src/NetTopologySuite/LinearReferencing/ExtractLineByLocation.cs",
+        "src/NetTopologySuite/LinearReferencing/LengthIndexOfPoint.cs",
+        "src/NetTopologySuite/LinearReferencing/LengthIndexedLine.cs",
+        "src/NetTopologySuite/LinearReferencing/LengthLocationMap.cs",
+        "src/NetTopologySuite/LinearReferencing/LinearGeometryBuilder.cs",
+        "src/NetTopologySuite/LinearReferencing/LinearIterator.cs",
+        "src/NetTopologySuite/LinearReferencing/LinearLocation.cs",
+        "src/NetTopologySuite/LinearReferencing/LocationIndexOfLine.cs",
+        "src/NetTopologySuite/LinearReferencing/LocationIndexOfPoint.cs",
+        "src/NetTopologySuite/LinearReferencing/LocationIndexedLine.cs",
+        "src/NetTopologySuite/Mathematics/DD.cs",
+        "src/NetTopologySuite/Mathematics/MathUtil.cs",
+        "src/NetTopologySuite/Mathematics/Matrix.cs",
+        "src/NetTopologySuite/Mathematics/Plane3D.cs",
+        "src/NetTopologySuite/Mathematics/Vector2D.cs",
+        "src/NetTopologySuite/Mathematics/Vector3D.cs",
+        "src/NetTopologySuite/Mathematics/VectorMath.cs",
+        "src/NetTopologySuite/NetTopologySuite.csproj",
+        "src/NetTopologySuite/NetTopologySuiteBootstrapper.cs",
+        "src/NetTopologySuite/Noding/BasicSegmentString.cs",
+        "src/NetTopologySuite/Noding/FastNodingValidator.cs",
+        "src/NetTopologySuite/Noding/FastSegmentSetIntersectionFinder.cs",
+        "src/NetTopologySuite/Noding/INodableSegmentString.cs",
+        "src/NetTopologySuite/Noding/INoder.cs",
+        "src/NetTopologySuite/Noding/ISegmentIntersector.cs",
+        "src/NetTopologySuite/Noding/ISegmentString.cs",
+        "src/NetTopologySuite/Noding/InteriorIntersectionFinder.cs",
+        "src/NetTopologySuite/Noding/InteriorIntersectionFinderAdder.cs",
+        "src/NetTopologySuite/Noding/IntersectionAdder.cs",
+        "src/NetTopologySuite/Noding/IntersectionFinderAdder.cs",
+        "src/NetTopologySuite/Noding/IteratedNoder.cs",
+        "src/NetTopologySuite/Noding/MCIndexNoder.cs",
+        "src/NetTopologySuite/Noding/MCIndexSegmentSetMutualIntersector.cs",
+        "src/NetTopologySuite/Noding/NodingValidator.cs",
+        "src/NetTopologySuite/Noding/Octant.cs",
+        "src/NetTopologySuite/Noding/OrientedCoordinateArray.cs",
+        "src/NetTopologySuite/Noding/ScaledNoder.cs",
+        "src/NetTopologySuite/Noding/SegmentIntersectionDetector.cs",
+        "src/NetTopologySuite/Noding/SegmentNode.cs",
+        "src/NetTopologySuite/Noding/SegmentNodeList.cs",
+        "src/NetTopologySuite/Noding/SegmentPointComparator.cs",
+        "src/NetTopologySuite/Noding/SegmentSetMutualIntersector.cs",
+        "src/NetTopologySuite/Noding/SegmentString.cs",
+        "src/NetTopologySuite/Noding/SegmentStringDissolver.cs",
+        "src/NetTopologySuite/Noding/SegmentStringUtil.cs",
+        "src/NetTopologySuite/Noding/SimpleNoder.cs",
+        "src/NetTopologySuite/Noding/SimpleSegmentSetMutualIntersector.cs",
+        "src/NetTopologySuite/Noding/SinglePassNoder.cs",
+        "src/NetTopologySuite/Noding/Snapround/GeometryNoder.cs",
+        "src/NetTopologySuite/Noding/Snapround/HotPixel.cs",
+        "src/NetTopologySuite/Noding/Snapround/MCIndexPointSnapper.cs",
+        "src/NetTopologySuite/Noding/Snapround/MCIndexSnapRounder.cs",
+        "src/NetTopologySuite/Noding/Snapround/SimpleSnapRounder.cs",
+        "src/NetTopologySuite/NtsGeometryServices.cs",
+        "src/NetTopologySuite/Operation/BoundaryOp.cs",
+        "src/NetTopologySuite/Operation/Buffer/BufferBuilder.cs",
+        "src/NetTopologySuite/Operation/Buffer/BufferInputLineSimplifier.cs",
+        "src/NetTopologySuite/Operation/Buffer/BufferOp.cs",
+        "src/NetTopologySuite/Operation/Buffer/BufferParameters.cs",
+        "src/NetTopologySuite/Operation/Buffer/BufferSubgraph.cs",
+        "src/NetTopologySuite/Operation/Buffer/OffsetCurveBuilder.cs",
+        "src/NetTopologySuite/Operation/Buffer/OffsetCurveSetBuilder.cs",
+        "src/NetTopologySuite/Operation/Buffer/OffsetCurveVertexList.cs",
+        "src/NetTopologySuite/Operation/Buffer/OffsetSegmentGenerator.cs",
+        "src/NetTopologySuite/Operation/Buffer/OffsetSegmentString.cs",
+        "src/NetTopologySuite/Operation/Buffer/OldOffsetCurveBuilder.cs",
+        "src/NetTopologySuite/Operation/Buffer/RightmostEdgeFinder.cs",
+        "src/NetTopologySuite/Operation/Buffer/SubgraphDepthLocater.cs",
+        "src/NetTopologySuite/Operation/Buffer/Validate/BufferCurveMaximumDistanceFinder.cs",
+        "src/NetTopologySuite/Operation/Buffer/Validate/BufferDistanceValidator.cs",
+        "src/NetTopologySuite/Operation/Buffer/Validate/BufferResultValidator.cs",
+        "src/NetTopologySuite/Operation/Buffer/Validate/DistanceToPointFinder.cs",
+        "src/NetTopologySuite/Operation/Buffer/Validate/PointPairDistance.cs",
+        "src/NetTopologySuite/Operation/Distance/ConnectedElementLocationFilter.cs",
+        "src/NetTopologySuite/Operation/Distance/ConnectedElementPointFilter.cs",
+        "src/NetTopologySuite/Operation/Distance/DistanceOp.cs",
+        "src/NetTopologySuite/Operation/Distance/FacetSequence.cs",
+        "src/NetTopologySuite/Operation/Distance/FacetSequenceTreeBuilder.cs",
+        "src/NetTopologySuite/Operation/Distance/GeometryLocation.cs",
+        "src/NetTopologySuite/Operation/Distance/IndexedFacedDistance.cs",
+        "src/NetTopologySuite/Operation/Distance3D/AxisPlaneCoordinateSequence.cs",
+        "src/NetTopologySuite/Operation/Distance3D/Distance3DOp.cs",
+        "src/NetTopologySuite/Operation/Distance3D/PlanarPolygon3D.cs",
+        "src/NetTopologySuite/Operation/GeometryGraphOperation.cs",
+        "src/NetTopologySuite/Operation/IsSimpleOp.cs",
+        "src/NetTopologySuite/Operation/Linemerge/EdgeString.cs",
+        "src/NetTopologySuite/Operation/Linemerge/LineMergeDirectedEdge.cs",
+        "src/NetTopologySuite/Operation/Linemerge/LineMergeEdge.cs",
+        "src/NetTopologySuite/Operation/Linemerge/LineMergeGraph.cs",
+        "src/NetTopologySuite/Operation/Linemerge/LineMerger.cs",
+        "src/NetTopologySuite/Operation/Linemerge/LineSequencer.cs",
+        "src/NetTopologySuite/Operation/Overlay/EdgeSetNoder.cs",
+        "src/NetTopologySuite/Operation/Overlay/LineBuilder.cs",
+        "src/NetTopologySuite/Operation/Overlay/MaximalEdgeRing.cs",
+        "src/NetTopologySuite/Operation/Overlay/MinimalEdgeRing.cs",
+        "src/NetTopologySuite/Operation/Overlay/OverlayNodeFactory.cs",
+        "src/NetTopologySuite/Operation/Overlay/OverlayOp.cs",
+        "src/NetTopologySuite/Operation/Overlay/PointBuilder.cs",
+        "src/NetTopologySuite/Operation/Overlay/PolygonBuilder.cs",
+        "src/NetTopologySuite/Operation/Overlay/Snap/GeometrySnapper.cs",
+        "src/NetTopologySuite/Operation/Overlay/Snap/LineStringSnapper.cs",
+        "src/NetTopologySuite/Operation/Overlay/Snap/SnapIfNeededOverlayOp.cs",
+        "src/NetTopologySuite/Operation/Overlay/Snap/SnapOverlayOp.cs",
+        "src/NetTopologySuite/Operation/Overlay/Validate/FuzzyPointLocator.cs",
+        "src/NetTopologySuite/Operation/Overlay/Validate/OffsetPointGenerator.cs",
+        "src/NetTopologySuite/Operation/Overlay/Validate/OverlayResultValidator.cs",
+        "src/NetTopologySuite/Operation/Polygonize/EdgeRing.cs",
+        "src/NetTopologySuite/Operation/Polygonize/PolygonizeDirectedEdge.cs",
+        "src/NetTopologySuite/Operation/Polygonize/PolygonizeEdge.cs",
+        "src/NetTopologySuite/Operation/Polygonize/PolygonizeGraph.cs",
+        "src/NetTopologySuite/Operation/Polygonize/Polygonizer.cs",
+        "src/NetTopologySuite/Operation/Predicate/RectangleContains.cs",
+        "src/NetTopologySuite/Operation/Predicate/RectangleIntersects.cs",
+        "src/NetTopologySuite/Operation/Predicate/SegmentIntersectionTester.cs",
+        "src/NetTopologySuite/Operation/Relate/EdgeEndBuilder.cs",
+        "src/NetTopologySuite/Operation/Relate/EdgeEndBundle.cs",
+        "src/NetTopologySuite/Operation/Relate/EdgeEndBundleStar.cs",
+        "src/NetTopologySuite/Operation/Relate/RelateComputer.cs",
+        "src/NetTopologySuite/Operation/Relate/RelateNode.cs",
+        "src/NetTopologySuite/Operation/Relate/RelateNodeFactory.cs",
+        "src/NetTopologySuite/Operation/Relate/RelateNodeGraph.cs",
+        "src/NetTopologySuite/Operation/Relate/RelateOp.cs",
+        "src/NetTopologySuite/Operation/Union/CascadedPolygonUnion.cs",
+        "src/NetTopologySuite/Operation/Union/PointGeometryUnion.cs",
+        "src/NetTopologySuite/Operation/Union/UnaryUnionOp.cs",
+        "src/NetTopologySuite/Operation/Union/UnionInteracting.cs",
+        "src/NetTopologySuite/Operation/Valid/ConnectedInteriorTester.cs",
+        "src/NetTopologySuite/Operation/Valid/ConsistentAreaTester.cs",
+        "src/NetTopologySuite/Operation/Valid/IndexedNestedRingTester.cs",
+        "src/NetTopologySuite/Operation/Valid/IsValidOp.cs",
+        "src/NetTopologySuite/Operation/Valid/RepeatedPointTester.cs",
+        "src/NetTopologySuite/Operation/Valid/TopologyValidationError.cs",
+        "src/NetTopologySuite/Planargraph/Algorithm/ConnectedSubgraphFinder.cs",
+        "src/NetTopologySuite/Planargraph/DirectedEdge.cs",
+        "src/NetTopologySuite/Planargraph/DirectedEdgeStar.cs",
+        "src/NetTopologySuite/Planargraph/Edge.cs",
+        "src/NetTopologySuite/Planargraph/GraphComponent.cs",
+        "src/NetTopologySuite/Planargraph/Node.cs",
+        "src/NetTopologySuite/Planargraph/NodeMap.cs",
+        "src/NetTopologySuite/Planargraph/PlanarGraph.cs",
+        "src/NetTopologySuite/Planargraph/Subgraph.cs",
+        "src/NetTopologySuite/Precision/CommonBits.cs",
+        "src/NetTopologySuite/Precision/CommonBitsOp.cs",
+        "src/NetTopologySuite/Precision/CommonBitsRemover.cs",
+        "src/NetTopologySuite/Precision/CoordinatePrecisionReducerFilter.cs",
+        "src/NetTopologySuite/Precision/DocFiles/minClearance.png",
+        "src/NetTopologySuite/Precision/EnhancedPrecisionOp.cs",
+        "src/NetTopologySuite/Precision/GeometryPrecisionReducer.cs",
+        "src/NetTopologySuite/Precision/MinimumClearance.cs",
+        "src/NetTopologySuite/Precision/PrecisionReducerCoordinateOperation.cs",
+        "src/NetTopologySuite/Precision/PrecisionSummary.xml",
+        "src/NetTopologySuite/Precision/SimpleGeometryPrecisionReducer.cs",
+        "src/NetTopologySuite/Precision/SimpleMinimumClearance.cs",
+        "src/NetTopologySuite/Properties/AssemblyInfo.cs",
+        "src/NetTopologySuite/Shape/Fractal/KochSnowflakeBuilder.cs",
+        "src/NetTopologySuite/Shape/Fractal/SierpinskiCarpetBuilder.cs",
+        "src/NetTopologySuite/Shape/GeometricShapeBuilder.cs",
+        "src/NetTopologySuite/Shape/Random/RandomPointsBuilder.cs",
+        "src/NetTopologySuite/Shape/Random/RandomPointsInGridBuilder.cs",
+        "src/NetTopologySuite/Simplify/DouglasPeuckerLineSimplifier.cs",
+        "src/NetTopologySuite/Simplify/DouglasPeuckerSimplifier.cs",
+        "src/NetTopologySuite/Simplify/LineSegmentIndex.cs",
+        "src/NetTopologySuite/Simplify/OldVWLineSimplifier.cs",
+        "src/NetTopologySuite/Simplify/SimplifySummary.xml",
+        "src/NetTopologySuite/Simplify/TaggedLineSegment.cs",
+        "src/NetTopologySuite/Simplify/TaggedLineString.cs",
+        "src/NetTopologySuite/Simplify/TaggedLineStringSimplifier.cs",
+        "src/NetTopologySuite/Simplify/TaggedLinesSimplifier.cs",
+        "src/NetTopologySuite/Simplify/TopologyPreservingSimplifier.cs",
+        "src/NetTopologySuite/Simplify/VWLineSimplifier.cs",
+        "src/NetTopologySuite/Simplify/VWSimplifier.cs",
+        "src/NetTopologySuite/Triangulate/ConformingDelaunayTriangulationBuilder.cs",
+        "src/NetTopologySuite/Triangulate/ConformingDelaunayTriangulator.cs",
+        "src/NetTopologySuite/Triangulate/ConstraintEnforcementException.cs",
+        "src/NetTopologySuite/Triangulate/ConstraintVertex.cs",
+        "src/NetTopologySuite/Triangulate/ConstraintVertexFactory.cs",
+        "src/NetTopologySuite/Triangulate/DelaunayTriangulationBuilder.cs",
+        "src/NetTopologySuite/Triangulate/IConstraintSplitPointFinder.cs",
+        "src/NetTopologySuite/Triangulate/IncrementalDelaunayTriangulator.cs",
+        "src/NetTopologySuite/Triangulate/MidpointSplitPointFinder.cs",
+        "src/NetTopologySuite/Triangulate/NonEncroachingSplitPointFinder.cs",
+        "src/NetTopologySuite/Triangulate/QuadEdge/EdgeConnectedTriangleTraversal.cs",
+        "src/NetTopologySuite/Triangulate/QuadEdge/IQuadEdgeLocator.cs",
+        "src/NetTopologySuite/Triangulate/QuadEdge/ITraversalVisitor.cs",
+        "src/NetTopologySuite/Triangulate/QuadEdge/ITriangleVisitor.cs",
+        "src/NetTopologySuite/Triangulate/QuadEdge/LastFoundQuadEdgeLocator.cs",
+        "src/NetTopologySuite/Triangulate/QuadEdge/LocateFailureException.cs",
+        "src/NetTopologySuite/Triangulate/QuadEdge/QuadEdge.cs",
+        "src/NetTopologySuite/Triangulate/QuadEdge/QuadEdgeSubdivision.cs",
+        "src/NetTopologySuite/Triangulate/QuadEdge/QuadEdgeSummary.xml",
+        "src/NetTopologySuite/Triangulate/QuadEdge/QuadEdgeTriangle.cs",
+        "src/NetTopologySuite/Triangulate/QuadEdge/QuadEdgeUtil.cs",
+        "src/NetTopologySuite/Triangulate/QuadEdge/TrianglePredicate.cs",
+        "src/NetTopologySuite/Triangulate/QuadEdge/Vertex.cs",
+        "src/NetTopologySuite/Triangulate/Segment.cs",
+        "src/NetTopologySuite/Triangulate/SplitSegment.cs",
+        "src/NetTopologySuite/Triangulate/TriangulateSummary.xml",
+        "src/NetTopologySuite/Triangulate/VertexTaggedGeometryDataMapper.cs",
+        "src/NetTopologySuite/Triangulate/VoronoiDiagramBuilder.cs",
+        "src/NetTopologySuite/Utilities/AlternativePriorityQueue.cs",
+        "src/NetTopologySuite/Utilities/Assert.cs",
+        "src/NetTopologySuite/Utilities/AssertionFailedException.cs",
+        "src/NetTopologySuite/Utilities/BitConverter.cs",
+        "src/NetTopologySuite/Utilities/BitTweaks.cs",
+        "src/NetTopologySuite/Utilities/Caster.cs",
+        "src/NetTopologySuite/Utilities/CollectionUtil.cs",
+        "src/NetTopologySuite/Utilities/CoordinateArrayFilter.cs",
+        "src/NetTopologySuite/Utilities/CoordinateCompare.cs",
+        "src/NetTopologySuite/Utilities/CoordinateCountFilter.cs",
+        "src/NetTopologySuite/Utilities/Degrees.cs",
+        "src/NetTopologySuite/Utilities/EnumUtility.cs",
+        "src/NetTopologySuite/Utilities/FunctionsUtility.cs",
+        "src/NetTopologySuite/Utilities/GeometricShapeFactory.cs",
+        "src/NetTopologySuite/Utilities/Global.cs",
+        "src/NetTopologySuite/Utilities/Guard.cs",
+        "src/NetTopologySuite/Utilities/HexConverter.cs",
+        "src/NetTopologySuite/Utilities/Memory.cs",
+        "src/NetTopologySuite/Utilities/PlatformUtilityEx.cs",
+        "src/NetTopologySuite/Utilities/PriorityQueue.cs",
+        "src/NetTopologySuite/Utilities/PriorityQueueNode.cs",
+        "src/NetTopologySuite/Utilities/RToolsUtil/CharBuffer.cs",
+        "src/NetTopologySuite/Utilities/RToolsUtil/StreamTokenizer.cs",
+        "src/NetTopologySuite/Utilities/RToolsUtil/Token.cs",
+        "src/NetTopologySuite/Utilities/RToolsUtil/VerbosityLevel.cs",
+        "src/NetTopologySuite/Utilities/Radians.cs",
+        "src/NetTopologySuite/Utilities/ReverseOrder.cs",
+        "src/NetTopologySuite/Utilities/StreamTokenizer.cs",
+        "src/NetTopologySuite/Utilities/UniqueCoordinateArrayFilter.cs"
+      ]
+    },
+    "Newtonsoft.Json/11.0.2": {
+      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+      "type": "package",
+      "path": "newtonsoft.json/11.0.2",
+      "files": [
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.11.0.2.nupkg.sha512",
+        "newtonsoft.json.nuspec"
+      ]
+    },
+    "RabbitMQ.Client/5.1.0": {
+      "sha512": "oMXzDw2NLDHYlAYVJs5AHZDGkTsuzmaAPNfHjgkPqq3VfnxAXgsJ643ts6xsdXJftpwPbDAwN5YP65lHm+MiNg==",
+      "type": "package",
+      "path": "rabbitmq.client/5.1.0",
+      "files": [
+        "lib/net451/RabbitMQ.Client.dll",
+        "lib/net451/RabbitMQ.Client.xml",
+        "lib/netstandard1.5/RabbitMQ.Client.dll",
+        "lib/netstandard1.5/RabbitMQ.Client.xml",
+        "rabbitmq.client.5.1.0.nupkg.sha512",
+        "rabbitmq.client.nuspec"
+      ]
+    },
+    "StackExchange.Redis/1.2.6": {
+      "sha512": "uBzdFmPmsCJWZ/Iau85+2Ogal6nPiY5gT8pl2gA7R4dQ14GwRpwyTGkTuD1+hgHVuBW+zkCSnysmWc7h277r/g==",
+      "type": "package",
+      "path": "stackexchange.redis/1.2.6",
+      "files": [
+        "lib/net45/StackExchange.Redis.dll",
+        "lib/net45/StackExchange.Redis.xml",
+        "lib/net46/StackExchange.Redis.dll",
+        "lib/net46/StackExchange.Redis.xml",
+        "lib/netstandard1.5/StackExchange.Redis.dll",
+        "lib/netstandard1.5/StackExchange.Redis.xml",
+        "stackexchange.redis.1.2.6.nupkg.sha512",
+        "stackexchange.redis.nuspec"
+      ]
+    },
+    "System.Buffers/4.3.0": {
+      "sha512": "ratu44uTIHgeBeI0dE8DWvmXVBSo4u7ozRZZHOMmK/JPpYyo0dAfgSiHlpiObMQ5lEtEyIXA40sKRYg5J6A8uQ==",
+      "type": "package",
+      "path": "system.buffers/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/netstandard1.1/.xml",
+        "lib/netstandard1.1/System.Buffers.dll",
+        "system.buffers.4.3.0.nupkg.sha512",
+        "system.buffers.nuspec"
+      ]
+    },
+    "System.Data.SqlClient/4.5.1": {
+      "sha512": "qXTvTFkBds7bnN+ntBMHGvmH3pCAkfT4TE1z2Xvfqo4wKMQC77O4aXsYCc7dzCESC+/Gom6l0GLuebpFx7MDvg==",
+      "type": "package",
+      "path": "system.data.sqlclient/4.5.1",
+      "files": [
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net451/System.Data.SqlClient.dll",
+        "lib/net46/System.Data.SqlClient.dll",
+        "lib/net461/System.Data.SqlClient.dll",
+        "lib/netcoreapp2.1/System.Data.SqlClient.dll",
+        "lib/netstandard1.2/System.Data.SqlClient.dll",
+        "lib/netstandard1.3/System.Data.SqlClient.dll",
+        "lib/netstandard2.0/System.Data.SqlClient.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net451/System.Data.SqlClient.dll",
+        "ref/net46/System.Data.SqlClient.dll",
+        "ref/net461/System.Data.SqlClient.dll",
+        "ref/net461/System.Data.SqlClient.xml",
+        "ref/netcoreapp2.1/System.Data.SqlClient.dll",
+        "ref/netcoreapp2.1/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/System.Data.SqlClient.dll",
+        "ref/netstandard1.2/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/de/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/es/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/fr/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/it/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/ja/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/ko/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/ru/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/zh-hans/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/zh-hant/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/System.Data.SqlClient.dll",
+        "ref/netstandard1.3/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/de/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/es/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/fr/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/it/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/ja/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/ko/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/ru/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/zh-hans/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/zh-hant/System.Data.SqlClient.xml",
+        "ref/netstandard2.0/System.Data.SqlClient.dll",
+        "ref/netstandard2.0/System.Data.SqlClient.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll",
+        "runtimes/unix/lib/netstandard1.3/System.Data.SqlClient.dll",
+        "runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.dll",
+        "runtimes/win/lib/net451/System.Data.SqlClient.dll",
+        "runtimes/win/lib/net46/System.Data.SqlClient.dll",
+        "runtimes/win/lib/net461/System.Data.SqlClient.dll",
+        "runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll",
+        "runtimes/win/lib/netstandard1.3/System.Data.SqlClient.dll",
+        "runtimes/win/lib/netstandard2.0/System.Data.SqlClient.dll",
+        "runtimes/win/lib/uap10.0.16299/System.Data.SqlClient.dll",
+        "system.data.sqlclient.4.5.1.nupkg.sha512",
+        "system.data.sqlclient.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Diagnostics.DiagnosticSource/4.4.0": {
+      "sha512": "UYr0+UbBAJwdsUrHqSWTOtT5DqZ9F116IUljFTl9l5KLMk4vxujml2bZFngErOHtOrKOy53exg5eBGlg3tNudA==",
+      "type": "package",
+      "path": "system.diagnostics.diagnosticsource/4.4.0",
+      "files": [
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net45/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net45/System.Diagnostics.DiagnosticSource.xml",
+        "lib/net46/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net46/System.Diagnostics.DiagnosticSource.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Diagnostics.DiagnosticSource.dll",
+        "lib/netstandard1.1/System.Diagnostics.DiagnosticSource.xml",
+        "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll",
+        "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.xml",
+        "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.dll",
+        "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.xml",
+        "ref/netcoreapp2.0/_._",
+        "system.diagnostics.diagnosticsource.4.4.0.nupkg.sha512",
+        "system.diagnostics.diagnosticsource.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Reactive/4.1.0": {
+      "sha512": "HK7h2XA9PM5Znh9dBYM1wi7J7ZpnyJqKhol4xvoij9b0uifeY8iIrN8SU0bWftmVdUPR6D8kB6XH3uJBx/Clug==",
+      "type": "package",
+      "path": "system.reactive/4.1.0",
+      "files": [
+        ".signature.p7s",
+        "lib/net46/System.Reactive.dll",
+        "lib/net46/System.Reactive.xml",
+        "lib/netstandard2.0/System.Reactive.dll",
+        "lib/netstandard2.0/System.Reactive.xml",
+        "lib/uap10.0.16299/System.Reactive.dll",
+        "lib/uap10.0.16299/System.Reactive.pri",
+        "lib/uap10.0.16299/System.Reactive.xml",
+        "lib/uap10.0/System.Reactive.dll",
+        "lib/uap10.0/System.Reactive.pri",
+        "lib/uap10.0/System.Reactive.xml",
+        "system.reactive.4.1.0.nupkg.sha512",
+        "system.reactive.nuspec"
+      ]
+    },
+    "System.Reactive.Linq/4.1.0": {
+      "sha512": "hZxmIfrxs7v6bUeAwB70qarIlURJxN+4XV6sKxKANOtymO2vscFSuNwZhcreFcaSXqyPWLu7LbXaW/ytxNuMng==",
+      "type": "package",
+      "path": "system.reactive.linq/4.1.0",
+      "files": [
+        ".signature.p7s",
+        "lib/net46/System.Reactive.Linq.dll",
+        "lib/net46/System.Reactive.Linq.xml",
+        "lib/netstandard2.0/System.Reactive.Linq.dll",
+        "lib/netstandard2.0/System.Reactive.Linq.xml",
+        "lib/uap10.0/System.Reactive.Linq.dll",
+        "lib/uap10.0/System.Reactive.Linq.pri",
+        "lib/uap10.0/System.Reactive.Linq.xml",
+        "system.reactive.linq.4.1.0.nupkg.sha512",
+        "system.reactive.linq.nuspec"
+      ]
+    },
+    "System.Reflection/4.3.0": {
+      "sha512": "KMiAFoW7MfJGa9nDFNcfu+FpEdiHpWgTcS2HdMpDvt9saK3y/G4GwprPyzqjFH9NTaGPQeWNHU+iDlDILj96aQ==",
+      "type": "package",
+      "path": "system.reflection/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net462/System.Reflection.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net462/System.Reflection.dll",
+        "ref/netcore50/System.Reflection.dll",
+        "ref/netcore50/System.Reflection.xml",
+        "ref/netcore50/de/System.Reflection.xml",
+        "ref/netcore50/es/System.Reflection.xml",
+        "ref/netcore50/fr/System.Reflection.xml",
+        "ref/netcore50/it/System.Reflection.xml",
+        "ref/netcore50/ja/System.Reflection.xml",
+        "ref/netcore50/ko/System.Reflection.xml",
+        "ref/netcore50/ru/System.Reflection.xml",
+        "ref/netcore50/zh-hans/System.Reflection.xml",
+        "ref/netcore50/zh-hant/System.Reflection.xml",
+        "ref/netstandard1.0/System.Reflection.dll",
+        "ref/netstandard1.0/System.Reflection.xml",
+        "ref/netstandard1.0/de/System.Reflection.xml",
+        "ref/netstandard1.0/es/System.Reflection.xml",
+        "ref/netstandard1.0/fr/System.Reflection.xml",
+        "ref/netstandard1.0/it/System.Reflection.xml",
+        "ref/netstandard1.0/ja/System.Reflection.xml",
+        "ref/netstandard1.0/ko/System.Reflection.xml",
+        "ref/netstandard1.0/ru/System.Reflection.xml",
+        "ref/netstandard1.0/zh-hans/System.Reflection.xml",
+        "ref/netstandard1.0/zh-hant/System.Reflection.xml",
+        "ref/netstandard1.3/System.Reflection.dll",
+        "ref/netstandard1.3/System.Reflection.xml",
+        "ref/netstandard1.3/de/System.Reflection.xml",
+        "ref/netstandard1.3/es/System.Reflection.xml",
+        "ref/netstandard1.3/fr/System.Reflection.xml",
+        "ref/netstandard1.3/it/System.Reflection.xml",
+        "ref/netstandard1.3/ja/System.Reflection.xml",
+        "ref/netstandard1.3/ko/System.Reflection.xml",
+        "ref/netstandard1.3/ru/System.Reflection.xml",
+        "ref/netstandard1.3/zh-hans/System.Reflection.xml",
+        "ref/netstandard1.3/zh-hant/System.Reflection.xml",
+        "ref/netstandard1.5/System.Reflection.dll",
+        "ref/netstandard1.5/System.Reflection.xml",
+        "ref/netstandard1.5/de/System.Reflection.xml",
+        "ref/netstandard1.5/es/System.Reflection.xml",
+        "ref/netstandard1.5/fr/System.Reflection.xml",
+        "ref/netstandard1.5/it/System.Reflection.xml",
+        "ref/netstandard1.5/ja/System.Reflection.xml",
+        "ref/netstandard1.5/ko/System.Reflection.xml",
+        "ref/netstandard1.5/ru/System.Reflection.xml",
+        "ref/netstandard1.5/zh-hans/System.Reflection.xml",
+        "ref/netstandard1.5/zh-hant/System.Reflection.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.reflection.4.3.0.nupkg.sha512",
+        "system.reflection.nuspec"
+      ]
+    },
+    "System.Reflection.Emit/4.3.0": {
+      "sha512": "228FG0jLcIwTVJyz8CLFKueVqQK36ANazUManGaJHkO0icjiIypKW7YLWLIWahyIkdh5M7mV2dJepllLyA1SKg==",
+      "type": "package",
+      "path": "system.reflection.emit/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/monotouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Reflection.Emit.dll",
+        "lib/netstandard1.3/System.Reflection.Emit.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/net45/_._",
+        "ref/netstandard1.1/System.Reflection.Emit.dll",
+        "ref/netstandard1.1/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/de/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/es/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/fr/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/it/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/ja/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/ko/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/ru/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/zh-hans/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/zh-hant/System.Reflection.Emit.xml",
+        "ref/xamarinmac20/_._",
+        "system.reflection.emit.4.3.0.nupkg.sha512",
+        "system.reflection.emit.nuspec"
+      ]
+    },
+    "System.Runtime.Caching/4.5.0": {
+      "sha512": "mu7yxF+OXCFkEGS10n3r9K4XvEwCfUNaVSQTIDen+0bxcdKuFDwDCaCi6rv995oxan+ZRV7gW+KWc57xBkxFdQ==",
+      "type": "package",
+      "path": "system.runtime.caching/4.5.0",
+      "files": [
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netstandard2.0/System.Runtime.Caching.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netstandard2.0/System.Runtime.Caching.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll",
+        "runtimes/win/lib/net45/_._",
+        "runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll",
+        "system.runtime.caching.4.5.0.nupkg.sha512",
+        "system.runtime.caching.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.0": {
+      "sha512": "6zBxkHYemB0kQiHP3vGXGRXejZVoNVuMn2paUuqKKi5Wyjkxfkp+D0rd0c3VrGwotidRINt6KpOi2smL4VkJKw==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/4.5.0",
+      "files": [
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/uap10.0.16300/_._",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/uap10.0.16300/_._",
+        "system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Runtime.InteropServices.RuntimeInformation/4.0.0": {
+      "sha512": "hWPhJxc453RCa8Z29O91EmfGeZIHX1ZH2A8L6lYQVSaKzku2DfArSfMEb1/MYYzPQRJZeu0c9dmYeJKxW5Fgng==",
+      "type": "package",
+      "path": "system.runtime.interopservices.runtimeinformation/4.0.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "lib/win8/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "lib/wpa81/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/aot/lib/netcore50/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "runtimes/unix/lib/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "runtimes/win/lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "runtimes/win/lib/netcore50/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "runtimes/win/lib/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "system.runtime.interopservices.runtimeinformation.4.0.0.nupkg.sha512",
+        "system.runtime.interopservices.runtimeinformation.nuspec"
+      ]
+    },
+    "System.Threading.Tasks.Dataflow/4.9.0": {
+      "sha512": "uL26FTb7aaH0t2Blf7ao1vBDvrih/zocTrytBCAOWqzriiHAEN0a/KlirS9Qq6ESNpJPnC5RJuF9oXOYz68LZQ==",
+      "type": "package",
+      "path": "system.threading.tasks.dataflow/4.9.0",
+      "files": [
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard1.0/System.Threading.Tasks.Dataflow.dll",
+        "lib/netstandard1.0/System.Threading.Tasks.Dataflow.xml",
+        "lib/netstandard1.1/System.Threading.Tasks.Dataflow.dll",
+        "lib/netstandard1.1/System.Threading.Tasks.Dataflow.xml",
+        "lib/netstandard2.0/System.Threading.Tasks.Dataflow.dll",
+        "lib/netstandard2.0/System.Threading.Tasks.Dataflow.xml",
+        "lib/portable-net45+win8+wpa81/System.Threading.Tasks.Dataflow.dll",
+        "lib/portable-net45+win8+wpa81/System.Threading.Tasks.Dataflow.xml",
+        "system.threading.tasks.dataflow.4.9.0.nupkg.sha512",
+        "system.threading.tasks.dataflow.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Threading.Tasks.Extensions/4.5.1": {
+      "sha512": "rckdhLJtzQ3EI+0BGuq7dUVtCSnerqAoAmL3S6oMRZ4VMZTL3Rq9DS8IDW57c6PYVebA4O0NbSA1BDvyE18UMA==",
+      "type": "package",
+      "path": "system.threading.tasks.extensions/4.5.1",
+      "files": [
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netcoreapp2.1/_._",
+        "ref/netstandard1.0/System.Threading.Tasks.Extensions.dll",
+        "ref/netstandard1.0/System.Threading.Tasks.Extensions.xml",
+        "ref/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "ref/netstandard2.0/System.Threading.Tasks.Extensions.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.tasks.extensions.4.5.1.nupkg.sha512",
+        "system.threading.tasks.extensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.ValueTuple/4.4.0": {
+      "sha512": "BahUww/+mdP4ARCAh2RQhQTg13wYLVrBb9SYVgW8ZlrwjraGCXHGjo0oIiUfZ34LUZkMMR+RAzR7dEY4S1HeQQ==",
+      "type": "package",
+      "path": "system.valuetuple/4.4.0",
+      "files": [
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.ValueTuple.dll",
+        "lib/net461/System.ValueTuple.xml",
+        "lib/net47/System.ValueTuple.dll",
+        "lib/net47/System.ValueTuple.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.ValueTuple.dll",
+        "lib/netstandard1.0/System.ValueTuple.xml",
+        "lib/netstandard2.0/_._",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.ValueTuple.dll",
+        "ref/net461/System.ValueTuple.xml",
+        "ref/net47/System.ValueTuple.dll",
+        "ref/net47/System.ValueTuple.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard2.0/_._",
+        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.valuetuple.4.4.0.nupkg.sha512",
+        "system.valuetuple.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.7": [
+      "IoTnxt.Common.Bootstrap.DefaultWindowsBootstrap >= 3.0.7",
+      "IoTnxt.DAPI.RedGreenQueue >= 6.1.0",
+      "IoTnxt.Entity.API.Abstractions >= 3.17.0",
+      "IoTnxt.Gateway.API.Abstractions >= 3.4.0",
+      "IoTnxt.Security.API.Abstractions >= 3.11.0",
+      "System.Data.SqlClient >= 4.5.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\JayJay\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "3.0.9",
+    "restore": {
+      "projectUniqueName": "D:\\Work\\Customers\\IOT\\IoTnxt.DigiTwin.Simulator\\IoTnxt.DigiTwin.Simulator\\IoTnxt.DigiTwin.Simulator.csproj",
+      "projectName": "IoTnxt.DigiTwin.Simulator",
+      "projectPath": "D:\\Work\\Customers\\IOT\\IoTnxt.DigiTwin.Simulator\\IoTnxt.DigiTwin.Simulator\\IoTnxt.DigiTwin.Simulator.csproj",
+      "packagesPath": "C:\\Users\\JayJay\\.nuget\\packages\\",
+      "outputPath": "D:\\Work\\Customers\\IOT\\IoTnxt.DigiTwin.Simulator\\IoTnxt.DigiTwin.Simulator\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\JayJay\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net47"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "D:\\Work\\Customers\\IOT\\Nuget": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net47": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net47": {
+        "dependencies": {
+          "IoTnxt.Common.Bootstrap.DefaultWindowsBootstrap": {
+            "target": "Package",
+            "version": "[3.0.7, )"
+          },
+          "IoTnxt.DAPI.RedGreenQueue": {
+            "target": "Package",
+            "version": "[6.1.0, )"
+          },
+          "IoTnxt.Entity.API.Abstractions": {
+            "target": "Package",
+            "version": "[3.17.0, )"
+          },
+          "IoTnxt.Gateway.API.Abstractions": {
+            "target": "Package",
+            "version": "[3.4.0, )"
+          },
+          "IoTnxt.Security.API.Abstractions": {
+            "target": "Package",
+            "version": "[3.11.0, )"
+          },
+          "System.Data.SqlClient": {
+            "target": "Package",
+            "version": "[4.5.1, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win7-x86": {
+        "#import": []
+      }
+    }
+  }
+}

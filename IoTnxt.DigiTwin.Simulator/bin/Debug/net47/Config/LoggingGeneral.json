@@ -1,0 +1,8 @@
+﻿{
+  "LoggingGeneralSettings": {
+    "LoggerCustomProperies": {
+      "Customer Id": "IoTnxt",
+      "Application name": "Brokers.DigiTwin.History.Service"
+    }
+  }
+}

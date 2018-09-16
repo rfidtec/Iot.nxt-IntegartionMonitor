@@ -1,0 +1,245 @@
+﻿{
+  "Gateway1SimulatorOptions": {
+    "Active": true,
+    "Simulations": [
+      {
+        "Active": false,
+        "Heartbeat": true,
+        "IntervalSeconds": 5,
+        "ClientId": "t000000070",
+        "GatewayId": "GPSMichiel",
+        "Secret": "123",
+        "Associate": true,
+        "Properties": [
+          {
+            "DeviceId": "GPS|ROOF:GPS|ROOF",
+            "Property": "Latitude",
+            "DoubleSequence": [ -29.884813, -29.885222, -29.885668 ]
+          },
+          {
+            "DeviceId": "GPS|ROOF:GPS|ROOF",
+            "Property": "Longitude",
+            "DoubleSequence": [ 31.029774, 31.028916, 31.028530 ]
+          },
+          {
+            "DeviceId": "GPS|ROOF:GPS|ROOF",
+            "Property": "Altitude",
+            "DoubleSequence": [ 1, 2, 3 ]
+          }
+        ]
+      },
+      {
+        "Active": false,
+        "Heartbeat": true,
+        "IntervalSeconds": 2,
+        "ClientId": "t000000070",
+        "GatewayId": "GPS{id}",
+        "StartIdAt": 1,
+        "EndIdAt": 100,
+        "Secret": "123",
+        "Associate": true,
+        "Properties": [
+          {
+            "DeviceId": "GPS|ROOF:GPS|ROOF",
+            "Property": "Latitude",
+            "StartIdAt": 1,
+            "EndIdAt": 1,
+            "FromDoubleValue": -30,
+            "ToDoubleValue": 30
+          },
+          {
+            "DeviceId": "GPS|ROOF:GPS|ROOF",
+            "Property": "Longitude",
+            "StartIdAt": 1,
+            "EndIdAt": 1,
+            "FromDoubleValue": -10,
+            "ToDoubleValue": 15
+          },
+          {
+            "DeviceId": "GPS|ROOF{id}:GPS|ROOF{id}",
+            "Property": "Altitude",
+            "StartIdAt": 1,
+            "EndIdAt": 1,
+            "DoubleSequence": [ 1, 2, 3 ],
+            "PercentageNulls": 30
+          },
+          {
+            "DeviceId": "GPS|ROOF:GPS|ROOF",
+            "Property": "Notes",
+            "StringSequence": [ "5 sattelites", "6 sattelites", "7 sattelites" ],
+            "PercentageNulls": 30
+          },
+          {
+            "DeviceId": "GPS|ROOF:GPS|ROOF",
+            "Property": "Transmitting",
+            "BoolSequence": [ false, true, true ],
+            "PercentageNulls": 30
+          },
+          {
+            "DeviceId": "GPS|ROOF:GPS|ROOF",
+            "Property": "TargetCoordinate",
+            "GpsCoordinateSequence": [
+              {
+                "Lat": 10,
+                "Lon": -10
+              },
+              {
+                "Lat": 20,
+                "Lon": -20
+              },
+              {
+                "Lat": 30,
+                "Lon": -30
+              },
+              null
+            ]
+          },
+          {
+            "DeviceId": "GPS|ROOF:GPS|ROOF",
+            "Property": "LastSpeedingViolation",
+            "DateTimeSequence": [ "2018/04/30 10:00", "2018/04/30 11:00", "2018/04/30 12:00", null ]
+          }
+        ]
+      },
+      {
+        "Active": false,
+        "Heartbeat": true,
+        "IntervalSeconds": 10,
+        "ClientId": "t000000070",
+        "GatewayId": "GPSx",
+        "Secret": "123",
+        "Associate": true,
+        "Properties": [
+          {
+            "DeviceId": "GPS|ROOF:GPS|ROOF",
+            "Property": "Latitude",
+            "DoubleSequence": [ -29.884813, -29.885222, -29.885668 ]
+          },
+          {
+            "DeviceId": "GPS|ROOF:GPS|ROOF",
+            "Property": "Longitude",
+            "DoubleSequence": [ 31.029774, 31.028916, 31.028530 ]
+          },
+          {
+            "DeviceId": "GPS|ROOF:GPS|ROOF",
+            "Property": "Altitude",
+            "DoubleSequence": [ 1, 2, 3 ]
+          }
+        ]
+      },
+      {
+        "Active": true,
+        "Heartbeat": true,
+        "IntervalSeconds": 5,
+        "ResetIntervalSeconds": 18,
+        "ClientId": "t000000070",
+        "GatewayId": "VodaworldSim",
+        "Secret": "123",
+        "Associate": true,
+        "Properties": [
+          {
+            "DeviceId": "InnotechReader1",
+            "Property": "ExitAntennaOne",
+            "RFIDSequence": [
+              {
+                "UnsoldItem1": {},
+                "UnsoldItem2": {},
+                "SoldItem1": {},
+                "SoldItem2": {},
+                "UnregisteredItem1": {}
+              },
+              {
+                "empty": true
+              }
+            ]
+          },
+          {
+            "DeviceId": "InnotechReader1",
+            "Property": "ExitAntennaTwo",
+            "RFIDSequence": [
+              {
+                "UnsoldItem1": {},
+                "SoldItem1": {},
+                "SoldItem2": {},
+                "UnregisteredItem3": {}
+              },
+              {
+                "empty": true
+              }
+            ]
+          },
+          {
+            "DeviceId": "InnotechReader1",
+            "Property": "IsleAntenna1",
+            "RFIDSequence": [
+              {
+                "InStockItem1": {},
+                "InStockItem2": {}
+              },
+              {
+                "InStockItem1": {}
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Active": true,
+        "Heartbeat": true,
+        "IntervalSeconds": 5,
+        "ResetIntervalSeconds": 18,
+        "ClientId": "t000000070",
+        "GatewayId": "VodaworldSim",
+        "Secret": "123",
+        "Associate": true,
+        "Properties": [
+          {
+            "DeviceId": "InnotechReader1",
+            "Property": "ExitAntennaOne",
+            "RFIDSequence": [
+              {
+                "UnsoldItem1": {},
+                "UnsoldItem2": {},
+                "SoldItem1": {},
+                "SoldItem2": {},
+                "UnregisteredItem1": {}
+              },
+              {
+                "empty": true
+              }
+            ]
+          },
+          {
+            "DeviceId": "InnotechReader1",
+            "Property": "ExitAntennaTwo",
+            "RFIDSequence": [
+              {
+                "UnsoldItem1": {},
+                "SoldItem1": {},
+                "SoldItem2": {},
+                "UnregisteredItem3": {}
+              },
+              {
+                "empty": true
+              }
+            ]
+          },
+          {
+            "DeviceId": "InnotechReader1",
+            "Property": "IsleAntenna1",
+            "RFIDSequence": [
+              {
+                "InStockItem1": {},
+                "InStockItem2": {}
+              },
+              {
+                "InStockItem1": {}
+              }
+            ]
+          }
+        ]
+      }
+
+    ]
+  }
+}

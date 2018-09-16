@@ -1,0 +1,9 @@
+2018/09/13 4:37:37 PM : DALC4NET
+Message: Object reference not set to an instance of an object.
+-----------------------------------------------
+2018/09/14 10:35:05 AM : DALC4NET
+Message: Object reference not set to an instance of an object.
+-----------------------------------------------
+2018/09/14 10:35:14 AM : DALC4NET
+Message: Object reference not set to an instance of an object.
+-----------------------------------------------

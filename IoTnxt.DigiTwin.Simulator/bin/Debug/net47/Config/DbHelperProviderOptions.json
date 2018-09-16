@@ -1,0 +1,14 @@
+﻿{
+  "DbHelperProviderOptions": {
+    "DBs": {
+      "Data": {
+        "SqlServerName": "10.4.10.10\\SQLExpress",
+        "SqlDbName": "iotnxtexxaronbcworkflow",
+        "SqlUsername": "sa",
+        "SqlPassword": "Inter123",
+        "SingleDb": true,
+        "DbType": "SqlServer2008"
+      }
+    }
+  }
+}
