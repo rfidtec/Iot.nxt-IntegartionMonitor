@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DALX.Core;
 using DALX.Core.Sql.Filters;
 using Innotrack.DeviceManager.Entities;
+using Innotrack.Logger;
 using IoTnxt.DAPI.RedGreenQueue.Abstractions;
 using IoTnxt.DigiTwin.Simulator.Collection_Property;
 using Microsoft.Extensions.Logging;
@@ -17,6 +18,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
     {
         #region Properties
         List<Device> Devices { get; set; }
+        List<TagLastSeen> tagList { get; set; }
         #endregion
         public UnreadRFIDSync(IRedGreenQueueAdapter redq) : base(redq)
         {
@@ -25,10 +27,10 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
 
         public async Task StartUnSeenMonitor()
         {
-            try
-            {
 
-                while (true)
+            while (true)
+            {
+                try
                 {
                     Devices = new Device().Read();
                     foreach (var device in Devices)
@@ -40,25 +42,27 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                         var removeList = GetRemovedTags(device.ID.ToString(), removedatetime);
                         if (removeList.Count == 0)
                             continue;
-
+                        LoggerX.WriteEventLog($"{removeList.Count} unread tags at device: {device.DeviceName}");
                         var value = new JObject
                         {
                             ["remove"] = JToken.FromObject(removeList)
                         };
                         _iotObject.Object = value;
                         lst.Add(_iotObject.ToString());
-                        await SendNotification();
-
+                        await SendNotification(lst);
+                        LoggerX.WriteEventLog($"Unreadlist device: {device.DeviceName} notifcation sent");
                         lst.Clear();
+                        UpdateAllTagSeen();
                     }
 
                     if (IotGateway.UnSeenListInterval > 0)
                         await Task.Delay((int)(IotGateway.UnSeenListInterval * 1000));
                 }
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, $"Sending notification for gateway {IotGateway.GatewayId}");
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, $"Sending notification for gateway {IotGateway.GatewayId}");
+                    LoggerX.WriteErrorLog(ex);
+                }
             }
         }
 
@@ -68,9 +72,10 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
             List<QueryFilter> filters = new List<QueryFilter>()
             {
                 new QueryFilter("DeviceID",deviceID,FilterOperator.Equals,LogicalOperator.AND),
-                new QueryFilter("DateTime",removeTimeLmit,FilterOperator.LessThan)
+                new QueryFilter("DateTime",removeTimeLmit,FilterOperator.LessThan,LogicalOperator.AND),
+                new QueryFilter("HostSeen",false,FilterOperator.Equals)
             };
-            var tagList = new Innotrack.DeviceManager.Entities.TagLastSeen().Read(filters);
+             tagList = new Innotrack.DeviceManager.Entities.TagLastSeen().Read(filters);
 
             Dictionary<string, RfidTag> tags = new Dictionary<string, RfidTag>();
             foreach (var read in tagList)
@@ -80,9 +85,18 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                     Rfid = read.RFID,
                     DateSeen = read.DateTime.ToString()
                 };
-                tags.Add(device.DeviceName, tag);
+                tags.Add(read.RFID.ToString(), tag);
             }
             return tags;
+        }
+
+        private void UpdateAllTagSeen()
+        {
+            foreach(var tag in tagList)
+            {
+                tag.HostSeen = true;
+                tag.Update();
+            }
         }
     }
 }

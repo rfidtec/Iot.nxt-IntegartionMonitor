@@ -34,21 +34,24 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                 try
                 {
                     RefreshDeviceStatusList();
+                    
                     foreach (var device in Devices)
                     {
                         //Add Heartbeat of device and send
-                        _iotObject.DeviceName = device.DeviceName;
-                        _iotObject.DeviceType = "ZONE";
+                        //_iotObject.DeviceName = device.DeviceName;
+                        //_iotObject.DeviceType = "DEVICE";
+                        _iotObject.Device = device;
                         _iotObject.ObjectType = "TAGS";
                         _iotObject.Object = new DeviceObject()
                         {
                             Device = device.DeviceName,
-                            Heartbeat = device.Status == "Active" ? true : false
+                            Heartbeat = device.Status == "Active" ? true : false,
+                            Zone = DeviceZone.GetDeviceZoneName((int)device.ID)
                         };
                         lst.Add(_iotObject.ToString());
                         //Send list to Iot Cloud Platform
-                        await SendNotification();
-                        //Clear 
+                        await SendNotification(lst);
+                        //Clear list
                         lst.Clear();
                         device.HostSeen = true;
                         device.Update();

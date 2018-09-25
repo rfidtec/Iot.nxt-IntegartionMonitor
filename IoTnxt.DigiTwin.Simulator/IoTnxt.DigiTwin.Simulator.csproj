@@ -69,6 +69,14 @@
     <Reference Include="Innotrack.DeviceManager">
       <HintPath>..\..\Innotrack Library\Innotrack.DeviceManager\bin\Debug\Innotrack.DeviceManager.dll</HintPath>
     </Reference>
+    <Reference Include="Innotrack.Logger">
+      <HintPath>..\..\Innotrack Library\Innotrack.Logger\bin\Debug\Innotrack.Logger.dll</HintPath>
+    </Reference>
     <Reference Include="System.Configuration" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="App.config">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>

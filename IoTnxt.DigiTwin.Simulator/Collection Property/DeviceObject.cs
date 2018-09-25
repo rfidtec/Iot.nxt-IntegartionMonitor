@@ -10,5 +10,6 @@ namespace IoTnxt.DigiTwin.Simulator.Collection_Property
     {
         public string Device { get; set; }
         public bool Heartbeat { get; set; }
+        public string Zone { get; set; }
     }
 }

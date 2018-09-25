@@ -17,12 +17,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Innotrack.DeviceManager.Entities;
+using Innotrack.Logger;
+using System.Threading;
 
 namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
 {
     public class TagReadsSync : IoTBase
     {
         private List<TagReads> TagList { get; set; }
+       
 
 
         public TagReadsSync(IRedGreenQueueAdapter redq) : base(redq)
@@ -44,7 +47,8 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                     try
                     {
                         //Add new tag read of device
-                        var addedUpdatedTags = AddTagRead(read.Device.DeviceName, read.EPC, read.DateTime.ToString());
+                        var addedUpdatedTags = GetAddedTags(read.Device.DeviceName); //AddTagRead(read.Device.DeviceName, read.EPC, read.DateTime.ToString());
+                        LoggerX.WriteEventLog($"{read.EPC} tags read at device: {read.Device.DeviceName}");
                         var value = new JObject
                         {
                             ["addOrUpdate"] = JToken.FromObject(addedUpdatedTags)
@@ -59,20 +63,22 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                         lst.Add(_iotObject.ToString());
                         // lst.Add(("RFID|1:ZONE|" + read.Device.DeviceName, "TAGS", value));
 
-                        await SendNotification();
-
+                        await SendNotification(lst);
+                        LoggerX.WriteEventLog("Notification Send");
                         lst.Clear();
                         read.HostSeen = true;
                         read.Update();
-                        //if (IotGateway.IntervalSeconds > 0)
-                        //    await Task.Delay((int)(sim.IntervalSeconds * 1000));
-                        // TagList = CheckForUnprocessedTags();
+                        Thread.Sleep(100);
+
                     }
                     catch (Exception ex)
                     {
                         _logger.LogError(ex, $"Sending notification for gateway {IotGateway.GatewayId}");
+                        LoggerX.WriteErrorLog(ex);
                         // await Task.Delay((int)(Math.Max(1, sim.IntervalSeconds) * 1000));
                     }
+                    //TagList = CheckForUnprocessedTags();
+                    break;
                 }
             }
             // ReSharper disable once FunctionNeverReturns
@@ -112,6 +118,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                  };
             var tagList = new TagReads().Read(filters);
 
+            int count = 0;
             Dictionary<string, RfidTag> tags = new Dictionary<string, RfidTag>();
             foreach (var read in tagList)
             {
@@ -120,7 +127,8 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                     Rfid = read.EPC,
                     DateSeen = read.DateTime.ToString()
                 };
-                tags.Add(device.DeviceName, tag);
+                count += 1;
+                tags.Add(read.EPC + count, tag);
                 read.HostSeen = true;
                 read.Update();
             }

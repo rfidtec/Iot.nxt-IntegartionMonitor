@@ -1,0 +1,188 @@
+2018/09/18 10:27:45 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteEventLog line: 89
+-----------------------------------------------
+2018/09/18 10:27:45 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:27:45 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:27:46 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:27:46 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:27:47 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:27:48 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:27:48 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:27:49 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:27:50 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:27:51 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:27:52 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:27:54 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:29:17 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteEventLog line: 89
+-----------------------------------------------
+2018/09/18 10:29:18 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:29:18 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:29:18 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:29:19 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:29:20 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:29:20 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:29:21 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:29:22 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:29:23 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:29:24 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:29:25 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:29:26 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:29:36 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteEventLog line: 89
+-----------------------------------------------
+2018/09/18 10:29:36 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:29:36 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:29:37 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:29:37 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:29:38 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:29:39 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:29:40 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:29:41 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:29:42 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:29:43 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:29:44 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 10:29:45 AM : System.Configuration
+Message: Unrecognized attribute 'degubber'. Note that attribute names are case-sensitive. (D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.Config line 17)
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteErrorLog line: 67
+-----------------------------------------------
+2018/09/18 1:05:36 PM : mscorlib
+Message: The process cannot access the file 'D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\log file.txt' because it is being used by another process.
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteEventLog line: 89
+-----------------------------------------------
+2018/09/19 10:52:24 AM : mscorlib
+Message: The process cannot access the file 'D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\log file.txt' because it is being used by another process.
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteEventLog line: 89
+-----------------------------------------------
+2018/09/19 10:53:45 AM : mscorlib
+Message: The process cannot access the file 'D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\log file.txt' because it is being used by another process.
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteEventLog line: 89
+-----------------------------------------------
+2018/09/19 2:35:30 PM : mscorlib
+Message: The process cannot access the file 'D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\log file.txt' because it is being used by another process.
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteEventLog line: 89
+-----------------------------------------------
+2018/09/19 3:08:39 PM : mscorlib
+Message: The process cannot access the file 'D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\log file.txt' because it is being used by another process.
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteEventLog line: 89
+-----------------------------------------------
+2018/09/20 3:20:43 PM : mscorlib
+Message: The process cannot access the file 'D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\log file.txt' because it is being used by another process.
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteEventLog line: 89
+-----------------------------------------------
+2018/09/21 11:07:32 AM : mscorlib
+Message: The process cannot access the file 'D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\log file.txt' because it is being used by another process.
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteEventLog line: 89
+-----------------------------------------------
+2018/09/21 12:20:40 PM : mscorlib
+Message: The process cannot access the file 'D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\log file.txt' because it is being used by another process.
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteEventLog line: 89
+-----------------------------------------------

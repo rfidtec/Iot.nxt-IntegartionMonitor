@@ -9,6 +9,8 @@ using Newtonsoft.Json.Linq;
 using IoTnxt.DigiTwin.Simulator.Collection_Property;
 using DALX.Core.Sql.Filters;
 using DALX.Core;
+using Microsoft.Extensions.Logging;
+using Innotrack.Logger;
 
 namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
 {
@@ -35,17 +37,19 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                     {
                         //Add all added tag of device
                         var Alltags = GetCurrentDeviceTagList(device);
+                        if (Alltags.Count == 0)
+                            break;
+
+                        LoggerX.WriteEventLog($"{Alltags.Count} tags found at device {device.DeviceName}");
                         var value = new JObject
                         {
                             ["reset"] = JToken.FromObject(Alltags)
                         };
                         lst.Add((device.DeviceName, device.DeviceName, value));
 
-                        await SendNotification();
-
+                        await SendNotification(lst);
+                        LoggerX.WriteEventLog("Reset Notification Sent");
                         lst.Clear();
-                        device.HostSeen = true;
-                        device.Update();
                     }
 
                         //Delay For Total Key Frame Interval Seconds
@@ -54,8 +58,8 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                 }
                 catch (Exception ex)
                 {
-
-                    throw;
+                    _logger.LogError(ex, $"Sending notification for gateway {IotGateway.GatewayId}");
+                    LoggerX.WriteErrorLog(ex);
                 }
         }
         /// <summary>
@@ -76,6 +80,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                     Rfid = read.RFID,
                     DateSeen = read.DateTime.ToString()
                 };
+                tags.Add(read.RFID,tag);
             }
             return tags;
         }

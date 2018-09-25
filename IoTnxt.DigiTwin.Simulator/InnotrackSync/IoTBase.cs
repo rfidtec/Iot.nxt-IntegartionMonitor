@@ -25,7 +25,6 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
         public readonly ILogger<Gateway1Simulator> _logger;
         public readonly IRedGreenQueueAdapter _redq;
         public List<(string, string, object)> lst = new List<(string, string, object)>();
-
         public IotObject _iotObject { get; set; }
         #endregion
 
@@ -46,7 +45,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
             return alive;
         }
 
-        public async Task SendNotification()
+        public async Task SendNotification(List<(string, string, object)> list)
         {
             await _redq.SendGateway1NotificationAsync(
                          IotGateway.ClientId,
@@ -57,7 +56,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                          DateTime.UtcNow,
                          true,
                          false,
-                         lst.ToArray());
+                         list.ToArray());
         }
         #endregion
     }

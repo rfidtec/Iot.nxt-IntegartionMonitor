@@ -49,7 +49,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
             }
         }
 
-        public  static int RemoveTimeout
+        public static int RemoveTimeout
         {
             get
             {
@@ -103,6 +103,14 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                 //temp.Add($"RFID|1:ZONE|{device.DeviceName}", iotDevice);
 
             }
+            temp.Add($"RFID|1:RNC|{IotGateway.GatewayId}", new Device()
+            {
+                DeviceName = IotGateway.GatewayId,
+                Properties = new Dictionary<string, DeviceProperty>()
+                    {
+                        { "HEARTBEAT", new DeviceProperty() { PropertyName = "HEARTBEAT", DataType = "Bool" } }
+                    }
+            });
             return temp;
         }
 

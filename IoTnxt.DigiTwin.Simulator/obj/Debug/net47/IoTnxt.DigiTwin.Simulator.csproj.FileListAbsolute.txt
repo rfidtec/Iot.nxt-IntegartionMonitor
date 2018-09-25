@@ -776,7 +776,6 @@ D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debu
 D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\Innotrack.Data.pdb
 D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\Innotrack.Process.pdb
 D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\Innotrack.Logger.pdb
-D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\obj\Debug\net47\IoTnxt.DigiTwin.Simulator.csprojAssemblyReference.cache
 D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\obj\Debug\net47\IoTnxt.DigiTwin.Simulator.exe.config
 D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\obj\Debug\net47\IoTnxt.DigiTwin.Simulator.csproj.CoreCompileInputs.cache
 D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\obj\Debug\net47\IoTnxt.DigiTwin.Simulator.AssemblyInfoInputs.cache
@@ -784,3 +783,4 @@ D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\obj\Debu
 D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\obj\Debug\net47\IoTnxt.DigiTwin.Simulator.csproj.CopyComplete
 D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\obj\Debug\net47\IoTnxt.DigiTwin.Simulator.exe
 D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\obj\Debug\net47\IoTnxt.DigiTwin.Simulator.pdb
+D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\obj\Debug\net47\IoTnxt.DigiTwin.Simulator.csprojAssemblyReference.cache
