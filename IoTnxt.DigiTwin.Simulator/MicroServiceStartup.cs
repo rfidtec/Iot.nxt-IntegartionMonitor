@@ -12,6 +12,7 @@ using IoTnxt.Entity.API.Abstractions;
 using IoTnxt.Gateway.API.Abstractions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using IoTnxt.DigiTwin.Simulator.InnotrackSync;
 
 namespace IoTnxt.DigiTwin.Simulator
 {
@@ -24,21 +25,26 @@ namespace IoTnxt.DigiTwin.Simulator
             base.ConfigurePicoServices(services);
 
             services.AddSingleton<IMicroServiceRunAs, RunAsService>();
-            services.AddSingleton<IAutoStartup, AutoStartup>();
-            services.AddSingleton<IDbHelperProvider, DbHelperProvider>();
-            services.AddSingleton<Gateway1Simulator>();
+            services.AddSingleton<IAutoStartup, Gateway1Simulator>();
             services.AddDapiRedGreenQueue(configuration);
 
             services.AddDapiRedGreenQueueProxy()
                 .AddSingletonProxy<IGatewayApi>()
                 .AddSingletonProxy<IEntityApi>();
-            
-            services.AddDapiRedGreenQueueServer().AddSingletonController<IDapiStatusService, DapiStatusService>();
-            services.AddDapiStatusService();
+
+
+            services.AddSingleton<TagReadsSync>();
+            services.AddSingleton<DeviceStatusSync>();
+            services.AddSingleton<RNCHeartbeatSync>();
+            services.AddSingleton<UnreadRFIDSync>();
+            services.AddSingleton<KeyFrameSync>();
+
+            //services.AddDapiRedGreenQueueServer().AddSingletonController<IDapiStatusService, DapiStatusService>();
+            //services.AddDapiStatusService();
 
             services.Configure<RedGreenQueueAdapterOptions>(configuration.GetSection(nameof(RedGreenQueueAdapterOptions)));
-            services.Configure<SimulatorOptions>(configuration.GetSection(nameof(SimulatorOptions)));
-            services.Configure<DbHelperProviderOptions>(configuration.GetSection(nameof(DbHelperProviderOptions)));
+            //services.Configure<SimulatorOptions>(configuration.GetSection(nameof(SimulatorOptions)));
+            //services.Configure<DbHelperProviderOptions>(configuration.GetSection(nameof(DbHelperProviderOptions)));
             services.Configure<Gateway1SimulatorOptions>(configuration.GetSection(nameof(Gateway1SimulatorOptions)));
             services.Configure<DapiRedGreenQueueProxyOptions>(configuration.GetSection(nameof(DapiRedGreenQueueProxyOptions)));
         }

@@ -1,9 +1,6 @@
-2018/09/13 4:37:37 PM : DALC4NET
-Message: Object reference not set to an instance of an object.
+2018/10/11 4:36:48 PM : .Net SqlClient Data Provider
+Message: Transaction (Process ID 58) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction.
 -----------------------------------------------
-2018/09/14 10:35:05 AM : DALC4NET
-Message: Object reference not set to an instance of an object.
------------------------------------------------
-2018/09/14 10:35:14 AM : DALC4NET
-Message: Object reference not set to an instance of an object.
+2018/10/12 11:56:13 AM : .Net SqlClient Data Provider
+Message: Transaction (Process ID 56) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction.
 -----------------------------------------------

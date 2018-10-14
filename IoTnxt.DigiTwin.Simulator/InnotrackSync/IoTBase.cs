@@ -15,6 +15,9 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Innotrack.DeviceManager.Pinger;
 using System.Collections;
+using Innotrack.DeviceManager.Data.Entities;
+using DALX.Core.Sql.Filters;
+using DALX.Core;
 
 namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
 {
@@ -22,10 +25,9 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
     {
 
         #region Properties
-        public readonly ILogger<Gateway1Simulator> _logger;
         public readonly IRedGreenQueueAdapter _redq;
-        public List<(string, string, object)> lst = new List<(string, string, object)>();
-        public IotObject _iotObject { get; set; }
+        public Gateway1Simulator Gateway1Simulator { get; set; }
+       public IntegrationProcessLog integrationLog { get; set; }
         #endregion
 
         #region Constructors
@@ -33,14 +35,16 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
         public IoTBase(IRedGreenQueueAdapter redq)
         {
             this._redq = redq;
-            _iotObject = new IotObject();
+            integrationLog = new IntegrationProcessLog();
+           
         }
         #endregion
 
         #region Methods
         public bool IsRNCAlive(string ip)
         {
-            bool alive = PingManager.PingDevice(ip);
+            PingManager pingManager = new PingManager();
+            bool alive = pingManager.PingDevice(ip);
 
             return alive;
         }
@@ -58,6 +62,37 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                          false,
                          list.ToArray());
         }
+
+        public async Task SendNotificationMock(List<(string, string, object)> list)
+        {
+
+            Console.WriteLine(JArray.FromObject(list));
+            await Task.Delay(15);
+        }
+
+        public void UpdateLastUpdatedLog(InterfaceType interfaceType)
+        {
+            //Create Log for this interface with a successful update.
+            integrationLog.Interface = InterfaceType.tagreads.ToString();
+            integrationLog.LastUpdated = DateTime.Now;
+            if (!integrationLog.Read(new QueryFilter("Interface", interfaceType.ToString(), FilterOperator.Equals)).Any())
+                integrationLog.Create();
+         //   else
+               // integrationLog.Update();
+          
+        }
+        public void UpdateLastCheckedLog(InterfaceType interfaceType)
+        {
+            //Create Log for this interface with a successful update.
+            integrationLog.Interface = InterfaceType.tagreads.ToString();
+            integrationLog.LastChecked = DateTime.Now;
+            if (!integrationLog.Read(new QueryFilter("Interface", interfaceType.ToString(), FilterOperator.Equals)).Any())
+                integrationLog.Create();
+          //  else
+               // integrationLog.Update();
+
+        }
+
         #endregion
     }
 }

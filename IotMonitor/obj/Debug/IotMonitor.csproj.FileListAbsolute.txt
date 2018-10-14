@@ -1,0 +1,11 @@
+D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IotMonitor\bin\Debug\IotMonitor.exe.config
+D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IotMonitor\bin\Debug\IotMonitor.exe
+D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IotMonitor\bin\Debug\IotMonitor.pdb
+D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IotMonitor\bin\Debug\Innotrack.Logger.dll
+D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IotMonitor\bin\Debug\Innotrack.Logger.pdb
+D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IotMonitor\obj\Debug\IotMonitor.Properties.Resources.resources
+D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IotMonitor\obj\Debug\IotMonitor.csproj.GenerateResource.cache
+D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IotMonitor\obj\Debug\IotMonitor.csproj.CoreCompileInputs.cache
+D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IotMonitor\obj\Debug\IotMonitor.csproj.CopyComplete
+D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IotMonitor\obj\Debug\IotMonitor.exe
+D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IotMonitor\obj\Debug\IotMonitor.pdb

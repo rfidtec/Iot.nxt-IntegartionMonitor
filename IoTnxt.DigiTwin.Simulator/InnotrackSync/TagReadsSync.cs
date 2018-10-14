@@ -19,69 +19,98 @@ using System.Threading.Tasks;
 using Innotrack.DeviceManager.Entities;
 using Innotrack.Logger;
 using System.Threading;
+using Innotrack.DeviceManager.Devices.RFID;
 
 namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
 {
     public class TagReadsSync : IoTBase
     {
+        private readonly ILogger<TagReads> _logger;
+
         private List<TagReads> TagList { get; set; }
-       
+        private Gateway1Simulator Gateway { get; set; }
 
 
-        public TagReadsSync(IRedGreenQueueAdapter redq) : base(redq)
+
+        public TagReadsSync(IRedGreenQueueAdapter redq, ILogger<TagReads> logger) : base(redq)
         {
+            _logger = logger;
             TagList = new List<TagReads>();
-            _iotObject = new IotObject("RFID");//Group name
+
 
         }
 
         public async Task StartTagReads()
         {
+            //  await Gateway.InitAsync();
+
             while (true)
             {
                 //Get all un seen tags
                 TagList = CheckForUnprocessedTags();
                 //Loop through all unprocessed tags
+
+                var lst = new List<(string, string, object)>();
                 foreach (var read in TagList)
                 {
                     try
                     {
+                        var _iotObject = new IotObject("RFID");//Group name
+                        UpdateLastCheckedLog(InterfaceType.tagreads);
+
                         //Add new tag read of device
-                        var addedUpdatedTags = GetAddedTags(read.Device.DeviceName); //AddTagRead(read.Device.DeviceName, read.EPC, read.DateTime.ToString());
+                        var addedUpdatedTags = GetAddedTags(read.Device.DeviceName); 
+                            //AddTagRead(read.Device.DeviceName, read.EPC, read.DateTime.ToString());
+                        //Remove all tags from last device and add to 
+                        AddRemovedTagsToList(lst);
+                        // await Task.Delay(10);
                         LoggerX.WriteEventLog($"{read.EPC} tags read at device: {read.Device.DeviceName}");
                         var value = new JObject
                         {
-                            ["addOrUpdate"] = JToken.FromObject(addedUpdatedTags)
+                            ["addOrUpdate"] = JObject.FromObject(addedUpdatedTags)
                         };
-
                         _iotObject.Object = value;
                         _iotObject.Group = "RFID";
-                       // _iotObject.DeviceType = "ZONE";
-                         _iotObject.Device = (Innotrack.DeviceManager.Entities.Device)read.Device;
+                        // _iotObject.DeviceType = "ZONE";
+                        _iotObject.Device = (Innotrack.DeviceManager.Entities.Device)read.Device;
                         //_iotObject.DeviceName = read.Device.DeviceName;
                         _iotObject.ObjectType = "TAGS";
                         lst.Add(_iotObject.ToString());
                         // lst.Add(("RFID|1:ZONE|" + read.Device.DeviceName, "TAGS", value));
-
-                        await SendNotification(lst);
-                        LoggerX.WriteEventLog("Notification Send");
-                        lst.Clear();
-                        read.HostSeen = true;
-                        read.Update();
-                        Thread.Sleep(100);
-
+                        if (lst.Count > 0)
+                        {
+                            LoggerX.WriteEventLog(JArray.FromObject(lst).ToString());
+                            LoggerX.WriteEventLog("Tag Reads Notification Try");
+                            await SendNotification(lst);
+                            LoggerX.WriteEventLog("Tag Reads Notification Sent");
+                            UpdateTagReadsHostSeen();
+                            //read.HostSeen = true;
+                            //read.Update();
+                            //UpdateLastUpdatedLog(InterfaceType.tagreads);
+                            lst.Clear();
+                        }
                     }
                     catch (Exception ex)
                     {
-                        _logger.LogError(ex, $"Sending notification for gateway {IotGateway.GatewayId}");
                         LoggerX.WriteErrorLog(ex);
+                        _logger.LogError(ex, $"Sending notification for gateway {IotGateway.GatewayId}");
                         // await Task.Delay((int)(Math.Max(1, sim.IntervalSeconds) * 1000));
                     }
-                    //TagList = CheckForUnprocessedTags();
                     break;
                 }
+                await Task.Delay(50);
             }
             // ReSharper disable once FunctionNeverReturns
+        }
+
+        private void UpdateTagReadsHostSeen()
+        {
+            foreach (var tag in TagList)
+            {
+
+                tag.HostSeen = true;
+                tag.Update();
+            }
         }
 
 
@@ -104,7 +133,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                 Rfid = rfid,
                 DateSeen = dateseen
             };
-            tags.Add(deviceName, tag);
+            tags.Add(rfid, tag);
             return tags;
         }
 
@@ -116,11 +145,11 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                  new QueryFilter("HostSeen", false, FilterOperator.Equals,LogicalOperator.AND),
                  new QueryFilter("DeviceID",device.ID,FilterOperator.Equals)
                  };
-            var tagList = new TagReads().Read(filters);
+            TagList = new TagReads().Read(filters);
 
             int count = 0;
             Dictionary<string, RfidTag> tags = new Dictionary<string, RfidTag>();
-            foreach (var read in tagList)
+            foreach (var read in TagList)
             {
                 var tag = new RfidTag
                 {
@@ -128,12 +157,43 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                     DateSeen = read.DateTime.ToString()
                 };
                 count += 1;
-                tags.Add(read.EPC + count, tag);
-                read.HostSeen = true;
-                read.Update();
+                if (!tags.ContainsKey(read.EPC))
+                    tags.Add(read.EPC, tag);
+                //read.HostSeen = true;
+                //read.Update();
             }
 
             return tags;
+        }
+
+        private void AddRemovedTagsToList(List<(string, string, object)> lst)
+        {
+            foreach (var tag in TagList)
+            {
+                List<QueryFilter> filters = new List<QueryFilter>()
+            {
+                new QueryFilter("EPC",tag.EPC,FilterOperator.Equals)
+            };
+                TagReads readTag = tag.GetSecondLastTagRead(tag.EPC);
+                if (readTag == null)
+                    continue;
+                Dictionary<string, JObject> tags = new Dictionary<string, JObject>();
+                tags.Add(readTag.EPC, JObject.Parse("{}"));
+
+                var value = new JObject
+                {
+                    ["remove"] = JToken.FromObject(tags)
+                };
+                var _iotObject = new IotObject();
+                _iotObject.Object = value;
+                _iotObject.Group = "RFID";
+                // _iotObject.DeviceType = "ZONE";
+                _iotObject.Device = (Innotrack.DeviceManager.Entities.Device)readTag.Device;
+                //_iotObject.DeviceName = read.Device.DeviceName;
+                _iotObject.ObjectType = "TAGS";
+                lst.Add(_iotObject.ToString());
+            }
+
         }
 
     }

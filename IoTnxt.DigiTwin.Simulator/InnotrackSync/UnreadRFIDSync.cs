@@ -16,13 +16,17 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
 {
     public class UnreadRFIDSync : IoTBase
     {
+        private readonly ILogger<UnreadRFIDSync> _logger;
         #region Properties
         List<Device> Devices { get; set; }
-        List<TagLastSeen> tagList { get; set; }
+        List<TagLastSeen> _tagList { get; set; }
+        private List<TagLastSeen> _tagLastSeenList { get; set; }
         #endregion
-        public UnreadRFIDSync(IRedGreenQueueAdapter redq) : base(redq)
+        public UnreadRFIDSync(IRedGreenQueueAdapter redq,ILogger<UnreadRFIDSync> logger) : base(redq)
         {
+            _logger = logger;
             Devices = new List<Device>();
+            _tagLastSeenList = new List<TagLastSeen>();
         }
 
         public async Task StartUnSeenMonitor()
@@ -33,12 +37,14 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                 try
                 {
                     Devices = new Device().Read();
+                    var lst = new List<(string, string, object)>();
                     foreach (var device in Devices)
                     {
+                        var _iotObject = new IotObject();
                         _iotObject.Device = device;
                         _iotObject.ObjectType = "TAGS";
                         DateTime removedatetime = DateTime.Now;
-                        removedatetime = removedatetime.AddSeconds(IotGateway.RemoveTimeout);
+                        removedatetime = removedatetime.AddSeconds( - IotGateway.RemoveTimeout);
                         var removeList = GetRemovedTags(device.ID.ToString(), removedatetime);
                         if (removeList.Count == 0)
                             continue;
@@ -49,10 +55,14 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                         };
                         _iotObject.Object = value;
                         lst.Add(_iotObject.ToString());
+                    }
+                    if (lst.Count > 0)
+                    {
+                        LoggerX.WriteEventLog("Remove List try...");
                         await SendNotification(lst);
-                        LoggerX.WriteEventLog($"Unreadlist device: {device.DeviceName} notifcation sent");
-                        lst.Clear();
                         UpdateAllTagSeen();
+                        LoggerX.WriteEventLog($"Remove list notifcation sent");
+                        await Task.Delay(50);
                     }
 
                     if (IotGateway.UnSeenListInterval > 0)
@@ -60,13 +70,16 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                 }
                 catch (Exception ex)
                 {
-                    _logger.LogError(ex, $"Sending notification for gateway {IotGateway.GatewayId}");
                     LoggerX.WriteErrorLog(ex);
+                    if (ex.Message == "Unable to write data to the transport connection: An existing connection was forcibly closed by the remote host.")
+                        continue ;
+                    _logger.LogError(ex, $"Sending notification for gateway {IotGateway.GatewayId}");
                 }
+                
             }
         }
 
-        private Dictionary<string, RfidTag> GetRemovedTags(string deviceID, DateTime removeTimeLmit)
+        private Dictionary<string, JObject> GetRemovedTags(string deviceID, DateTime removeTimeLmit)
         {
             Innotrack.DeviceManager.Entities.Device device = new Innotrack.DeviceManager.Entities.Device(deviceID);
             List<QueryFilter> filters = new List<QueryFilter>()
@@ -75,28 +88,26 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                 new QueryFilter("DateTime",removeTimeLmit,FilterOperator.LessThan,LogicalOperator.AND),
                 new QueryFilter("HostSeen",false,FilterOperator.Equals)
             };
-             tagList = new Innotrack.DeviceManager.Entities.TagLastSeen().Read(filters);
-
-            Dictionary<string, RfidTag> tags = new Dictionary<string, RfidTag>();
-            foreach (var read in tagList)
+             _tagList = new Innotrack.DeviceManager.Entities.TagLastSeen().Read(filters);
+            
+            Dictionary<string, JObject> tags = new Dictionary<string, JObject>();
+            foreach (var read in _tagList)
             {
-                var tag = new RfidTag
-                {
-                    Rfid = read.RFID,
-                    DateSeen = read.DateTime.ToString()
-                };
-                tags.Add(read.RFID.ToString(), tag);
+                tags.Add(read.RFID.ToString(), JObject.Parse("{}"));
+                _tagLastSeenList.Add(read);
             }
             return tags;
         }
 
         private void UpdateAllTagSeen()
         {
-            foreach(var tag in tagList)
+            foreach(var tag in _tagLastSeenList)
             {
                 tag.HostSeen = true;
+                tag.DeviceID = 0;
                 tag.Update();
             }
+            _tagLastSeenList.Clear();
         }
     }
 }

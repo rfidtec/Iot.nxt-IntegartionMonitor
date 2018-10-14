@@ -12,10 +12,11 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
 {
     public class RNCHeartbeatSync : IoTBase
     {
+        private readonly ILogger<RNCHeartbeatSync> _logger;
 
-        public RNCHeartbeatSync(IRedGreenQueueAdapter redq) : base(redq)
+        public RNCHeartbeatSync(IRedGreenQueueAdapter redq, ILogger<RNCHeartbeatSync> logger) : base(redq)
         {
-
+            _logger = logger;
         }
 
         public async Task StartAsync()
@@ -23,6 +24,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
 
             try
             {
+                var _iotObject = new IotObject();
                 _iotObject.Group = "RFID";
                 _iotObject.DeviceType = "DEVICE";
                 _iotObject.DeviceName = IotGateway.GatewayId;
@@ -30,26 +32,26 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
 
                 while (true)
                 {
+                    var lst = new List<(string, string, object)>();
                     Console.WriteLine("Check RNC Heartbeat");
                     //Check if the RNC Server is online -RNC IP Address is configurable in app.config
                     if (IsRNCAlive(IotGateway.RNCIpAddress))
                     {
-                        _iotObject.Object = IotGateway.Heartbeat = true;
-                      
+                        _iotObject.Object = 1;
+                        IotGateway.Heartbeat = true;
                         LoggerX.WriteEventLog($"RNC Heartbeat is alive");
                     }
                     else
                     {
-                        _iotObject.Object = IotGateway.Heartbeat = false;
-                        
+                        _iotObject.Object = 0;
+                        IotGateway.Heartbeat = false;
                         LoggerX.WriteEventLog($"RNC Heartbeat is dead");
 
                     }
                     lst.Add(_iotObject.ToString());
-                    Console.WriteLine("Attempting to send");
+                    Console.WriteLine("Attempting to send " + DateTime.Now.ToString());
                     await SendNotification(lst);
-                    LoggerX.WriteEventLog($"RNC Heartbeat Notification Sent");
-                    lst.Clear();
+                    LoggerX.WriteEventLog($"RNC Heartbeat Notification Sent ");
 
                     if (IotGateway.RNCCheckInterval > 0)
                         await Task.Delay((int)(IotGateway.RNCCheckInterval * 1000));
@@ -58,8 +60,9 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"Sending notification for gateway {IotGateway.GatewayId}");
+                Console.WriteLine(ex.Message);
                 LoggerX.WriteErrorLog(ex);
+                _logger.LogError(ex, $"Sending notification for gateway {IotGateway.GatewayId}");
             }
         }
     }

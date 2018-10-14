@@ -19,16 +19,19 @@ using System.Configuration;
 using IoTnxt.DigiTwin.Simulator.InnotrackSync;
 using Innotrack.Logger;
 using System.Windows.Forms;
+using System.Threading;
+using IoTnxt.Common.Bootstrap;
 
 namespace IoTnxt.DigiTwin.Simulator
 {
-    public class Gateway1Simulator
+    public class Gateway1Simulator: IAutoStartup
     {
         private readonly IGatewayApi _gatewayApi;
         private readonly ILogger<Gateway1Simulator> _logger;
         private readonly IRedGreenQueueAdapter _redq;
         private readonly IOptions<Gateway1SimulatorOptions> _options;
         private readonly IEntityApi _entityApi;
+        private bool connected = false;
 
         TagReadsSync _tagReadsSync { get; set; }
         DeviceStatusSync _devicestatusSync { get; set; }
@@ -41,7 +44,13 @@ namespace IoTnxt.DigiTwin.Simulator
     IOptions<Gateway1SimulatorOptions> options,
     ILogger<Gateway1Simulator> logger,
     IGatewayApi gatewayApi,
-    IEntityApi entityApi)
+    IEntityApi entityApi,
+    TagReadsSync tagReadsSync,
+    DeviceStatusSync devicestatusSync,
+    RNCHeartbeatSync RNCHeartbeatSync,
+    UnreadRFIDSync unreadRFIDSync,
+    KeyFrameSync keyFrameSync
+    )
         {
             _entityApi = entityApi ?? throw new ArgumentNullException(nameof(entityApi));
             _gatewayApi = gatewayApi ?? throw new ArgumentNullException(nameof(gatewayApi));
@@ -51,37 +60,54 @@ namespace IoTnxt.DigiTwin.Simulator
             if (options.Value.Active)
                 logger.LogInformation("GATEWAY.1 simulator active");
 
-
             //Init all Innotrack Sync Classes
-            _tagReadsSync = new TagReadsSync(redq);
-            _devicestatusSync = new DeviceStatusSync(redq);
-            _RNCHeartbeatSync = new RNCHeartbeatSync(redq);
-            _unreadRFIDSync = new UnreadRFIDSync(redq);
-            _keyFrameSync = new KeyFrameSync(redq);
+            _tagReadsSync = tagReadsSync;
+            _devicestatusSync = devicestatusSync;
+            _RNCHeartbeatSync = RNCHeartbeatSync;
+            _unreadRFIDSync = unreadRFIDSync;
+            _keyFrameSync = keyFrameSync;
 
-
-            Task.Run(InitAsync);
+            
 
         }
 
-        private void Init()
+        private void RunIntegration()
         {
 
+           
+             Task.Run(InitAsync);
+            
+           
+
         }
 
-        private async Task InitAsync()
+        public async Task StartTagReads()
+        {
+            await InitAsync();
+
+            await Task.Run(() => _tagReadsSync.StartTagReads());
+        }
+
+        public async Task StartRNCHeartBeat()
+        {
+            await InitAsync();
+
+           await Task.Run(() => _RNCHeartbeatSync.StartAsync());
+        }
+
+        public async Task InitAsync()
         {
             try
             {
                 _logger.LogInformation("Waiting for connecting...");
                 LoggerX.WriteEventLog("Waiting for connecting...");
-               
+
                 if (!string.IsNullOrWhiteSpace(IotGateway.Secret))
                 {
                     _logger.LogInformation($"Registering gateway {IotGateway.GatewayId}");
                     LoggerX.WriteEventLog($"Registering gateway {IotGateway.GatewayId}");
-                    
-                    
+
+
                     var gw = new Gateway.API.Abstractions.Gateway
                     {
                         GatewayId = IotGateway.GatewayId,
@@ -100,21 +126,18 @@ namespace IoTnxt.DigiTwin.Simulator
                     {
                         _logger.LogInformation($"Associating gateway {IotGateway.GatewayId} with client {IotGateway.ClientId}");
                         LoggerX.WriteEventLog($"Associating gateway {IotGateway.GatewayId} with client {IotGateway.ClientId}");
-                       await DapiContext.ExecuteAsync(username: "root", action: () => _entityApi.AssociateGatewayAndClientAsync(IotGateway.GatewayId, IotGateway.ClientId));
+                        await DapiContext.ExecuteAsync(username: "root", action: () => _entityApi.AssociateGatewayAndClientAsync(IotGateway.GatewayId, IotGateway.ClientId));
                     }
                 }
-
+                connected = true;
                 _logger.LogInformation($"Simulating gateway {IotGateway.GatewayId} started...");
                 LoggerX.WriteEventLog($"Simulating gateway {IotGateway.GatewayId} started...");
-                //var unused = Task.Run(async () =>
-                //{
-                //    await _tagReadsSync.SyncTagReads();
-                //    await _devicestatusSync.SyncDeviceStatus();
-                //});
+
                 StartIntegration();
             }
             catch (Exception ex)
             {
+                connected = false;
                 _logger.LogError(ex, "Error initialization simulator");
             }
         }
@@ -127,22 +150,42 @@ namespace IoTnxt.DigiTwin.Simulator
         /// 
         private void StartIntegration()
         {
-            Task.Run(() => _tagReadsSync.StartTagReads());
+            new Thread(() =>
+            {
+                Task.Run(() => _tagReadsSync.StartTagReads());
+            }).Start();
             LoggerX.WriteEventLog("Tag Read Monitor has started...");
-            //Task.Run(() => _RNCHeartbeatSync.StartAsync());
-            //LoggerX.WriteEventLog("RNC Heartbeat Monitor started...");
-            ////Task.Run(() => _devicestatusSync.StartDeviceStatus());
-            ////LoggerX.WriteEventLog("Device Status Monitor started...");
-            //Task.Run(() => _unreadRFIDSync.StartUnSeenMonitor());
-            //LoggerX.WriteEventLog("Unread list Monitor started...");
-            //Task.Run(() => _keyFrameSync.StartKeyFrameMonitor());
-            //LoggerX.WriteEventLog("Keyframe sending started...");
+            new Thread(() =>
+            {
+                Task.Run(() => _RNCHeartbeatSync.StartAsync());
+            }).Start();
+            LoggerX.WriteEventLog("RNC Heartbeat Monitor started...");
+            new Thread(() =>
+            {
+                Task.Run(() => _devicestatusSync.StartDeviceStatus());
+            }).Start();
+            Task.Run(() => _devicestatusSync.StartDeviceStatus());
+            LoggerX.WriteEventLog("Device Status Monitor started...");
+            new Thread(() =>
+            {
+                Task.Run(() => _unreadRFIDSync.StartUnSeenMonitor());
+            }).Start();
+            LoggerX.WriteEventLog("Unread list Monitor started...");
+            new Thread(() =>
+            {
+                Task.Run(() => _keyFrameSync.StartKeyFrameMonitor());
+            }).Start();
+            LoggerX.WriteEventLog("Keyframe sending started...");
         }
 
+        public Task StartAsync()
+        {
+            return Task.Run(() => RunIntegration());
+        }
 
-
-
-
-
+        public void Dispose()
+        {
+             
+        }
     }
 }

@@ -11,14 +11,38 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
 {
     public static class IotGateway
     {
-        public static string GatewayId { get; } = "RNCVodaworld";
+        public static string GatewayId
+        {
+            get
+            {
+                return GetConfigurationValue("GatewayId");
+            }
+        }
         public static int IntervalSendUnReadTags { get; }
         public static int IntervalSendKeyFrame { get; }
-        public static string UserName { get; } = "root";
-        public static string Secret { get; } = "Inno65";
         public static string Make { get; } = "Innotrack";
-        public static string Model { get; } = "Vodaworld-RNC";
-        public static string ClientId { get; } = "t000000065";
+        public static string Model { get; } = "RNC";
+        public static string UserName
+        {
+            get
+            {
+                return GetConfigurationValue("Username");
+            }
+        }
+        public static string Secret
+        {
+            get
+            {
+                return GetConfigurationValue("Secret");
+            }
+        }
+        public static string ClientId
+        {
+            get
+            {
+                return GetConfigurationValue("ClientId");
+            }
+        }
         public static bool Heartbeat { get; set; }
 
         private static string _deviceType;
@@ -29,7 +53,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
         {
             get
             {
-                return GetConfigurationValue("rnc-ipaddress");
+                return GetConfigurationValue("Rnc-ipaddress");
             }
         }
 
@@ -65,6 +89,20 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
             }
         }
 
+        public static int KeyFrameTimeout
+        {
+            get
+            {
+                return Convert.ToInt32(GetConfigurationValue("KeyframeTimeout"));
+            }
+        }
+        public static int DeviceHeatbeatInterval
+        {
+            get
+            {
+                return Convert.ToInt32(GetConfigurationValue("DeviceHeartBeat"));
+            }
+        }
 
 
         public static string GetConfigurationValue(string key)

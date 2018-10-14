@@ -18,9 +18,12 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
     {
         List<Device> DeviceList { get; set; }
 
-        public KeyFrameSync(IRedGreenQueueAdapter redq) : base(redq)
+        private readonly ILogger<KeyFrameSync> _logger;
+
+        public KeyFrameSync(IRedGreenQueueAdapter redq, ILogger<KeyFrameSync> logger) : base(redq)
         {
             DeviceList = new List<Device>();
+            _logger = logger;
         }
 
         /// <summary>
@@ -33,33 +36,42 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
             while (true)
                 try
                 {
+                    var lst = new List<(string, string, object)>();
                     foreach (var device in DeviceList)
                     {
+                        var _iotObject = new IotObject();
+                        _iotObject.Group = "RFID";
+                        _iotObject.Device = device;
+                        _iotObject.ObjectType = "TAGS";
                         //Add all added tag of device
+                        await Task.Delay(100);
                         var Alltags = GetCurrentDeviceTagList(device);
-                        if (Alltags.Count == 0)
-                            break;
+                        //if (Alltags.Count == 0)
+                        //    continue;
 
                         LoggerX.WriteEventLog($"{Alltags.Count} tags found at device {device.DeviceName}");
                         var value = new JObject
                         {
-                            ["reset"] = JToken.FromObject(Alltags)
+                            ["reset"] = JObject.FromObject(Alltags)
                         };
-                        lst.Add((device.DeviceName, device.DeviceName, value));
-
-                        await SendNotification(lst);
-                        LoggerX.WriteEventLog("Reset Notification Sent");
-                        lst.Clear();
+                        _iotObject.Object = value;
+                        lst.Add(_iotObject.ToString());
+                        //Console.WriteLine(JArray.FromObject(lst).ToString());
                     }
+                    _logger.LogTrace("Logging: Key frame attempt");
+                    Console.WriteLine("Key frame try..");
+                    LoggerX.WriteEventLog("Reset Notification Try");
+                    await SendNotification(lst);
+                    LoggerX.WriteEventLog("Reset Notification Sent");
 
-                        //Delay For Total Key Frame Interval Seconds
-                        if (IotGateway.KeyframeInterval > 0)
-                            await Task.Delay((int)(IotGateway.KeyframeInterval * 1000));
+                    //Delay For Total Key Frame Interval Seconds
+                    if (IotGateway.KeyframeInterval > 0)
+                        await Task.Delay((int)(IotGateway.KeyframeInterval * 1000));
                 }
                 catch (Exception ex)
                 {
-                    _logger.LogError(ex, $"Sending notification for gateway {IotGateway.GatewayId}");
                     LoggerX.WriteErrorLog(ex);
+                    _logger.LogError(ex, $"Sending notification for gateway {IotGateway.GatewayId}");
                 }
         }
         /// <summary>
@@ -67,12 +79,20 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
         /// </summary>
         /// <param name="device"></param>
         /// <returns></returns>
-        private Dictionary<string, RfidTag> GetCurrentDeviceTagList(Device device)
+        private Dictionary<string, JObject> GetCurrentDeviceTagList(Device device)
         {
-            QueryFilter filter = new QueryFilter("DeviceID", device.ID, FilterOperator.Equals);
-            var list = new TagLastSeen().Read(filter);
+            DateTime removedatetime = DateTime.Now;
+            removedatetime = removedatetime.AddSeconds(-IotGateway.KeyFrameTimeout);
+            List<QueryFilter> filters = new List<QueryFilter>()
+            {
+                new QueryFilter("DeviceID", device.ID, FilterOperator.Equals,LogicalOperator.AND),
+                new QueryFilter("DateTime",removedatetime,FilterOperator.GreaterThan)
+            };
 
-            Dictionary<string, RfidTag> tags = new Dictionary<string, RfidTag>();
+            //QueryFilter filter = new QueryFilter("DeviceID", device.ID, FilterOperator.Equals);
+            var list = new TagLastSeen().Read(filters);
+
+            Dictionary<string, JObject> tags = new Dictionary<string, JObject>();
             foreach (var read in list)
             {
                 var tag = new RfidTag
@@ -80,7 +100,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                     Rfid = read.RFID,
                     DateSeen = read.DateTime.ToString()
                 };
-                tags.Add(read.RFID,tag);
+                tags.Add(read.RFID, JObject.FromObject(tag));
             }
             return tags;
         }
