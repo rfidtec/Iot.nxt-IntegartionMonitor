@@ -70,23 +70,25 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
             await Task.Delay(15);
         }
 
-        public void UpdateLastUpdatedLog(InterfaceType interfaceType)
+        public async Task UpdateLastUpdatedLog(InterfaceType interfaceType)
         {
             //Create Log for this interface with a successful update.
             integrationLog.Interface = InterfaceType.tagreads.ToString();
             integrationLog.LastUpdated = DateTime.Now;
-            if (!integrationLog.Read(new QueryFilter("Interface", interfaceType.ToString(), FilterOperator.Equals)).Any())
-                integrationLog.Create();
-         //   else
+           var list = await integrationLog.ReadAsync(new QueryFilter("Interface", interfaceType.ToString(), FilterOperator.Equals)); 
+            if (!list.Any())
+            integrationLog.Create();
+            //else
                // integrationLog.Update();
           
         }
-        public void UpdateLastCheckedLog(InterfaceType interfaceType)
+        public async Task UpdateLastCheckedLog(InterfaceType interfaceType)
         {
             //Create Log for this interface with a successful update.
             integrationLog.Interface = InterfaceType.tagreads.ToString();
             integrationLog.LastChecked = DateTime.Now;
-            if (!integrationLog.Read(new QueryFilter("Interface", interfaceType.ToString(), FilterOperator.Equals)).Any())
+            var list = await integrationLog.ReadAsync(new QueryFilter("Interface", interfaceType.ToString(), FilterOperator.Equals));
+            if (!list.Any())
                 integrationLog.Create();
           //  else
                // integrationLog.Update();

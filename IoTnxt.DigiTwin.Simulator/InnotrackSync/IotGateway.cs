@@ -121,32 +121,46 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
             addedZones = new List<string>();
             foreach (var device in new Innotrack.DeviceManager.Entities.Device().Read())
             {
-                deviceZoneName = DeviceHelper.GetDeviceZoneName(device, out _deviceType);
+                //deviceZoneName = DeviceHelper.GetDeviceZoneName(device, out _deviceType);
                 Device iotDevice = new Device()
                 {
-                    DeviceName = $"RFID|1:{_deviceType}|" + deviceZoneName,
+                    DeviceName = $"RFID|1:DEVICE|" + device.DeviceName,
                     // DeviceName = $"RFID|1:ZONE|{device.DeviceName}",
                     Properties = new Dictionary<string, DeviceProperty>()
                     {
                         { "TAGS", new DeviceProperty() { PropertyName = "TAGS", DataType = "RFIDDictionary" } },
-                        { "HEARTBEAT", new DeviceProperty() { PropertyName = "HEARTBEAT", DataType = "Bool" } }
+                        { "HEARTBEAT", new DeviceProperty() { PropertyName = "HEARTBEAT", DataType = "Int" } }
                     }
                 };
-                if (deviceZoneName != device.DeviceName)
-                    if (!addedZones.Contains(deviceZoneName))
-                        addedZones.Add(deviceZoneName);
-                    else
-                        continue;
-                temp.Add($"RFID|1:{_deviceType}|{deviceZoneName}", iotDevice);
+                //if (deviceZoneName != device.DeviceName)
+                //    if (!addedZones.Contains(deviceZoneName))
+                //        addedZones.Add(deviceZoneName);
+                //    else
+                //        continue;
+                temp.Add($"RFID|1:DEVICE|" + device.DeviceName, iotDevice);
                 //temp.Add($"RFID|1:ZONE|{device.DeviceName}", iotDevice);
 
             }
+            foreach(var zone in new Innotrack.DeviceManager.Entities.Zone().Read())
+            {
+                Device iotDevice = new Device()
+                {
+                    DeviceName = $"RFID|1:ZONE|" + zone.ZoneName,
+                    // DeviceName = $"RFID|1:ZONE|{device.DeviceName}",
+                    Properties = new Dictionary<string, DeviceProperty>()
+                    {
+                        { "TAGS", new DeviceProperty() { PropertyName = "TAGS", DataType = "RFIDDictionary" } },
+                        { "HEARTBEAT", new DeviceProperty() { PropertyName = "HEARTBEAT", DataType = "Int" } }
+                    }
+                };
+                temp.Add($"RFID|1:ZONE|" + zone.ZoneName, iotDevice);
+            }
             temp.Add($"RFID|1:RNC|{IotGateway.GatewayId}", new Device()
             {
-                DeviceName = IotGateway.GatewayId,
+                DeviceName = $"RFID|1:RNC|{IotGateway.GatewayId}",
                 Properties = new Dictionary<string, DeviceProperty>()
                     {
-                        { "HEARTBEAT", new DeviceProperty() { PropertyName = "HEARTBEAT", DataType = "Bool" } }
+                        { "HEARTBEAT", new DeviceProperty() { PropertyName = "HEARTBEAT", DataType = "Int" } }
                     }
             });
             return temp;

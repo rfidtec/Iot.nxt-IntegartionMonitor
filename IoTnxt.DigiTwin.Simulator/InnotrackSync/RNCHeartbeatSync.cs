@@ -21,12 +21,11 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
 
         public async Task StartAsync()
         {
-
             try
             {
                 var _iotObject = new IotObject();
                 _iotObject.Group = "RFID";
-                _iotObject.DeviceType = "DEVICE";
+                _iotObject.DeviceType = "RNC";
                 _iotObject.DeviceName = IotGateway.GatewayId;
                 _iotObject.ObjectType = "HEARTBEAT";
 

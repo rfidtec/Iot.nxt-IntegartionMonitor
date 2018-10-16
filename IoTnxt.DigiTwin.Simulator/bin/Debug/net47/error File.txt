@@ -2066,3 +2066,23 @@ file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs met
 Message: The process cannot access the file 'D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\log file.txt' because it is being used by another process.
 file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteEventLog line: 96
 -----------------------------------------------
+2018/10/16 2:12:35 PM : mscorlib
+Message: The process cannot access the file 'D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\log file.txt' because it is being used by another process.
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteEventLog line: 96
+-----------------------------------------------
+2018/10/16 2:13:38 PM : mscorlib
+Message: The process cannot access the file 'D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\log file.txt' because it is being used by another process.
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteEventLog line: 96
+-----------------------------------------------
+2018/10/16 2:17:46 PM : mscorlib
+Message: The process cannot access the file 'D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\log file.txt' because it is being used by another process.
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteEventLog line: 96
+-----------------------------------------------
+2018/10/16 2:18:48 PM : mscorlib
+Message: The process cannot access the file 'D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\log file.txt' because it is being used by another process.
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteEventLog line: 96
+-----------------------------------------------
+2018/10/16 2:18:48 PM : mscorlib
+Message: The process cannot access the file 'D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\bin\Debug\net47\log file.txt' because it is being used by another process.
+file name: D:\Work\Source Code\Innotrack Library\Innotrack.Logger\LoggerX.cs method: WriteEventLog line: 96
+-----------------------------------------------

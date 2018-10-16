@@ -41,9 +41,13 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                     var lst = new List<(string, string, object)>();
                     foreach (var device in Devices)
                     {
+                        //if (device.Status != "Active")
+                        //    continue;
                         //Add Heartbeat of device and send
                         var _iotObject = new IotObject();
-                        _iotObject.Device = device;
+                        //_iotObject.Device = device;
+                        _iotObject.DeviceName = device.DeviceName;
+                        _iotObject.DeviceType = "DEVICE";
                         _iotObject.ObjectType = "HEARTBEAT";
                         _iotObject.Object = device.Status == "Active" ? 1 : 0;
                         lst.Add(_iotObject.ToString());
