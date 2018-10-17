@@ -24,7 +24,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
 
         #endregion
 
-        public DeviceStatusSync(IRedGreenQueueAdapter redq, ILogger<DeviceStatusSync> logger) : base(redq)
+        public DeviceStatusSync(IRedGreenQueueAdapter redq, ILogger<DeviceStatusSync> logger,LoggerX loggerX) : base(redq,loggerX)
         {
             Devices = new List<Device>();
             _logger = logger;
@@ -36,7 +36,8 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
             {
                 try
                 {
-                    RefreshDeviceStatusList();
+                    await UpdateLastCheckedLog(InterfaceType.deviceheartbeat);
+                    await RefreshDeviceStatusList();
 
                     var lst = new List<(string, string, object)>();
                     foreach (var device in Devices)
@@ -54,6 +55,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                         //Send list to Iot Cloud Platform
                     }
                     await SendNotification(lst);
+                    await UpdateLastUpdatedLog(InterfaceType.deviceheartbeat);
                 }
                 catch (Exception ex)
                 {
@@ -65,11 +67,11 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
         }
 
 
-        private void RefreshDeviceStatusList()
+        private async Task RefreshDeviceStatusList()
         {
             //Get a list of all devices that status has changed
             //QueryFilter filter = new QueryFilter("HostSeen", false, DALX.Core.FilterOperator.Equals);
-            Devices = new Device().Read();
+            Devices = await new Device().ReadAsync();
         }
 
 

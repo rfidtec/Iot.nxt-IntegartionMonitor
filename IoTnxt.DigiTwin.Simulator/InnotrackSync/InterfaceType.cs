@@ -9,7 +9,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
     public enum InterfaceType
     {
         tagreads,
-        devicestatuschange,
+        deviceheartbeat,
         unreadtaglist,
         keyframe,
         rncheartbeat

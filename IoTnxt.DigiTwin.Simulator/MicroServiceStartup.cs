@@ -13,6 +13,7 @@ using IoTnxt.Gateway.API.Abstractions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using IoTnxt.DigiTwin.Simulator.InnotrackSync;
+using Innotrack.Logger;
 
 namespace IoTnxt.DigiTwin.Simulator
 {
@@ -38,6 +39,7 @@ namespace IoTnxt.DigiTwin.Simulator
             services.AddSingleton<RNCHeartbeatSync>();
             services.AddSingleton<UnreadRFIDSync>();
             services.AddSingleton<KeyFrameSync>();
+            services.AddSingleton<LoggerX>();
 
             //services.AddDapiRedGreenQueueServer().AddSingletonController<IDapiStatusService, DapiStatusService>();
             //services.AddDapiStatusService();

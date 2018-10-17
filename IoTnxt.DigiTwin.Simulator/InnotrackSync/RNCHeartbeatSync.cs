@@ -14,7 +14,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
     {
         private readonly ILogger<RNCHeartbeatSync> _logger;
 
-        public RNCHeartbeatSync(IRedGreenQueueAdapter redq, ILogger<RNCHeartbeatSync> logger) : base(redq)
+        public RNCHeartbeatSync(IRedGreenQueueAdapter redq, ILogger<RNCHeartbeatSync> logger,LoggerX loggerX) : base(redq,loggerX)
         {
             _logger = logger;
         }
@@ -31,10 +31,12 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
 
                 while (true)
                 {
+                    await UpdateLastCheckedLog(InterfaceType.rncheartbeat);
                     var lst = new List<(string, string, object)>();
                     Console.WriteLine("Check RNC Heartbeat");
                     //Check if the RNC Server is online -RNC IP Address is configurable in app.config
-                    if (IsRNCAlive(IotGateway.RNCIpAddress))
+
+                    if (await IsRNCAlive(IotGateway.RNCIpAddress))
                     {
                         _iotObject.Object = 1;
                         IotGateway.Heartbeat = true;
@@ -50,6 +52,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                     lst.Add(_iotObject.ToString());
                     Console.WriteLine("Attempting to send " + DateTime.Now.ToString());
                     await SendNotification(lst);
+                    await UpdateLastUpdatedLog(InterfaceType.rncheartbeat);
                     LoggerX.WriteEventLog($"RNC Heartbeat Notification Sent ");
 
                     if (IotGateway.RNCCheckInterval > 0)

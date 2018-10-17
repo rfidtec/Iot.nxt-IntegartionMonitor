@@ -32,11 +32,10 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
 
 
 
-        public TagReadsSync(IRedGreenQueueAdapter redq, ILogger<TagReads> logger) : base(redq)
+        public TagReadsSync(IRedGreenQueueAdapter redq, ILogger<TagReads> logger,LoggerX loggerx) : base(redq,loggerx)
         {
             _logger = logger;
             TagList = new List<TagReads>();
-
 
         }
 
@@ -47,22 +46,22 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
             while (true)
             {
                 //Get all un seen tags
-                TagList = CheckForUnprocessedTags();
+                TagList = await CheckForUnprocessedTags();
                 //Loop through all unprocessed tags
 
-                var lst = new List<(string, string, object)>();
                 foreach (var read in TagList)
                 {
                     try
                     {
+                        var lst = new List<(string, string, object)>();
                         var _iotObject = new IotObject("RFID");//Group name
-                        UpdateLastCheckedLog(InterfaceType.tagreads);
+                        await UpdateLastCheckedLog(InterfaceType.tagreads);
 
                         //Add new tag read of device
-                        var addedUpdatedTags = GetAddedTags(read.Device.DeviceName); 
-                            //AddTagRead(read.Device.DeviceName, read.EPC, read.DateTime.ToString());
+                        var addedUpdatedTags = await GetAddedTags(read.Device.DeviceName);
+                        //AddTagRead(read.Device.DeviceName, read.EPC, read.DateTime.ToString());
                         //Remove all tags from last device and add to 
-                        AddRemovedTagsToList(lst);
+                        await AddRemovedTagsToList(lst);
                         // await Task.Delay(10);
                         LoggerX.WriteEventLog($"{read.EPC} tags read at device: {read.Device.DeviceName}");
                         var value = new JObject
@@ -86,8 +85,9 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                             UpdateTagReadsHostSeen();
                             //read.HostSeen = true;
                             //read.Update();
-                            //UpdateLastUpdatedLog(InterfaceType.tagreads);
+                           await UpdateLastUpdatedLog(InterfaceType.tagreads);
                             lst.Clear();
+
                         }
                     }
                     catch (Exception ex)
@@ -114,13 +114,13 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
         }
 
 
-        private List<TagReads> CheckForUnprocessedTags()
+        private async Task<List<TagReads>> CheckForUnprocessedTags()
         {
             List<QueryFilter> filters = new List<QueryFilter>()
             {
                  new QueryFilter("HostSeen", false, FilterOperator.Equals)
                  };
-            var tagList = new TagReads().Read(filters);
+            var tagList = await new TagReads().ReadAsync(filters);
 
             return tagList;
         }
@@ -137,7 +137,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
             return tags;
         }
 
-        private Dictionary<string, RfidTag> GetAddedTags(string deviceName)
+        private async Task<Dictionary<string, RfidTag>> GetAddedTags(string deviceName)
         {
             Innotrack.DeviceManager.Entities.Device device = Innotrack.DeviceManager.Entities.Device.GetDeviceByName(deviceName);
             List<QueryFilter> filters = new List<QueryFilter>()
@@ -145,7 +145,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                  new QueryFilter("HostSeen", false, FilterOperator.Equals,LogicalOperator.AND),
                  new QueryFilter("DeviceID",device.ID,FilterOperator.Equals)
                  };
-            TagList = new TagReads().Read(filters);
+            TagList = await new TagReads().ReadAsync(filters);
 
             int count = 0;
             Dictionary<string, RfidTag> tags = new Dictionary<string, RfidTag>();
@@ -166,7 +166,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
             return tags;
         }
 
-        private void AddRemovedTagsToList(List<(string, string, object)> lst)
+        private async Task AddRemovedTagsToList(List<(string, string, object)> lst)
         {
             foreach (var tag in TagList)
             {
@@ -174,7 +174,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
             {
                 new QueryFilter("EPC",tag.EPC,FilterOperator.Equals)
             };
-                TagReads readTag = tag.GetSecondLastTagRead(tag.EPC);
+                TagReads readTag = await tag.GetSecondLastTagReadAsync(tag.EPC);
                 if (readTag == null)
                     continue;
                 Dictionary<string, JObject> tags = new Dictionary<string, JObject>();

@@ -18,6 +18,7 @@ using System.Collections;
 using Innotrack.DeviceManager.Data.Entities;
 using DALX.Core.Sql.Filters;
 using DALX.Core;
+using Innotrack.Logger;
 
 namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
 {
@@ -28,24 +29,31 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
         public readonly IRedGreenQueueAdapter _redq;
         public Gateway1Simulator Gateway1Simulator { get; set; }
        public IntegrationProcessLog integrationLog { get; set; }
+        public LoggerX LoggerX { get; set; }
+        IntegrationProcessLog processLog = new IntegrationProcessLog();
         #endregion
 
         #region Constructors
 
-        public IoTBase(IRedGreenQueueAdapter redq)
+        public IoTBase(IRedGreenQueueAdapter redq,LoggerX loggerX )
         {
             this._redq = redq;
+            LoggerX = loggerX;
             integrationLog = new IntegrationProcessLog();
+            processLog = new IntegrationProcessLog();
            
         }
         #endregion
 
         #region Methods
-        public bool IsRNCAlive(string ip)
+        public async Task<bool> IsRNCAlive(string ip)
         {
-            PingManager pingManager = new PingManager();
-            bool alive = pingManager.PingDevice(ip);
-
+            bool alive = false;
+          await Task.Run(() =>
+            {
+                PingManager pingManager = new PingManager();
+                alive = pingManager.PingDevice(ip);
+            });
             return alive;
         }
 
@@ -73,25 +81,14 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
         public async Task UpdateLastUpdatedLog(InterfaceType interfaceType)
         {
             //Create Log for this interface with a successful update.
-            integrationLog.Interface = InterfaceType.tagreads.ToString();
-            integrationLog.LastUpdated = DateTime.Now;
-           var list = await integrationLog.ReadAsync(new QueryFilter("Interface", interfaceType.ToString(), FilterOperator.Equals)); 
-            if (!list.Any())
-            integrationLog.Create();
-            //else
-               // integrationLog.Update();
+           await processLog.InsertUpdate_LastUpdated(interfaceType.ToString());
+           
           
         }
         public async Task UpdateLastCheckedLog(InterfaceType interfaceType)
         {
             //Create Log for this interface with a successful update.
-            integrationLog.Interface = InterfaceType.tagreads.ToString();
-            integrationLog.LastChecked = DateTime.Now;
-            var list = await integrationLog.ReadAsync(new QueryFilter("Interface", interfaceType.ToString(), FilterOperator.Equals));
-            if (!list.Any())
-                integrationLog.Create();
-          //  else
-               // integrationLog.Update();
+            await processLog.InsertUpdate_LastChecked(interfaceType.ToString());
 
         }
 

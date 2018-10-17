@@ -20,7 +20,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
 
         private readonly ILogger<KeyFrameSync> _logger;
 
-        public KeyFrameSync(IRedGreenQueueAdapter redq, ILogger<KeyFrameSync> logger) : base(redq)
+        public KeyFrameSync(IRedGreenQueueAdapter redq, ILogger<KeyFrameSync> logger,LoggerX loggerX) : base(redq,loggerX)
         {
             DeviceList = new List<Device>();
             _logger = logger;
@@ -32,10 +32,11 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
         /// <returns></returns>
         public async Task StartKeyFrameMonitor()
         {
-            DeviceList = new Device().Read();
+            DeviceList = await new Device().ReadAsync();
             while (true)
                 try
                 {
+                    await UpdateLastCheckedLog(InterfaceType.keyframe);
                     var lst = new List<(string, string, object)>();
                     foreach (var device in DeviceList)
                     {
@@ -45,7 +46,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                         _iotObject.ObjectType = "TAGS";
                         //Add all added tag of device
                         await Task.Delay(100);
-                        var Alltags = GetCurrentDeviceTagList(device);
+                        var Alltags = await GetCurrentDeviceTagList(device);
                         //if (Alltags.Count == 0)
                         //    continue;
 
@@ -62,6 +63,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                     Console.WriteLine("Key frame try..");
                     LoggerX.WriteEventLog("Reset Notification Try");
                     await SendNotification(lst);
+                    await UpdateLastUpdatedLog(InterfaceType.keyframe);
                     LoggerX.WriteEventLog("Reset Notification Sent");
 
                     //Delay For Total Key Frame Interval Seconds
@@ -79,7 +81,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
         /// </summary>
         /// <param name="device"></param>
         /// <returns></returns>
-        private Dictionary<string, JObject> GetCurrentDeviceTagList(Device device)
+        private async Task<Dictionary<string, JObject>> GetCurrentDeviceTagList(Device device)
         {
             DateTime removedatetime = DateTime.Now;
             removedatetime = removedatetime.AddSeconds(-IotGateway.KeyFrameTimeout);
@@ -90,7 +92,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
             };
 
             //QueryFilter filter = new QueryFilter("DeviceID", device.ID, FilterOperator.Equals);
-            var list = new TagLastSeen().Read(filters);
+            var list = await new TagLastSeen().ReadAsync(filters);
 
             Dictionary<string, JObject> tags = new Dictionary<string, JObject>();
             foreach (var read in list)

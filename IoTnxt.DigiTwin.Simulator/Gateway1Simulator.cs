@@ -31,6 +31,7 @@ namespace IoTnxt.DigiTwin.Simulator
         private readonly IRedGreenQueueAdapter _redq;
         private readonly IOptions<Gateway1SimulatorOptions> _options;
         private readonly IEntityApi _entityApi;
+        private LoggerX LoggerX { get; set; }
         private bool connected = false;
 
         TagReadsSync _tagReadsSync { get; set; }
@@ -49,7 +50,8 @@ namespace IoTnxt.DigiTwin.Simulator
     DeviceStatusSync devicestatusSync,
     RNCHeartbeatSync RNCHeartbeatSync,
     UnreadRFIDSync unreadRFIDSync,
-    KeyFrameSync keyFrameSync
+    KeyFrameSync keyFrameSync,
+    LoggerX loggerX
     )
         {
             _entityApi = entityApi ?? throw new ArgumentNullException(nameof(entityApi));
@@ -66,6 +68,7 @@ namespace IoTnxt.DigiTwin.Simulator
             _RNCHeartbeatSync = RNCHeartbeatSync;
             _unreadRFIDSync = unreadRFIDSync;
             _keyFrameSync = keyFrameSync;
+            LoggerX = loggerX;
 
             
 
