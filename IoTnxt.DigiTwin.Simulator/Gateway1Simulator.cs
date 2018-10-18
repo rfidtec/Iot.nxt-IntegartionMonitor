@@ -33,6 +33,7 @@ namespace IoTnxt.DigiTwin.Simulator
         private readonly IEntityApi _entityApi;
         private LoggerX LoggerX { get; set; }
         private bool connected = false;
+        List<Task> tasks = new List<Task>();
 
         TagReadsSync _tagReadsSync { get; set; }
         DeviceStatusSync _devicestatusSync { get; set; }
@@ -59,6 +60,7 @@ namespace IoTnxt.DigiTwin.Simulator
             _redq = redq ?? throw new ArgumentNullException(nameof(redq));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _options = options ?? throw new ArgumentException(nameof(options));
+            
             if (options.Value.Active)
                 logger.LogInformation("GATEWAY.1 simulator active");
 
@@ -70,7 +72,7 @@ namespace IoTnxt.DigiTwin.Simulator
             _keyFrameSync = keyFrameSync;
             LoggerX = loggerX;
 
-            
+            RunIntegration();
 
         }
 
@@ -120,7 +122,7 @@ namespace IoTnxt.DigiTwin.Simulator
                         FirmwareVersion = typeof(Gateway1Simulation).Assembly.GetName().Version.ToString(),
                         Devices = new Dictionary<string, Device>()
                     };
-                    gw.Devices = IotGateway.GetIotDevices();
+                    gw.Devices = await IotGateway.GetIotDevices();
                     // gw.Devices.Add("RFID|1:ZONE|ZONE1", new Device() { DeviceName = "RFID|1:ZONE|ZONE1", DeviceType = "ZONE", Properties = new Dictionary<string, DeviceProperty>() { { "TAGS", new DeviceProperty() { PropertyName = "TAGS", DataType = "RFIDDictionary" } } } });
 
                     await DapiContext.ExecuteAsync(username: IotGateway.UserName, action: () => _gatewayApi.RegisterGatewayFromGatewayAsync(gw));
@@ -153,37 +155,23 @@ namespace IoTnxt.DigiTwin.Simulator
         /// 
         private void StartIntegration()
         {
-            new Thread(() =>
-            {
-                Task.Run(() => _tagReadsSync.StartTagReads());
-            }).Start();
+            Task.Run(()=> _tagReadsSync.StartTagReads());
             LoggerX.WriteEventLog("Tag Read Monitor has started...");
-            new Thread(() =>
-            {
-                Task.Run(() => _RNCHeartbeatSync.StartAsync());
-            }).Start();
+            Task.Run(()=>_RNCHeartbeatSync.StartAsync());
             LoggerX.WriteEventLog("RNC Heartbeat Monitor started...");
-            new Thread(() =>
-            {
-                Task.Run(() => _devicestatusSync.StartDeviceStatus());
-            }).Start();
             Task.Run(() => _devicestatusSync.StartDeviceStatus());
             LoggerX.WriteEventLog("Device Status Monitor started...");
-            new Thread(() =>
-            {
-                Task.Run(() => _unreadRFIDSync.StartUnSeenMonitor());
-            }).Start();
+            Task.Run(() => _unreadRFIDSync.StartUnSeenMonitor());
             LoggerX.WriteEventLog("Unread list Monitor started...");
-            new Thread(() =>
-            {
-                Task.Run(() => _keyFrameSync.StartKeyFrameMonitor());
-            }).Start();
+            Task.Run(() => _devicestatusSync.StartDeviceStatus());
             LoggerX.WriteEventLog("Keyframe sending started...");
+            Task.Run(() => _keyFrameSync.StartKeyFrameMonitor());
+
         }
 
         public Task StartAsync()
         {
-            return Task.Run(() => RunIntegration());
+            return Task.Run(() => StartIntegration()); ;
         }
 
         public void Dispose()

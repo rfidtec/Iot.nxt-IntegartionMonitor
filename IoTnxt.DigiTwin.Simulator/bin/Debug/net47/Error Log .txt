@@ -1,0 +1,166 @@
+2018/10/18 8:53:31 PM : Object reference not set to an instance of an object.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\UnreadRFIDSync.cs method: StartUnSeenMonitor line: 77
+-----------------------------------------------
+2018/10/18 8:53:31 PM : Object reference not set to an instance of an object.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\UnreadRFIDSync.cs method: StartUnSeenMonitor line: 77
+-----------------------------------------------
+2018/10/18 8:53:38 PM : Object reference not set to an instance of an object.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\UnreadRFIDSync.cs method: StartUnSeenMonitor line: 77
+-----------------------------------------------
+2018/10/18 8:53:57 PM : Value cannot be null.
+Parameter name: key
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\KeyFrameSync.cs method: StartKeyFrameMonitor line: 78
+-----------------------------------------------
+2018/10/18 8:54:01 PM : Value cannot be null.
+Parameter name: key
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\KeyFrameSync.cs method: StartKeyFrameMonitor line: 78
+-----------------------------------------------
+2018/10/18 8:54:52 PM : Value cannot be null.
+Parameter name: key
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\KeyFrameSync.cs method: StartKeyFrameMonitor line: 78
+-----------------------------------------------
+2018/10/18 8:55:54 PM : Value cannot be null.
+Parameter name: key
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\KeyFrameSync.cs method: StartKeyFrameMonitor line: 78
+-----------------------------------------------
+2018/10/18 8:56:29 PM : Value cannot be null.
+Parameter name: key
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\KeyFrameSync.cs method: StartKeyFrameMonitor line: 78
+-----------------------------------------------
+2018/10/18 8:58:30 PM : Object reference not set to an instance of an object.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\KeyFrameSync.cs method: StartKeyFrameMonitor line: 78
+-----------------------------------------------
+2018/10/18 8:58:39 PM : Object reference not set to an instance of an object.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\KeyFrameSync.cs method: StartKeyFrameMonitor line: 78
+-----------------------------------------------
+2018/10/18 8:58:45 PM : Value cannot be null.
+Parameter name: key
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\KeyFrameSync.cs method: StartKeyFrameMonitor line: 78
+-----------------------------------------------
+2018/10/18 8:59:15 PM : Value cannot be null.
+Parameter name: key
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\KeyFrameSync.cs method: StartKeyFrameMonitor line: 78
+-----------------------------------------------
+2018/10/18 8:59:46 PM : Value cannot be null.
+Parameter name: key
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\KeyFrameSync.cs method: StartKeyFrameMonitor line: 78
+-----------------------------------------------
+2018/10/18 8:59:53 PM : Object reference not set to an instance of an object.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\UnreadRFIDSync.cs method: StartUnSeenMonitor line: 77
+-----------------------------------------------
+2018/10/18 9:00:05 PM : Value cannot be null.
+Parameter name: key
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\KeyFrameSync.cs method: StartKeyFrameMonitor line: 78
+-----------------------------------------------
+2018/10/18 9:03:06 PM : Value cannot be null.
+Parameter name: key
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\KeyFrameSync.cs method: StartKeyFrameMonitor line: 78
+-----------------------------------------------
+2018/10/18 9:03:16 PM : Value cannot be null.
+Parameter name: key
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\KeyFrameSync.cs method: StartKeyFrameMonitor line: 78
+-----------------------------------------------
+2018/10/18 9:03:24 PM : Value cannot be null.
+Parameter name: key
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\KeyFrameSync.cs method: StartKeyFrameMonitor line: 78
+-----------------------------------------------
+2018/10/18 9:03:29 PM : Value cannot be null.
+Parameter name: key
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\KeyFrameSync.cs method: StartKeyFrameMonitor line: 78
+-----------------------------------------------
+2018/10/18 9:04:00 PM : Cannot find table 0.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\UnreadRFIDSync.cs method: StartUnSeenMonitor line: 77
+-----------------------------------------------
+2018/10/18 9:04:16 PM : Value cannot be null.
+Parameter name: key
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\KeyFrameSync.cs method: StartKeyFrameMonitor line: 78
+-----------------------------------------------
+2018/10/18 9:05:47 PM : Object reference not set to an instance of an object.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\UnreadRFIDSync.cs method: StartUnSeenMonitor line: 77
+-----------------------------------------------
+2018/10/18 9:12:41 PM : Collection was modified; enumeration operation may not execute.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\UnreadRFIDSync.cs method: StartUnSeenMonitor line: 77
+-----------------------------------------------
+2018/10/18 9:13:01 PM : Object reference not set to an instance of an object.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\UnreadRFIDSync.cs method: StartUnSeenMonitor line: 77
+-----------------------------------------------
+2018/10/18 9:15:10 PM : Object reference not set to an instance of an object.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\UnreadRFIDSync.cs method: StartUnSeenMonitor line: 77
+-----------------------------------------------
+2018/10/18 9:15:11 PM : Object reference not set to an instance of an object.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\UnreadRFIDSync.cs method: StartUnSeenMonitor line: 77
+-----------------------------------------------
+2018/10/18 9:15:23 PM : Object reference not set to an instance of an object.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\TagReadsSync.cs method: StartTagReads line: 106
+-----------------------------------------------
+2018/10/18 9:15:32 PM : Cannot find table 0.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\TagReadsSync.cs method: StartTagReads line: 106
+-----------------------------------------------
+2018/10/18 9:15:34 PM : Value cannot be null.
+Parameter name: key
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\KeyFrameSync.cs method: StartKeyFrameMonitor line: 78
+-----------------------------------------------
+2018/10/18 9:17:35 PM : Object reference not set to an instance of an object.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\UnreadRFIDSync.cs method: StartUnSeenMonitor line: 77
+-----------------------------------------------
+2018/10/18 9:17:52 PM : Object reference not set to an instance of an object.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\TagReadsSync.cs method: StartTagReads line: 106
+-----------------------------------------------
+2018/10/18 9:18:00 PM : Object reference not set to an instance of an object.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\TagReadsSync.cs method: StartTagReads line: 106
+-----------------------------------------------
+2018/10/18 9:18:09 PM : Object reference not set to an instance of an object.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\TagReadsSync.cs method: StartTagReads line: 106
+-----------------------------------------------
+2018/10/18 9:18:12 PM : Cannot find table 0.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\TagReadsSync.cs method: StartTagReads line: 106
+-----------------------------------------------
+2018/10/18 9:18:12 PM : Cannot find table 0.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\TagReadsSync.cs method: StartTagReads line: 106
+-----------------------------------------------
+2018/10/18 9:18:12 PM : Object reference not set to an instance of an object.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\TagReadsSync.cs method: StartTagReads line: 106
+-----------------------------------------------
+2018/10/18 9:18:16 PM : Cannot find table 0.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\TagReadsSync.cs method: StartTagReads line: 106
+-----------------------------------------------
+2018/10/18 9:18:18 PM : Cannot find table 0.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\TagReadsSync.cs method: StartTagReads line: 106
+-----------------------------------------------
+2018/10/18 9:18:29 PM : Value cannot be null.
+Parameter name: key
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\KeyFrameSync.cs method: StartKeyFrameMonitor line: 78
+-----------------------------------------------
+2018/10/18 9:27:19 PM : Object reference not set to an instance of an object.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\TagReadsSync.cs method: StartTagReads line: 106
+-----------------------------------------------
+2018/10/18 9:27:23 PM : Value cannot be null.
+Parameter name: key
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\KeyFrameSync.cs method: StartKeyFrameMonitor line: 78
+-----------------------------------------------
+2018/10/18 9:27:23 PM : Object reference not set to an instance of an object.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\TagReadsSync.cs method: StartTagReads line: 106
+-----------------------------------------------
+2018/10/18 9:27:30 PM : Value cannot be null.
+Parameter name: key
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\KeyFrameSync.cs method: StartKeyFrameMonitor line: 78
+-----------------------------------------------
+2018/10/18 9:28:03 PM : Collection was modified; enumeration operation may not execute.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\UnreadRFIDSync.cs method: StartUnSeenMonitor line: 77
+-----------------------------------------------
+2018/10/18 9:28:26 PM : Object reference not set to an instance of an object.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\TagReadsSync.cs method: StartTagReads line: 106
+-----------------------------------------------
+2018/10/18 9:28:26 PM : Cannot find table 0.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\TagReadsSync.cs method: StartTagReads line: 106
+-----------------------------------------------
+2018/10/18 9:28:31 PM : Cannot find table 0.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\TagReadsSync.cs method: StartTagReads line: 106
+-----------------------------------------------
+2018/10/18 9:28:48 PM : Value cannot be null.
+Parameter name: key
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\KeyFrameSync.cs method: StartKeyFrameMonitor line: 78
+-----------------------------------------------
+2018/10/18 9:29:13 PM : Cannot find table 0.
+file name: D:\Work\Source Code\IoTnxt.DigiTwin.Simulator\IoTnxt.DigiTwin.Simulator\InnotrackSync\TagReadsSync.cs method: StartTagReads line: 106
+-----------------------------------------------

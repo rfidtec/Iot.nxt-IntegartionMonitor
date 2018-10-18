@@ -20,7 +20,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
 
         private readonly ILogger<KeyFrameSync> _logger;
 
-        public KeyFrameSync(IRedGreenQueueAdapter redq, ILogger<KeyFrameSync> logger,LoggerX loggerX) : base(redq,loggerX)
+        public KeyFrameSync(IRedGreenQueueAdapter redq, ILogger<KeyFrameSync> logger, LoggerX loggerX) : base(redq, loggerX)
         {
             DeviceList = new List<Device>();
             _logger = logger;
@@ -32,6 +32,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
         /// <returns></returns>
         public async Task StartKeyFrameMonitor()
         {
+            while(DeviceList.Count ==0)
             DeviceList = await new Device().ReadAsync();
             while (true)
                 try
@@ -42,11 +43,13 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                     {
                         var _iotObject = new IotObject();
                         _iotObject.Group = "RFID";
-                        _iotObject.Device = device;
+                        await _iotObject.SetDevice(device);
                         _iotObject.ObjectType = "TAGS";
                         //Add all added tag of device
                         await Task.Delay(100);
-                        var Alltags = await GetCurrentDeviceTagList(device);
+                        Dictionary<string, JObject> Alltags = null;
+                        while (Alltags == null)
+                         Alltags = await GetCurrentDeviceTagList(device);
                         //if (Alltags.Count == 0)
                         //    continue;
 

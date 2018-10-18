@@ -45,8 +45,6 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
         }
         public static bool Heartbeat { get; set; }
 
-        private static string _deviceType;
-        private static string deviceZoneName { get; set; }
         private static List<string> addedZones { get; set; }
 
         public static string RNCIpAddress
@@ -115,11 +113,11 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
 
 
 
-        public static Dictionary<string, Device> GetIotDevices()
+        public static async Task< Dictionary<string, Device>> GetIotDevices()
         {
             Dictionary<string, Device> temp = new Dictionary<string, Device>();
             addedZones = new List<string>();
-            foreach (var device in new Innotrack.DeviceManager.Entities.Device().Read())
+            foreach (var device in  await new Innotrack.DeviceManager.Entities.Device().ReadAsync())
             {
                 //deviceZoneName = DeviceHelper.GetDeviceZoneName(device, out _deviceType);
                 Device iotDevice = new Device()

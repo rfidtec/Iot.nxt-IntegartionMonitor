@@ -36,7 +36,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
             {
                 try
                 {
-                    await UpdateLastCheckedLog(InterfaceType.deviceheartbeat);
+                   await  UpdateLastCheckedLog(InterfaceType.deviceheartbeat);
                     await RefreshDeviceStatusList();
 
                     var lst = new List<(string, string, object)>();
@@ -71,7 +71,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
         {
             //Get a list of all devices that status has changed
             //QueryFilter filter = new QueryFilter("HostSeen", false, DALX.Core.FilterOperator.Equals);
-            Devices = await new Device().ReadAsync();
+            Devices =  await new Device().ReadAsync();
         }
 
 

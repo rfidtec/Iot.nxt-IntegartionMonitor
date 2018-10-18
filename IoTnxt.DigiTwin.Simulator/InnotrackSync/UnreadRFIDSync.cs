@@ -35,17 +35,20 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
             {
                 try
                 {
+                    
                     await UpdateLastCheckedLog(InterfaceType.unreadtaglist);
                     Devices = await new Device().ReadAsync();
                     var lst = new List<(string, string, object)>();
                     foreach (var device in Devices)
                     {
                         var _iotObject = new IotObject();
-                        _iotObject.Device = device;
+                      await  _iotObject.SetDevice(device);
                         _iotObject.ObjectType = "TAGS";
                         DateTime removedatetime = DateTime.Now;
                         removedatetime = removedatetime.AddSeconds(IotGateway.RemoveTimeout);
-                        var removeList = await GetRemovedTags(device.ID.ToString(), removedatetime);
+                        Dictionary<string, JObject> removeList = null;
+                        while(removeList == null)
+                        removeList = await GetRemovedTags(device.ID.ToString(), removedatetime);
                         if (removeList.Count == 0)
                             continue;
                         LoggerX.WriteEventLog($"{removeList.Count} unread tags at device: {device.DeviceName}");
@@ -61,7 +64,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                         LoggerX.WriteEventLog("Remove List try...");
                         await SendNotification(lst);
                         UpdateAllTagSeen();
-                        await UpdateLastUpdatedLog(InterfaceType.unreadtaglist);
+                       await  UpdateLastUpdatedLog(InterfaceType.unreadtaglist);
                         LoggerX.WriteEventLog($"Remove list notifcation sent");
                         await Task.Delay(50);
                     }
@@ -89,7 +92,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                 new QueryFilter("DateTime",removeTimeLmit,FilterOperator.LessThan,LogicalOperator.AND),
                 new QueryFilter("HostSeen",false,FilterOperator.Equals)
             };
-             _tagList = await new Innotrack.DeviceManager.Entities.TagLastSeen().ReadAsync(filters);
+             _tagList =await new Innotrack.DeviceManager.Entities.TagLastSeen().ReadAsync(filters);
             
             Dictionary<string, JObject> tags = new Dictionary<string, JObject>();
             foreach (var read in _tagList)

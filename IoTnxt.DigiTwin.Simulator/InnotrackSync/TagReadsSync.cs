@@ -45,10 +45,12 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
 
             while (true)
             {
+                LoggerX.WriteDebugLog("1. Check for un processed tags");
                 //Get all un seen tags
+                //while(TagList == null)
                 TagList = await CheckForUnprocessedTags();
                 //Loop through all unprocessed tags
-
+                LoggerX.WriteDebugLog($"2. {TagList.Count} Tags found to process");
                 foreach (var read in TagList)
                 {
                     try
@@ -58,23 +60,32 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                         await UpdateLastCheckedLog(InterfaceType.tagreads);
 
                         //Add new tag read of device
-                        var addedUpdatedTags = await GetAddedTags(read.Device.DeviceName);
-                        //AddTagRead(read.Device.DeviceName, read.EPC, read.DateTime.ToString());
-                        //Remove all tags from last device and add to 
-                        await AddRemovedTagsToList(lst);
-                        // await Task.Delay(10);
-                        LoggerX.WriteEventLog($"{read.EPC} tags read at device: {read.Device.DeviceName}");
+                        LoggerX.WriteDebugLog($"3. Get all tags of device {read.Device.DeviceName}");
+                        Dictionary<string, RfidTag> addedUpdatedTags = null;
+                        while (addedUpdatedTags == null)
+                            addedUpdatedTags = await GetAddedTags(read.Device.DeviceName);
                         var value = new JObject
                         {
                             ["addOrUpdate"] = JObject.FromObject(addedUpdatedTags)
                         };
+                        LoggerX.WriteDebugLog($"4. Add device taglist to iot object");
+                        //AddTagRead(read.Device.DeviceName, read.EPC, read.DateTime.ToString());
+                        //Remove all tags from last device and add to 
+
+                        LoggerX.WriteDebugLog($"5. Get remove list");
+                        await AddRemovedTagsToList(lst);
+                        LoggerX.WriteDebugLog($"6. Remove list added to iot object");
+                        // await Task.Delay(10);
+                        LoggerX.WriteEventLog($"7. {read.EPC} tags read at device: {read.Device.DeviceName}");
+                       
                         _iotObject.Object = value;
                         _iotObject.Group = "RFID";
                         // _iotObject.DeviceType = "ZONE";
-                        _iotObject.Device = (Innotrack.DeviceManager.Entities.Device)read.Device;
+                       await _iotObject.SetDevice((Innotrack.DeviceManager.Entities.Device)read.Device);
                         //_iotObject.DeviceName = read.Device.DeviceName;
                         _iotObject.ObjectType = "TAGS";
                         lst.Add(_iotObject.ToString());
+                        LoggerX.WriteEventLog($"8. Fill iot object");
                         // lst.Add(("RFID|1:ZONE|" + read.Device.DeviceName, "TAGS", value));
                         if (lst.Count > 0)
                         {
@@ -85,7 +96,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                             UpdateTagReadsHostSeen();
                             //read.HostSeen = true;
                             //read.Update();
-                           await UpdateLastUpdatedLog(InterfaceType.tagreads);
+                          await  UpdateLastUpdatedLog(InterfaceType.tagreads);
                             lst.Clear();
 
                         }
@@ -107,7 +118,6 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
         {
             foreach (var tag in TagList)
             {
-
                 tag.HostSeen = true;
                 tag.Update();
             }
@@ -174,7 +184,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
             {
                 new QueryFilter("EPC",tag.EPC,FilterOperator.Equals)
             };
-                TagReads readTag = await tag.GetSecondLastTagReadAsync(tag.EPC);
+                TagReads readTag =  tag.GetSecondLastTagReadAsync(tag.EPC);
                 if (readTag == null)
                     continue;
                 Dictionary<string, JObject> tags = new Dictionary<string, JObject>();
@@ -188,7 +198,7 @@ namespace IoTnxt.DigiTwin.Simulator.InnotrackSync
                 _iotObject.Object = value;
                 _iotObject.Group = "RFID";
                 // _iotObject.DeviceType = "ZONE";
-                _iotObject.Device = (Innotrack.DeviceManager.Entities.Device)readTag.Device;
+               await _iotObject.SetDevice((Innotrack.DeviceManager.Entities.Device)readTag.Device);
                 //_iotObject.DeviceName = read.Device.DeviceName;
                 _iotObject.ObjectType = "TAGS";
                 lst.Add(_iotObject.ToString());
